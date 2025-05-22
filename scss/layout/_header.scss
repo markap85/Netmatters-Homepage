@@ -1,0 +1,721 @@
+header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    @media (min-width: $brk-point-m) {
+        .container {
+            flex-direction: row;
+            height: 110px;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        height: 110px;
+    }
+
+    .header-row {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a.btn {
+            display: none;
+            margin-top: auto;
+            background: $design;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
+                background: darken($design, 10%);
+            }
+
+            @media (min-width: $brk-point-m) {
+                display: block;
+            }
+        }
+    }
+
+    .primary,
+    .secondary {
+        display: flex;
+        align-items: center; // vertical centering
+        justify-content: center;
+        gap: 8px;
+        background-color: $it !important;
+        transition: background-color 0.3s;
+        font-size: 15px;
+        width: 149.5px;
+        height: 56px;
+        text-align: center !important;
+        font-weight: 400;
+        line-height: normal; // <-- fix: do not set to button height
+        padding: 0; // Remove default padding
+
+        // Remove margin from all children to avoid shifting
+        & > * {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto; // <-- fix: do not force 100%
+        }
+
+        // If using icon font classes, ensure they are flex-centered
+        .icon-mouse,
+        .icon-paper-plane {
+            font-size: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto; // <-- fix: do not force 100%
+        }
+
+        &.secondary {
+            background-color: #84858F !important;
+        }
+
+        &:hover {
+            background-color: darken($it, 10%) !important;
+
+            &.secondary {
+                background-color: darken(#84858F, 10%) !important;
+            }
+        }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .search-bar-large {
+            display: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            height: 55px;
+            align-items: center;
+            border-radius: 2px;
+
+            @media (min-width: $brk-point-s) {
+                display: flex;
+            }
+
+            input {
+                border: 1px rgb(180, 180, 180) solid;
+                background: transparent;
+                height: 100%;
+                font-size: 1rem;
+                outline: none;
+                padding: 10px;
+            }
+
+            .icon-search {
+                background: #999AA2;
+                border-radius: 2px;
+                width: 55px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+
+                &:hover {
+                    background: darken(#999AA2, 10%);
+                }
+            }
+        }
+    }
+
+    .icon-menu {
+        background: #333645;
+        border-radius: 2px;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    img {
+        max-height: 80px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .phoneicon {
+        @media (min-width: $brk-point-s) {
+            width: 750px;
+            display: none;
+        }
+    }
+}
+
+.main-nav {
+    display: none;
+    align-items: stretch; // Ensure children stretch to full height
+    background-color: #323544;
+    color: white;
+    height: 99px;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.875rem;
+        line-height: 1;
+        font-family: poppins, sans-serif;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: none; // Center content vertically
+        align-items: center; // Center content vertically
+        justify-content: center; // Center content horizontally
+    }
+
+        strong {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 300; // Make font thinner
+        }
+
+        @media (min-width: $brk-point-m) {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+.main-nav-items {
+    width: 90vw;
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%; // Fill the height of .main-nav
+    display: flex;
+    align-items: center; // Make children fill height
+    justify-content: center;
+
+    > a {
+        display: block; // Use flex for centering
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+
+        &.bespoke:hover,
+        &.bespoke:focus {
+            background: $bespoke;
+
+            .icon-laptop {
+                color: $white;
+            }
+        }
+        &.it:hover,
+        &.it:focus {
+            background: $it;
+
+            .icon-display {
+                color: $white;
+            }
+        }
+        &.digital:hover,
+        &.digital:focus {
+            background: $marketing;
+
+            .icon-stats-bars {
+                color: $white;
+            }
+        }
+        &.telecoms:hover,
+        &.telecoms:focus {
+            background: $telecoms;
+
+            .icon-phone_in_talk {
+                color: $white;
+            }
+        }
+        &.web:hover,
+        &.web:focus {
+            background: $design;
+
+            .icon-embed2 {
+                color: $white;
+            }
+        }
+        &.cyber:hover,
+        &.cyber:focus {
+            background: $cyber;
+
+            .icon-security {
+                color: $white;
+            }
+        }
+        &.developer:hover,
+        &.developer:focus {
+            background: $developer;
+            
+            .icon-school {
+            color: $white;
+            }
+        }
+    }
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 10px 0 10px;
+    height: 50px;
+    border-radius: 2px;
+
+    input {
+        border: 1px rgb(180, 180, 180) solid;
+        background: transparent;
+        height: 100%;
+        font-size: 1rem;
+        outline: none;
+        padding: 10px;
+    }
+
+    .icon-search {
+        background: #999AA2;
+        border-radius: 2px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    @media (min-width: $brk-point-s) {
+        display: none;
+    }
+}
+
+.icon-laptop {
+    color: $bespoke;
+    font-size: 23px;
+    background-color: transparent !important;
+}
+.icon-display {
+    color: $it;
+    font-size: 23px;
+}
+.icon-stats-bars {
+    color: $marketing;
+    font-size: 23px;
+}
+.icon-phone_in_talk {
+    color: $telecoms;
+    font-size: 23px;
+}
+.icon-embed2 {
+    color: $design;
+    font-size: 23px;
+}
+.icon-security {
+    color: $cyber;
+    font-size: 23px;
+}
+.icon-school {
+    color: $developer;
+    font-size: 23px;
+}
+.icon-paper-plane {
+    font-size: 23px;
+}
+.icon-mouse {
+    font-size: 23px;
+}
+
+.mobile-search-bar {
+    display: none;
+    margin: 0 auto;
+    height: 50px;
+    align-items: center;
+    border-radius: 2px;
+    width: 85vw !important;
+    max-width: 90vw;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background: $white;
+
+    // Add padding below header for mobile search bar
+    @media (max-width: $brk-point-s) {
+        display: flex;
+        margin-bottom: 20px; // Add space below search bar
+    }
+
+    input {
+        border: 1px rgb(180, 180, 180) solid;
+        background: transparent;
+        height: 100%;
+        font-size: 1rem;
+        outline: none;
+        padding: 10px;
+        flex: 1 1 auto;
+    }
+
+    .icon-search {
+        background: #999AA2;
+        border-radius: 2px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+// Add padding to the bottom of the header on mobile to prevent overlap
+@media (max-width: $brk-point-s) {
+    header {
+        padding-bottom: 70px; // Adjust as needed to fit the mobile search bar
+    }
+}
+
+.nav-popout-bespoke {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px; // Added fixed height for debugging
+    background: $bespoke;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+// Show popout when any main nav item is hovered
+@media (min-width: $brk-point-m) {
+    .main-nav {
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-popout-bespoke {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $bespoke;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.bespoke:hover ~ .nav-popout-bespoke,
+    .nav-popout-bespoke:hover,
+    .nav-popout-bespoke:focus-within {
+        display: block !important;
+    }
+}
+
+.nav-popout-it {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px; // Added fixed height for debugging
+    background: $it;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+}
+
+@media (min-width: $brk-point-m) {
+    .main-nav {
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-popout-it {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $it;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.it:hover ~ .nav-popout-it,
+    .nav-popout-it:hover,
+    .nav-popout-it:focus-within {
+        display: block !important;
+    }
+}
+
+.nav-popout-marketing {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px; // Added fixed height for debugging
+    background: $marketing;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+@media (min-width: $brk-point-m) {
+    .main-nav {
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-popout-marketing {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $marketing;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.digital:hover ~ .nav-popout-marketing,
+    .nav-popout-marketing:hover,
+    .nav-popout-marketing:focus-within {
+        display: block !important;
+    }
+}
+
+.nav-popout-telecoms {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    background: $telecoms;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+.nav-popout-design {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    background: $design;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+.nav-popout-cyber {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    background: $cyber;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+.nav-popout-developer {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    background: $developer;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+@media (min-width: $brk-point-m) {
+    .main-nav {
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-popout-telecoms {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $telecoms;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.telecoms:hover ~ .nav-popout-telecoms,
+    .nav-popout-telecoms:hover,
+    .nav-popout-telecoms:focus-within {
+        display: block !important;
+    }
+
+    .nav-popout-design {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $design;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.web:hover ~ .nav-popout-design,
+    .nav-popout-design:hover,
+    .nav-popout-design:focus-within {
+        display: block !important;
+    }
+
+    .nav-popout-cyber {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $cyber;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.cyber:hover ~ .nav-popout-cyber,
+    .nav-popout-cyber:hover,
+    .nav-popout-cyber:focus-within {
+        display: block !important;
+    }
+
+    .nav-popout-developer {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $developer;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.developer:hover ~ .nav-popout-developer,
+    .nav-popout-developer:hover,
+    .nav-popout-developer:focus-within {
+        display: block !important;
+    }
+}
+
+// Style for all nav-popout h1 and ul
+.nav-popout-bespoke,
+.nav-popout-it,
+.nav-popout-marketing,
+.nav-popout-telecoms,
+.nav-popout-design,
+.nav-popout-cyber,
+.nav-popout-developer {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 24px;
+        color: $white;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: left; // Ensure h1 is left aligned
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start; // Align list items to the left
+        text-align: left; // Ensure text is left aligned
+
+        li a {
+            color: $white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 6px 0;
+            transition: text-decoration 0.2s, color 0.2s;
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+                color: #fffbe7;
+            }
+        }
+    }
+}

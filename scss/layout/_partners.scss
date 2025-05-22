@@ -1,0 +1,16 @@
+.partners {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.partner-logo {
+    gap: 32px;
+    filter: grayscale(100%);
+
+    &:hover {
+        filter: grayscale(0%)
+    }
+}

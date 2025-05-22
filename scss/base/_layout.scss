@@ -1,0 +1,38 @@
+// ==========================================================================
+// layout Partial
+// ==========================================================================
+
+// Primary layout styles for the entire site
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin-right:auto;
+    margin-left:auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $brk-point-s) {
+        width: 750px;
+    }
+
+    @media (min-width: $brk-point-m){
+        width: 970px;
+    }
+
+    @media (min-width: $brk-point-m){
+        width: 1200px;
+    }
+    
+}
+
+.debug {
+    background-color: $telecoms !important;
+}
+
+
+
+
+

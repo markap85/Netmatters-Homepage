@@ -1,0 +1,50 @@
+// Set base font family and common text properties
+body, p, h1, h2, h3, h4, h5, h6, li, a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+
+body, a {
+    font-size: 13px;
+    line-height: 22px;
+}
+
+body {
+    color: $black-dark;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+h1 {
+    font-size: 43px;
+    line-height: 47px;
+    color: $primary-dark;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 35.2px;
+    color: $primary-dark;
+}
+
+h3, h4, h5, h6 {
+    color: $primary-dark;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bold {
+    font-weight: bold !important;
+}

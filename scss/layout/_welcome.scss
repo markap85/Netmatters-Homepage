@@ -1,0 +1,117 @@
+.welcome-grid {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+    margin: 32px 0;
+    background-color: $primary-dark;
+    color: $white;
+    padding: 30px;
+    position: relative;
+    width: 100%; // Ensure it doesn't overflow container
+    box-sizing: border-box;
+}
+
+.welcome-section {
+    max-width: 1022px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 32px 0;
+    padding: 30px;
+    position: relative;
+    margin: 0 auto;
+
+    h2 {
+        color: $white;
+    }
+
+    @media (min-width: $brk-point-m) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.icon-star-full {
+    color: $yellow;
+    font-size: 40px;
+}
+
+.welcome-grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    a {
+        background-color: $it;
+        color: $white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        display: inline-block;
+        margin: 5px auto;
+
+        &:hover {
+            background-color: $it;
+        }
+    }
+}
+
+@media (min-width: $brk-point-m) {
+    .welcome-links, .review-links {
+        display: flex;
+        gap: 16px;
+        justify-content: flex-start;
+        align-items: center;
+
+        a {
+            flex: 1 1 0;
+            width: 90%;
+            max-width: 90%;
+            box-sizing: border-box;
+            text-align: center;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .color-primary {
+            background-color: $secondary-dark;
+            color: $white;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $black-dark;
+            }
+        }
+
+        .color-secondary {
+            background-color: $it;
+            color: $white;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $it-hover;
+            }
+        }
+
+        .color-accent {
+            background-color: $marketing;
+            color: $white;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $marketing-hover;
+            }
+        }
+    }
+}
+
+.icon-arrow-right {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,19 @@
+.clients {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.clients-logos {
+    gap: 32px;
+    filter: grayscale(100%);
+
+    &:hover {
+        filter: grayscale(0%);
+    }
+}

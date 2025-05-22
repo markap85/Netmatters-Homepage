@@ -1,0 +1,190 @@
+// ==========================================================================
+// Footer Partial
+// ==========================================================================
+
+footer {
+    background-color: $primary-dark;
+    color: $white;
+    padding: 30px 0 0;
+    position: relative;
+
+    .container {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo {
+        flex: 0 0 70%;
+        max-width: 70%;
+        padding-bottom: 20px;
+        margin-right: 50px;
+
+        @media (min-width: $brk-point-m) {
+            flex: 0 0 50%;
+            max-width: 30%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (min-width: $brk-point-m) {
+            flex-direction: row;
+
+            .footer-menus-grid {
+                flex: 1 1 0;
+            }
+        }
+
+        .footer-menu {
+            flex: 100%;
+            margin-bottom: 0;
+
+            @media (min-width: $brk-point-s) {
+                flex: 50%;
+            }
+
+            @media (min-width: $brk-point-m) {
+                flex: 25%;
+                margin-bottom: 40px;
+            }
+        }
+
+        .footer-menus-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+
+            h4 {
+                text-transform: uppercase;
+                color: $white;
+                font-size: 0.8;
+                margin-bottom: 26px;
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                font-size: 0.875rem;
+                line-height: 1.5;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            @media (min-width: $brk-point-s) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (min-width: $brk-point-m) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+
+    .footer-social-logos {
+        display: flex;
+        height: 48px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.1rem;
+        margin-bottom: 100px;
+
+        a {
+            flex: 0 0 10%;
+            max-width: 45%;
+            color: $white;
+            font-size: 1.5rem;
+            text-decoration: none;
+
+            &:hover {
+                color: #ccc;
+            }
+        }
+    }
+
+    .footer-copyright {
+        text-align: center;
+        font-size: 0.875rem;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 767px) {
+        .footer-logo {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+// Social icon base styles
+%footer-icon {
+    color: $white !important;
+    font-size: 20px !important;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: $secondary-dark !important;
+    padding: 12px 22px 16px 22px;
+}
+
+.icon-facebook {
+    @extend %footer-icon;
+    &:hover { background-color: $facebook !important; }
+}
+.icon-instagram {
+    @extend %footer-icon;
+    &:hover { background-color: $instagram !important; }
+}
+.icon-x {
+    @extend %footer-icon;
+    &:hover { background-color: $X !important; }
+}
+.icon-linkedin {
+    @extend %footer-icon;
+    &:hover { background-color: $linkedin !important; }
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color: $secondary-dark !important;
+
+    .footer-bottom-content {
+        display: flex;
+        align-items: center;
+        padding-right: 5px;
+        margin-left: 0;
+        width: 100%;
+        
+        @media (min-width: $brk-point-m) {
+            margin-left: 370px;
+    width: 100vw;
+        }
+
+        a {
+            color: $white;
+            text-decoration: none;
+            font-size: 0.875rem;
+            line-height: 1.5;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
