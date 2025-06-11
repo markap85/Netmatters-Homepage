@@ -648,6 +648,8 @@ footer .footer-copyright { text-align: center; font-size: 0.875rem; margin-top: 
 
 .nav-popout-bespoke ul li a:hover, .nav-popout-bespoke ul li a:focus, .nav-popout-it ul li a:hover, .nav-popout-it ul li a:focus, .nav-popout-marketing ul li a:hover, .nav-popout-marketing ul li a:focus, .nav-popout-telecoms ul li a:hover, .nav-popout-telecoms ul li a:focus, .nav-popout-design ul li a:hover, .nav-popout-design ul li a:focus, .nav-popout-cyber ul li a:hover, .nav-popout-cyber ul li a:focus, .nav-popout-developer ul li a:hover, .nav-popout-developer ul li a:focus { text-decoration: underline; color: #fffbe7 !important; }
 
+.nav-popout-bespoke ul li a span, .nav-popout-it ul li a span, .nav-popout-marketing ul li a span, .nav-popout-telecoms ul li a span, .nav-popout-design ul li a span, .nav-popout-cyber ul li a span, .nav-popout-developer ul li a span { width: 20px; color: white !important; padding-right: 10px; }
+
 .nav-popout-bespoke, .nav-popout-it, .nav-popout-marketing, .nav-popout-telecoms, .nav-popout-design, .nav-popout-cyber, .nav-popout-developer { min-height: unset; height: auto; padding-bottom: 50px; padding-top: 20px; }
 
 @media (min-width: 992px) { .nav-popout-bespoke .main-nav, .nav-popout-it .main-nav, .nav-popout-marketing .main-nav, .nav-popout-telecoms .main-nav, .nav-popout-design .main-nav, .nav-popout-cyber .main-nav, .nav-popout-developer .main-nav { position: relative; z-index: 1001; }

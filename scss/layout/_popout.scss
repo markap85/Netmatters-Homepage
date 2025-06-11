@@ -316,6 +316,12 @@
                 text-decoration: underline;
                 color: #fffbe7 !important;
             }
+
+            span { // Style for the icon span
+                width: 20px; // Fixed width for icon
+                color: white !important;
+                padding-right: 10px;
+            }
         }
     }
 }
