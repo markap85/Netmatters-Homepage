@@ -1,34 +1,95 @@
 .clients {
-    width: 100vw;
+    width: 100%;
     position: relative;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    margin: 0 auto;
+    transform: none;
     padding: 32px 0;
     overflow: hidden;
 
     .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-    margin: 0;
+        max-width: 1200px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
     }
 }
 
-
-
 .clients-logos {
     display: flex;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
-    padding: 0 32px; /* Add some padding so logos don't touch edges */
+    gap: 50px;
+    padding: 0 50px;
+
+    .client-logo-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+
+        .client-tooltip {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-16px);
+            min-width: 220px;
+            max-width: 320px;
+            background: $primary-dark;
+            color: #ffffff;
+            padding: 18px 22px 14px 22px;
+            z-index: 10;
+            text-align: left;
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+            white-space: normal;
+
+            h2 {
+                font-size: 1.1rem;
+                margin: 0 0 6px 0;
+                color: #fff;
+                font-weight: 700;
+                white-space: normal;
+            }
+            p {
+                font-size: 0.95rem;
+                margin: 0;
+                color: #eee;
+                white-space: normal;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-top: 12px solid $primary-dark;
+            }
+        }
+
+        &:hover .client-tooltip,
+        &:focus-within .client-tooltip {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            z-index: 9999;
+        }
+    }
 }
 
 .client-logo {
     flex: 1;
     max-width: 200px;
-    height: 70px; /* Adjust height */
+    height: 70px;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease;

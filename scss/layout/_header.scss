@@ -4,7 +4,6 @@
 
 header {
     margin: 0;
-    padding: 0;
     width: 100%;
 
     @media (min-width: $brk-point-m) {
@@ -24,7 +23,6 @@ header {
     }
 
     .header-row {
-        margin-bottom: 10px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -50,7 +48,7 @@ header {
 
             .icon-mouse,
             .icon-paper-plane {
-                font-size: 23px;
+                font-size: 30px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -76,7 +74,6 @@ header {
     .logo {
         display: flex;
         align-items: center;
-        gap: 10px;
 
         img {
             width: 402px;
@@ -98,7 +95,7 @@ header {
         display: block;
     }
 
-    .header-icons {
+    .header-icons { // support, contact, seartch and burger
         display: flex;
         align-items: center;
         gap: 10px;
@@ -107,10 +104,13 @@ header {
             display: none;
             margin-left: 10px;
             margin-right: 10px;
-            margin-top: 10px;
             height: 55px;
             align-items: center;
             border-radius: 2px;
+            /* Add these for centering */
+            display: flex; // Ensure flex context
+            align-items: center; // Vertically center input and icon
+            justify-content: center; // Horizontally center content
 
             @media (min-width: $brk-point-s) {
                 display: flex;
@@ -142,22 +142,135 @@ header {
                 }
             }
         }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: $secondary-dark;
+            border: none;
+            border-radius: 7px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+
+            &:hover {
+                background: darken($secondary-dark, 10%);
+            }
+
+            .burger-bar {
+                display: block;
+                width: 32px;
+                height: 4px;
+                margin: 4px 0;
+                background: white;
+                transition: all 0.3s;
+            }
+        }
     }
 
-    .icon-menu {
-        background: #333645;
-        border-radius: 5px;
-        width: 55px;
-        height: 55px;
+    .logo {
         display: flex;
         align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 1.5rem;
-        margin-top: 10px;
+        gap: 10px;
 
-        &:hover {
+        img {
+            width: 402px;
+            height: 70px;
+            max-width: 100%;
+            max-height: 70px;
+            object-fit: contain;
+            display: block;
+        }
+    }
+
+    // Ensure the Netmatters header logo is always 402x70px
+    .logo img {
+        width: 402px !important;
+        height: 70px !important;
+        max-width: 402px !important;
+        max-height: 70px !important;
+        object-fit: contain;
+        display: block;
+    }
+
+    .header-icons { // support, contact, seartch and burger
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .search-bar-large {
+            display: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 55px;
+            align-items: center;
+            border-radius: 2px;
+            /* Add these for centering */
+            display: flex; // Ensure flex context
+            align-items: center; // Vertically center input and icon
+            justify-content: center; // Horizontally center content
+
+            @media (min-width: $brk-point-s) {
+                display: flex;
+            }
+
+            input {
+                border: 1px rgb(180, 180, 180) solid;
+                background: transparent;
+                height: 100%;
+                font-size: 1rem;
+                outline: none;
+                padding: 10px;
+            }
+
+            .icon-search {
+                background: #999AA2;
+                border-radius: 0 2px 2px 0;
+                width: 55px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+
+                &:hover {
+                    background: darken(#999AA2, 10%);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: $secondary-dark;
+            border: none;
+            border-radius: 7px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 55px;
+            height: 55px;
             cursor: pointer;
+
+            &:hover {
+                background: darken($secondary-dark, 10%);
+            }
+
+            .burger-bar {
+                display: block;
+                width: 32px;
+                height: 4px;
+                margin: 4px 0;
+                background: white;
+                transition: all 0.3s;
+            }
         }
     }
 
@@ -175,80 +288,6 @@ header {
             display: none;
         }
     }
-}
-
-.main-nav {
-    display: none;
-    align-items: stretch; // Ensure children stretch to full height
-    background-color: #323544;
-    color: white;
-    height: 99px;
-
-    a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 0.875rem;
-        line-height: 1;
-        font-family: poppins, sans-serif;
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        display: none; // Center content vertically
-        align-items: center; // Center content vertically
-        justify-content: center; // Center content horizontally
-    }
-
-        strong {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            font-weight: 300; // Make font thinner
-        }
-
-        @media (min-width: $brk-point-m) {
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    }
-
-.main-nav-items {
-  width: 90vw;
-  max-width: 1260px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%; // Fill the height of .main-nav
-  display: flex;
-  align-items: center; // Make children fill height
-  justify-content: center;
-
-  > a {
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    box-sizing: border-box;
-    // Remove old &.bespoke, &.it, etc. rules
-  }
-
-  // Generate color classes for each nav item
-  @each $key, $color in $netmatters-colors {
-    .#{$key} {
-      @include nav-item-col($key);
-      color: #fff;
-      transition: filter 0.2s, background-color 0.2s;
-
-      &:hover,
-      &:focus {
-        filter: brightness(0.92);
-      }
-    }
-  }
 }
 
 .search-bar {
@@ -289,41 +328,7 @@ header {
     }
 }
 
-.icon-laptop {
-    color: $bespoke;
-    font-size: 23px;
-    background-color: transparent !important;
-}
-.icon-display {
-    color: $it;
-    font-size: 23px;
-}
-.icon-stats-bars {
-    color: $marketing;
-    font-size: 23px;
-}
-.icon-phone_in_talk {
-    color: $telecoms;
-    font-size: 23px;
-}
-.icon-embed2 {
-    color: $design;
-    font-size: 23px;
-}
-.icon-security {
-    color: $cyber;
-    font-size: 23px;
-}
-.icon-school {
-    color: $developer;
-    font-size: 23px;
-}
-.icon-paper-plane {
-    font-size: 23px;
-}
-.icon-mouse {
-    font-size: 23px;
-}
+
 
 .mobile-search-bar {
     display: none;

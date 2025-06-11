@@ -2,6 +2,10 @@
     color: $white;
 }
 
+// CHAT
+// ===================================================================
+// Chat toggle button and consent banner styles
+
 .chat-toggle {
     position: fixed;
     width: 60px;
@@ -23,14 +27,19 @@
     font-size: 24px;
 }
 
+// CONSENT
+// ===================================================================
+// Chat toggle button and consent banner styles
+
 .consent {
     position: fixed;
     left: 0;
     bottom: 0;
     background-color: #75788A;
+    border: 0px solid transparent;
+    border-radius: 0 12px 0 0;
     padding: 8px;
-    border-radius: 0 8px 0 0;
-    font-size: 8px;
+    font-size: 12px;
     min-height: 15px;
     z-index: 1001;
     display: flex;

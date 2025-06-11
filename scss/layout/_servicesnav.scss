@@ -1,0 +1,112 @@
+.main-nav {
+    display: none;
+    align-items: stretch; // Ensure children stretch to full height
+    background-color: #323544;
+    color: white;
+    height: 99px;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.875rem;
+        line-height: 1;
+        font-family: poppins, sans-serif;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex; // Center content vertically
+        align-items: center; // Center content vertically
+        justify-content: center; // Center content horizontally
+    }
+
+    strong {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 300; // Make font thinner
+    }
+
+    @media (min-width: $brk-point-m) {
+        width: 100%; // Prevent horizontal overflow
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.main-nav-items {
+  width: 90%;
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%; // Fill the height of .main-nav
+  display: flex;
+  align-items: center; // Make children fill height
+  justify-content: center;
+
+  > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+
+    
+    // Remove old &.bespoke, &.it, etc. rules
+  }
+
+//   // Generate color classes for each nav item
+//   @each $key, $color in $netmatters-colors {
+//     .#{$key} {
+//       @include nav-item-col($key);
+//       color: #fff;
+//       transition: filter 0.2s, background-color 0.2s;
+
+//       &:hover,
+//       &:focus {
+//         filter: brightness(0.92);
+//       }
+//     }
+//   }
+// }
+
+.icon-laptop {
+    color: $bespoke;
+    font-size: 23px;
+    background-color: transparent !important;
+}
+.icon-display {
+    color: $it;
+    font-size: 23px;
+}
+.icon-stats-bars {
+    color: $marketing;
+    font-size: 23px;
+}
+.icon-phone_in_talk {
+    color: $telecoms;
+    font-size: 23px;
+}
+.icon-embed2 {
+    color: $design;
+    font-size: 23px;
+}
+.icon-security {
+    color: $cyber;
+    font-size: 23px;
+}
+.icon-school {
+    color: $developer;
+    font-size: 23px;
+}
+.icon-paper-plane {
+    font-size: 23px;
+}
+.icon-mouse {
+    font-size: 23px;
+}
+}

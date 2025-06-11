@@ -1,3 +1,4 @@
+// TOP OF SECTION TITLES
 .news {
     background-color: $white;
     padding: 20px;
@@ -8,6 +9,8 @@
         margin-bottom: 16px;
     }
 }
+
+// News grid layout
 
 .news-grid {
     display: grid;
@@ -40,18 +43,7 @@
         max-width: 100%;
         height: auto;
         display: block;
-        margin: 0 auto 16px auto;
         object-fit: cover;
-    }
-
-    .news-icon {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        margin-bottom: 16px;
-        display: block;
-        align-self: stretch;
-        border: none;
     }
 
     h3 {
@@ -73,21 +65,30 @@
     }
 
     .btn {
-        margin-top: auto;
-        color: $white;
+        @include button(
+            $bg-color: #272936,
+            $hover-bg: #121318,
+            $padding: 0.5rem 0.5rem
+        );
+        text-transform: uppercase;
+        margin-right: 50%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+
+        // Ensure all buttons are the same height and aligned
+        min-height: 44px; // Set a minimum height for all buttons
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        font-size: 1.3rem;
-        padding: 8px 20px;
-        border-radius: 4px;
-        text-decoration: none;
-        transition: background 0.2s;
-        max-width: 40%;
-        height: 50px;
-        margin-left: 5%;
-        margin-bottom: 16px;
+        box-sizing: border-box;
+
+        @media (min-width: $brk-point-m) {
+            flex: 1;
+        }
+
+        .icon-arrow-right {
+            font-size: 16px;
+        }
     }
 }
 
@@ -112,9 +113,11 @@
     margin-top: auto;
     border-top: 1px solid $grey;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 16px 20px;
     flex-direction: row;
+    background-color: $white;
+    justify-content: flex-start; // Ensures items are aligned to the left
 }
 
 .news-logo {
@@ -123,6 +126,7 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 12px;
+    align-self: flex-start; // Aligns logo to the top/left of the flex container
 }
 
 .news-meta-text {

@@ -36,8 +36,39 @@ footer {
         flex-direction: column;
         justify-content: space-between;
 
+        @media (min-width: $brk-point-s) {
+            flex-direction: row;
+            
+            // Ensure logo and socials take full width, then links in 4 columns
+            .footer-logo {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .footer-social {
+                flex: 0 0 100%;
+                margin-bottom: 40px;
+            }
+
+            .footer-menus-grid {
+                flex: 1 1 100%;
+            }
+        }
+
         @media (min-width: $brk-point-m) {
             flex-direction: row;
+
+            .footer-logo {
+                flex: 0 0 50%;
+                max-width: 30%;
+                margin-bottom: 0;
+            }
+            
+            .footer-social {
+                flex: 0 0 100%;
+                margin-bottom: 100px;
+            }
 
             .footer-menus-grid {
                 flex: 1 1 0;
@@ -70,6 +101,16 @@ footer {
                 margin-bottom: 26px;
             }
 
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                margin-bottom: 8px;
+            }
+
             a {
                 color: $white;
                 text-decoration: none;
@@ -90,21 +131,39 @@ footer {
         }
     }
 
-    .footer-social-logos {
-        display: flex;
-        height: 48px;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+    .footer-social {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         gap: 0.1rem;
+        height: auto;
+        align-items: center;
+        justify-items: center;
         margin-bottom: 100px;
+        max-width: 200px; // Constrain the 2x2 grid size
+
+        @media (min-width: 480px) {
+            display: flex;
+            height: 48px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 0.1rem;
+            max-width: none;
+        }
 
         a {
-            flex: 0 0 10%;
-            max-width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: $white;
             font-size: 1.5rem;
             text-decoration: none;
+
+            @media (min-width: 480px) {
+                flex: 0 0 10%;
+                max-width: 45%;
+            }
 
             &:hover {
                 color: #ccc;
@@ -135,6 +194,9 @@ footer {
     margin-bottom: 10px;
     background-color: $secondary-dark !important;
     padding: 12px 22px 16px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-facebook {
@@ -154,22 +216,29 @@ footer {
     &:hover { background-color: $linkedin !important; }
 }
 
+// Footer bottom section styles
+// This section is styled to be responsive and maintain a consistent look across devices
+
 .footer-bottom {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     background-color: $secondary-dark !important;
+
+    .container {
+        margin-bottom: 0;
+    }
 
     .footer-bottom-content {
         display: flex;
         align-items: center;
-        padding-right: 5px;
-        margin-left: 0;
         width: 100%;
         
+        @media (min-width: $brk-point-s) {
+            padding: 15px 5px; // Responsive padding for smaller screens
+        }
+        
         @media (min-width: $brk-point-m) {
-            margin-left: 370px;
-    width: 100vw;
         }
 
         a {
