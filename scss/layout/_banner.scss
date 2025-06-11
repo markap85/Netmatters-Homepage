@@ -8,20 +8,20 @@
     align-items: center;
     justify-content: center;
 
-    &::before {
+    &::before { // Gradient Overlay over Image Banner
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to right , rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
         z-index: 1;
     }
 
     h1 {
         color: $white;
-        font-size: 64px;
+        font-size: 4rem;
         line-height: 80px;
         font-weight: 400;
         letter-spacing: 0.4px;
@@ -40,20 +40,19 @@
         color: $white;
     }
 
-    a {
-        background-color: $design-light;
-        color: $white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-        display: flex;
-        margin: 0 20%;
+        .btn {
+            @include button(
+                $bg-color: lighten(#926FB1, 8%),
+                $hover-bg: #926FB1
+            );
 
-        &:hover {
-            background-color: $design;
+            text-transform: uppercase;
+            
+            @media (min-width: $brk-point-m) {
+                flex: 1;
+            }
+        
         }
-    }
 
     .banner-content {
         position: relative;

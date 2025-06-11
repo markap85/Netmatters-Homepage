@@ -2,8 +2,6 @@
 // NAVIGATION STYLES
 // ===================================================================
 
-
-
 header {
     margin: 0;
     padding: 0;
@@ -32,69 +30,44 @@ header {
         align-items: center;
         justify-content: space-between;
 
-        a.btn {
+        .btn {
+            @include button(
+                $bg-color: #4285f4,
+                $hover-bg: #3367d6
+            );
+            // Optional: Add icon alignment for buttons with icons
             display: none;
-            margin-top: auto;
-            background: $design;
-            color: #fff;
-            padding: 15px 25px;
-            border-radius: 2px;
-            text-decoration: none;
-            text-transform: uppercase;
-
-            &:hover {
-                background: darken($design, 10%);
-            }
-
-            @media (min-width: $brk-point-m) {
-                display: block;
-            }
-        }
-    }
-
-    .primary,
-    .secondary {
-        display: flex;
-        align-items: center; // vertical centering
-        justify-content: center;
-        gap: 8px;
-        background-color: $it !important;
-        transition: background-color 0.3s;
-        font-size: 15px;
-        width: 149.5px;
-        height: 56px;
-        text-align: center !important;
-        font-weight: 400;
-        line-height: normal; // <-- fix: do not set to button height
-        padding: 0; // Remove default padding
-
-        // Remove margin from all children to avoid shifting
-        & > * {
-            margin: 0;
-            display: flex;
             align-items: center;
+            gap: 8px;
+            font-size: 20px;
+            width: 149.5px;
+            height: 56px;
+            text-align: center !important;
+            font-weight: 400;
+            line-height: normal;
+            padding: 0 25px;
             justify-content: center;
-            height: auto; // <-- fix: do not force 100%
+
+            .icon-mouse,
+            .icon-paper-plane {
+                font-size: 23px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: auto;
+            }
         }
 
-        // If using icon font classes, ensure they are flex-centered
-        .icon-mouse,
-        .icon-paper-plane {
-            font-size: 23px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto; // <-- fix: do not force 100%
+        @media (min-width: $brk-point-m) { // Show buttons on larger screens
+            .btn {
+                display: inline-flex;
+            }
         }
 
-        &.secondary {
+        .btn.secondary {
             background-color: #84858F !important;
-        }
-
-        &:hover {
-            background-color: darken($it, 10%) !important;
-
-            &.secondary {
+            &:hover,
+            &:focus {
                 background-color: darken(#84858F, 10%) !important;
             }
         }
@@ -711,4 +684,3 @@ header {
         }
     }
 }
-

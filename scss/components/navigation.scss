@@ -4,7 +4,7 @@
 
 // Mixin for nav item background color
 @mixin nav-item-bg($key) {
-  background-color: map-get($netmatters-colors, $key);
+  color: map-get($netmatters-colors, $key);
 }
 
 // Main nav items using color map

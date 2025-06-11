@@ -89,6 +89,7 @@ $instagram: #D93175;
   transition: $transition;
   user-select: none;
   vertical-align: middle;
+  text-transform: uppercase;
   
   &:hover:not(:disabled) {
     background-color: $hover-bg;
