@@ -1,0 +1,356 @@
+
+.nav-popout-bespoke {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px; // Added fixed height for debugging
+    background: $bespoke;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+// Show popout when any main nav item is hovered
+@media (min-width: $brk-point-m) {
+    .main-nav {
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-popout-bespoke {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $bespoke;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.bespoke:hover ~ .nav-popout-bespoke,
+    .nav-popout-bespoke:hover,
+    .nav-popout-bespoke:focus-within {
+        display: block !important;
+    }
+}
+
+.nav-popout-it {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px; // Added fixed height for debugging
+    background: $it;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+}
+
+@media (min-width: $brk-point-m) {
+    .main-nav {
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-popout-it {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $it;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.it:hover ~ .nav-popout-it,
+    .nav-popout-it:hover,
+    .nav-popout-it:focus-within {
+        display: block !important;
+    }
+}
+
+.nav-popout-marketing {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    background: $marketing; // <-- FIX: was $it, should be $marketing
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+@media (min-width: $brk-point-m) {
+    .main-nav {
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-popout-marketing {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $marketing; // <-- FIX: was $marketing in your code, keep as $marketing
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.marketing:hover ~ .nav-popout-marketing, // <-- FIX: was a.digital, should be a.marketing
+    .nav-popout-marketing:hover,
+    .nav-popout-marketing:focus-within {
+        display: block !important;
+    }
+}
+
+.nav-popout-telecoms {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    background: $telecoms;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+.nav-popout-design {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    background: $design;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+.nav-popout-cyber {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    background: $cyber;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+.nav-popout-developer {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    background: $developer;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+}
+
+@media (min-width: $brk-point-m) {
+    .main-nav {
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-popout-telecoms {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $telecoms;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.telecoms:hover ~ .nav-popout-telecoms,
+    .nav-popout-telecoms:hover,
+    .nav-popout-telecoms:focus-within {
+        display: block !important;
+    }
+
+    .nav-popout-design {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $design;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.design:hover ~ .nav-popout-design, // <-- FIX: was a.web, should be a.design
+    .nav-popout-design:hover,
+    .nav-popout-design:focus-within {
+        display: block !important;
+    }
+
+    .nav-popout-cyber {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $cyber;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.cyber:hover ~ .nav-popout-cyber,
+    .nav-popout-cyber:hover,
+    .nav-popout-cyber:focus-within {
+        display: block !important;
+    }
+
+    .nav-popout-developer {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        background: $developer;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        z-index: 1002;
+        padding: 20px 200px;
+        color: $white;
+    }
+    .main-nav-items > a.developer:hover ~ .nav-popout-developer,
+    .nav-popout-developer:hover,
+    .nav-popout-developer:focus-within {
+        display: block !important;
+    }
+}
+
+// Style for all nav-popout h1 and ul
+.nav-popout-bespoke,
+.nav-popout-it,
+.nav-popout-marketing,
+.nav-popout-telecoms,
+.nav-popout-design,
+.nav-popout-cyber,
+.nav-popout-developer {
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 24px;
+        color: $white;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: left; // Ensure h1 is left aligned
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid; // Use grid for columns
+        grid-template-columns: repeat(3, 1fr); // 4 columns
+        gap: 12px 32px; // row gap, column gap
+        align-items: flex-start;
+        text-align: left;
+        max-width: 100%; // Prevent overflow
+
+        @media (max-width: 1100px) {
+            grid-template-columns: repeat(2, 1fr); // 2 columns on smaller screens
+        }
+        @media (max-width: 700px) {
+            grid-template-columns: 1fr; // 1 column on mobile
+        }
+
+        li a {
+            color: $white !important;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 6px 0;
+            transition: text-decoration 0.2s, color 0.2s;
+            display: block;
+            word-break: break-word;
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+                color: #fffbe7 !important;
+            }
+        }
+    }
+}
+
+// Adjust height and padding for all nav popouts
+// This ensures that the popouts have enough space for content and padding
+// ===================================================================
+// NAV POPOUT STYLES
+
+.nav-popout-bespoke,
+.nav-popout-it,
+.nav-popout-marketing,
+.nav-popout-telecoms,
+.nav-popout-design,
+.nav-popout-cyber,
+.nav-popout-developer {
+    min-height: unset;
+    height: auto; // Let height adjust to content
+    padding-bottom: 50px; // Add padding to the bottom of the popout
+    padding-top: 20px; // Add padding to the top of the popout
+
+    @media (min-width: $brk-point-m) {
+        .main-nav {
+            position: relative;
+            z-index: 1001;
+        }
+        .nav-popout-bespoke,
+        .nav-popout-it,
+        .nav-popout-marketing,
+        .nav-popout-telecoms,
+        .nav-popout-design,
+        .nav-popout-cyber,
+        .nav-popout-developer {
+            min-height: unset;
+            height: auto; // Let height adjust to content
+        }
+    }
+}

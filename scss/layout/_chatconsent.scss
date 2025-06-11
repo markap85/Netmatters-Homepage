@@ -1,19 +1,20 @@
-.chat, .icon-chat, .consent {
+.chat-toggle, .icon-chat, .consent {
     color: $white;
 }
 
-.chat {
+.chat-toggle {
     position: fixed;
     width: 60px;
     height: 60px;
     bottom: 20px;
     right: 20px;
-    background-color: $primary-dark;
+    background-color: rgba($primary-dark, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    border: 0px solid transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     cursor: pointer;
 }

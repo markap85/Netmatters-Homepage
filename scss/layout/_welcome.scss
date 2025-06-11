@@ -67,21 +67,20 @@
     .stars-bar {
         display: flex;
         gap: 4px;
-        margin: 16px 0;
         
         .icon-star-full {
             color: $yellow;
-            font-size: 24px;
+            font-size: 50px;
         }
         
         .icon-star-empty {
             color: rgba($white, 0.3);
-            font-size: 24px;
+            font-size: 50px;
         }
     }
 
     // Welcome section buttons (Why Choose Us, Our Culture)
-    .welcome-links {
+    .welcome-links, .review-links {
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -96,69 +95,35 @@
                 $bg-color: #272936,
                 $hover-bg: #121318
             );
-
             text-transform: uppercase;
-            
+
             @media (min-width: $brk-point-m) {
                 flex: 1;
             }
-            
+
             .icon-arrow-right {
                 font-size: 16px;
             }
         }
-    }
 
-    // Review links with different styling
-    .review-links {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-top: auto;
+        // Used direct selector for modifier classes to avoid specificity issues
+        .btn--google {
+            background-color: #4285f4 !important;
+            color: #fff !important;
 
-        @media (min-width: $brk-point-m) {
-            flex-direction: row;
+            &:hover,
+            &:focus {
+                background-color: #3367d6 !important;
+            }
         }
 
-        .review-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            height: 50px;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            border: 2px solid transparent;
-                        text-transform: uppercase;
-            
-            @media (min-width: $brk-point-m) {
-                flex: 1;
-            }
-            
-            .icon-arrow-right {
-                font-size: 16px;
-            }
-            
-            // Google Reviews styling
-            &--google {
-                background-color: #4285f4;
-                color: white;
-                
-                &:hover {
-                    background-color: #3367d6;
-                }
-            }
-            
-            // Trustpilot styling
-            &--trustpilot {
-                background-color: #00b67a;
-                color: white;
-                
-                &:hover {
-                    background-color: #009a66;
-                }
+        .btn--trustpilot {
+            background-color: #00b67a !important;
+            color: #fff !important;
+
+            &:hover,
+            &:focus {
+                background-color: #009a66 !important;
             }
         }
     }
