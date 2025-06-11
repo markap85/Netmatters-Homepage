@@ -1,60 +1,30 @@
-.partners {
-    width: 100vw;
-    position: relative;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    padding: 32px 0;
-    overflow: hidden; // Ensures logos do not overflow the section
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 16px; // Add horizontal padding for smaller screens
-        box-sizing: border-box;
-    }
-}
-
-.partners-logos {
-    display: flex;
+.client-carousel {
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-    padding: 0 0; // Remove extra padding to prevent overflow
-
-    @media (max-width: 1200px) {
-        gap: 20px;
-    }
-    @media (max-width: 900px) {
-        gap: 12px;
-    }
-    @media (max-width: 768px) {
-        flex-wrap: wrap;
-        gap: 16px;
-        justify-content: center;
-    }
+    overflow: clip;
+    margin: 0;
+    padding: 50px 0;
+    background: white;
 }
 
-.partner-logo {
-    flex: 1 1 120px;
-    max-width: 160px;
-    height: 60px;
-    object-fit: contain;
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+  gap: 100px;
+
+
+
+}
+
+.carousel-track img {
+    width: auto;
+    height: 70px;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
     filter: grayscale(100%);
-    transition: filter 0.3s ease;
-    min-width: 80px;
-    width: 100%;
 
     &:hover {
-        filter: grayscale(0%);
+    filter: grayscale(0%);
     }
-
-    @media (max-width: 900px) {
-        max-width: 120px;
-        height: 48px;
     }
-    @media (max-width: 600px) {
-        max-width: 90px;
-        height: 36px;
-    }
-}
