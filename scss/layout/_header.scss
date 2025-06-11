@@ -36,7 +36,7 @@ header {
                 $hover-bg: #3367d6
             );
             // Optional: Add icon alignment for buttons with icons
-            display: none;
+            display: none !important; // Hide buttons by default on smaller screens
             align-items: center;
             gap: 8px;
             font-size: 20px;
@@ -60,7 +60,7 @@ header {
 
         @media (min-width: $brk-point-m) { // Show buttons on larger screens
             .btn {
-                display: inline-flex;
+                display: inline-flex !important; // Show buttons on larger screens
             }
         }
 
