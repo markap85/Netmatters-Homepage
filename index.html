@@ -4,400 +4,454 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
+        <meta name="robots" content="NOINDEX,NOFOLLOW">
         <meta name="description" content="Netmatters is a leading Bespoke Software, IT Support, and Digital Marketing company based in the East of England with offices in Cambridge, Wymondham, and Great Yarmouth.">
         <meta name="keywords" content="Netmatters, Bespoke Software, IT Support, Digital Marketing, East of England, Cambridge, Wymondham, Great Yarmouth">
-        <link rel="stylesheet" href="css/styles.css">
+        
+        <!-- Open Graph meta tags for social sharing -->
+        <meta property="og:title" content="Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters">
+        <meta property="og:description" content="Performance-driven digital and technology services with complete transparency">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.netmatters.co.uk">
+        
+        <!-- Twitter Card meta tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Full Service Digital Agency | Netmatters">
+        <meta name="twitter:description" content="Performance-driven digital and technology services with complete transparency">
+        
+        <link rel="stylesheet" href="./css/styles.css">
         <title>Full Service Digital Agency | Cambridgeshire &amp; Norfolk | Netmatters</title>
     </head>
 
     <body>
         <main>
-            <header>
+            <header role="banner">
                 <div class="container">
-
                     <div class="header-row">
                         <div class="logo">
-                            <a href="#"><img src="img/logos/nm-logo-dark.png" alt="Netmatters Logo"></a>
+                            <a href="/" aria-label="Netmatters home page">
+                                <img src="img/logos/nm-logo-dark.png" alt="Netmatters company logo">
+                            </a>
                         </div>
                         <div class="header-icons">
-                            <a href="#"><img src="img/icons/phone.svg" alt="Phone Icon" class="phoneicon"></a>
-                            <a href="#" class="btn primary icon-mouse"> Support</a>
-                            <a href="#" class="btn secondary icon-paper-plane"> Contact</a>
-                                <div class="search-bar-large">
-                                    <input type="text" placeholder="Search...">
-                                    <span class="icon-search"></span>
-                                </div>
-                            <span class="icon-menu"></span>
-                        </div> <!-- Closes .header-row -->
-                    </div> <!-- Closes .header-row -->
+                            <a href="tel:01603704020" aria-label="Call Netmatters">
+                                <img src="img/icons/phone.svg" alt="Phone" class="phoneicon">
+                            </a>
+                            <a href="/support" class="btn primary icon-mouse">Support</a>
+                            <a href="/contact" class="btn secondary icon-paper-plane">Contact</a>
+                            <div class="search-bar-large">
+                                <label for="main-search" class="sr-only">Search</label>
+                                <input type="text" id="main-search" placeholder="Search..." aria-label="Search Netmatters website">
+                                <span class="icon-search" aria-hidden="true"></span>
+                            </div>
+                            <button class="mobile-menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+                                <span class="icon-menu" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
                     <div class="mobile-search-bar">
-                        <input placeholder="Search...">
-                        <span class="icon-search"></span>
+                        <label for="mobile-search" class="sr-only">Search</label>
+                        <input type="text" id="mobile-search" placeholder="Search..." aria-label="Search Netmatters website">
+                        <span class="icon-search" aria-hidden="true"></span>
                     </div>
                 </div>
-                <nav class="main-nav">
+                
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
                     <div class="main-nav-items">
-                        <a href="#" class="bespoke">
-                            <span class="icon-laptop"></span> <br>
+                        <a href="/bespoke-software" class="bespoke">
+                            <span class="icon-laptop" aria-hidden="true"></span> <br>
                             <small>Bespoke</small> <br>
                             <strong>Software</strong>
                         </a>
-                        <a href="#" class="it">
-                            <span class="icon-display"></span> <br>
+                        <a href="/it-support" class="it">
+                            <span class="icon-display" aria-hidden="true"></span> <br>
                             <small>IT</small> <br>
                             <strong>Support</strong>
                         </a>
-                        <a href="#" class="digital">
-                            <span class="icon-stats-bars"></span> <br>
+                        <a href="/digital-marketing" class="marketing">
+                            <span class="icon-stats-bars" aria-hidden="true"></span> <br>
                             <small>Digital</small> <br>
                             <strong>Marketing</strong>
                         </a>
-                        <a href="#" class="telecoms">
-                            <span class="icon-phone_in_talk"></span> <br>
+                        <a href="/telecoms" class="telecoms">
+                            <span class="icon-phone_in_talk" aria-hidden="true"></span> <br>
                             <small>Telecoms</small> <br>
                             <strong>Services</strong>
                         </a>
-                        <a href="#" class="web">
-                            <span class="icon-embed2"></span> <br>
+                        <a href="/web-design" class="design">
+                            <span class="icon-embed2" aria-hidden="true"></span> <br>
                             <small>Web</small> <br>
                             <strong>Design</strong>
                         </a>
-                        <a href="#" class="cyber">
-                            <span class="icon-security"></span> <br>
+                        <a href="/cyber-security" class="cyber">
+                            <span class="icon-security" aria-hidden="true"></span> <br>
                             <small>Cyber</small> <br>
                             <strong>Security</strong>
                         </a>
-                        <a href="#" class="developer">
-                            <span class="icon-school"></span> <br>
+                        <a href="/developer-training" class="developer">
+                            <span class="icon-school" aria-hidden="true"></span> <br>
                             <small>Developer</small> <br>
                             <strong>Course</strong>
                         </a>
-                        <div class="nav-popout-bespoke">
-                            <h2>BESPOKE</h2>
-                            <ul>
-                                <li><a href="#">Bespoke CRM</a></li>
-                                <li><a href="#">Business Automation</a></li>
-                                <li><a href="#">Software Integrations</a></li>
-                                <li><a href="#">Mobile App Development</a></li>
+                        
+                        <!-- Navigation popouts with proper ARIA labels -->
+                        <div class="nav-popout-bespoke" role="menu" aria-labelledby="bespoke-nav">
+                            <h2 id="bespoke-nav">BESPOKE</h2>
+                            <ul role="none">
+                                <li><a href="/bespoke-crm" role="menuitem">Bespoke CRM</a></li>
+                                <li><a href="/business-automation" role="menuitem">Business Automation</a></li>
+                                <li><a href="/software-integrations" role="menuitem">Software Integrations</a></li>
+                                <li><a href="/mobile-app-development" role="menuitem">Mobile App Development</a></li>
                             </ul>
                         </div>
-                        <div class="nav-popout-it">
-                            <h2>IT SUPPORT</h2>
-                            <ul>
-                                <li><a href="#">Managed IT Support</a></li>
-                                <li><a href="#">Business IT Support</a></li>
-                                <li><a href="#">Office 365 for Business</a></li>
-                                <li><a href="#">IT Consultancy</a></li>
+                        <div class="nav-popout-it" role="menu" aria-labelledby="it-nav">
+                            <h2 id="it-nav">IT SUPPORT</h2>
+                            <ul role="none">
+                                <li><a href="/managed-it-support" role="menuitem">Managed IT Support</a></li>
+                                <li><a href="/business-it-support" role="menuitem">Business IT Support</a></li>
+                                <li><a href="/office-365" role="menuitem">Office 365 for Business</a></li>
+                                <li><a href="/it-consultancy" role="menuitem">IT Consultancy</a></li>
                             </ul>
                         </div>
-                        <div class="nav-popout-marketing">
-                            <h2>DIGITAL MARKETING</h2>
-                            <ul>
-                                <li><a href="#">Search Engine Optimisation (SEO)</a></li>
-                                <li><a href="#">Pay Per Click Advertising (PPC)</a></li>
-                                <li><a href="#">Conversion Rate Optimisation (CRO)</a></li>
-                                <li><a href="#">Email Marketing</a></li>
+                        <div class="nav-popout-marketing" role="menu" aria-labelledby="marketing-nav">
+                            <h2 id="marketing-nav">DIGITAL MARKETING</h2>
+                            <ul role="none">
+                                <li><a href="/seo" role="menuitem">Search Engine Optimisation (SEO)</a></li>
+                                <li><a href="/ppc" role="menuitem">Pay Per Click Advertising (PPC)</a></li>
+                                <li><a href="/cro" role="menuitem">Conversion Rate Optimisation (CRO)</a></li>
+                                <li><a href="/email-marketing" role="menuitem">Email Marketing</a></li>
                             </ul>
                         </div>
-                        <div class="nav-popout-telecoms">
-                            <h2>TELECOMS</h2>
-                            <ul>
-                                <li><a href="#">Business Mobile</a></li>
-                                <li><a href="#">Hosted VoIP Provider</a></li>
-                                <li><a href="#">Business VoIP Systems</a></li>
-                                <li><a href="#">Business Broadband</a></li>
+                        <div class="nav-popout-telecoms" role="menu" aria-labelledby="telecoms-nav">
+                            <h2 id="telecoms-nav">TELECOMS</h2>
+                            <ul role="none">
+                                <li><a href="/business-mobile" role="menuitem">Business Mobile</a></li>
+                                <li><a href="/hosted-voip" role="menuitem">Hosted VoIP Provider</a></li>
+                                <li><a href="/business-voip" role="menuitem">Business VoIP Systems</a></li>
+                                <li><a href="/business-broadband" role="menuitem">Business Broadband</a></li>
                             </ul>
                         </div>
-                        <div class="nav-popout-design">
-                            <h2>WEB DESIGN</h2>
-                            <ul>
-                                <li><a href="#">Bespoke Website Design</a></li>
-                                <li><a href="#">eCommerce Website Design</a></li>
-                                <li><a href="#">Pay Monthly Websites</a></li>
-                                <li><a href="#">Branding & Design</a></li>
+                        <div class="nav-popout-design" role="menu" aria-labelledby="design-nav">
+                            <h2 id="design-nav">WEB DESIGN</h2>
+                            <ul role="none">
+                                <li><a href="/bespoke-website-design" role="menuitem">Bespoke Website Design</a></li>
+                                <li><a href="/ecommerce-design" role="menuitem">eCommerce Website Design</a></li>
+                                <li><a href="/pay-monthly-websites" role="menuitem">Pay Monthly Websites</a></li>
+                                <li><a href="/branding-design" role="menuitem">Branding & Design</a></li>
                             </ul>
                         </div>
-                        <div class="nav-popout-cyber">
-                            <h2>CYBER SECURITY</h2>
-                            <ul>
-                                <li><a href="#">Cyber Security Assessment</a></li>
-                                <li><a href="#">Cyber Security Management</a></li>
-                                <li><a href="#">Cyber Penetration Testing</a></li>
-                                <li><a href="#">Cyber Essentials Certification</a></li>
+                        <div class="nav-popout-cyber" role="menu" aria-labelledby="cyber-nav">
+                            <h2 id="cyber-nav">CYBER SECURITY</h2>
+                            <ul role="none">
+                                <li><a href="/cyber-assessment" role="menuitem">Cyber Security Assessment</a></li>
+                                <li><a href="/cyber-management" role="menuitem">Cyber Security Management</a></li>
+                                <li><a href="/penetration-testing" role="menuitem">Cyber Penetration Testing</a></li>
+                                <li><a href="/cyber-essentials" role="menuitem">Cyber Essentials Certification</a></li>
                             </ul>
                         </div>
-                        <div class="nav-popout-developer">
-                            <h2>DEVELOPER TRAINING</h2>
-                            <ul>
-                                <li><a href="#">Train For A Career In Tech</a></li>
-                                <li><a href="#">Skills Bootcamp</a></li>
-                                <li><a href="#">Scion Scheme Frequently Asked Questions</a></li>
-                                <li><a href="#">Scion Collaborators</a></li>
+                        <div class="nav-popout-developer" role="menu" aria-labelledby="developer-nav">
+                            <h2 id="developer-nav">DEVELOPER TRAINING</h2>
+                            <ul role="none">
+                                <li><a href="/career-training" role="menuitem">Train For A Career In Tech</a></li>
+                                <li><a href="/skills-bootcamp" role="menuitem">Skills Bootcamp</a></li>
+                                <li><a href="/scion-faq" role="menuitem">Scion Scheme Frequently Asked Questions</a></li>
+                                <li><a href="/scion-collaborators" role="menuitem">Scion Collaborators</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
             </header>
 
-            <div class="banner">
+            <section class="banner" aria-labelledby="hero-heading">
                 <div class="container">
                     <div class="banner-content">
-                        <h1>The East Of England's Leading Technology Company</h1>
+                        <h1 id="hero-heading">The East Of England's Leading Technology Company</h1>
                         <p class="subtext">Performance-driven digital and technology services with complete transparency</p>
-                        <a href="#">Why Choose Us?</a>
+                        <a href="/why-choose-us" class="cta-link">Why Choose Us?</a>
                     </div>
                 </div>                    
-            </div>
+            </section>
 
-            <div class="services">
+            <section class="services" aria-labelledby="services-heading">
                 <div class="container">
-                    <div class="services-title">
-                        <h2>Our Services</h2>
-                        <a href="" class="viewourwork">View Our Work</a>
-                    </div>
+                    <header class="services-title">
+                        <h2 id="services-heading">Our Services</h2>
+                        <a href="/our-work" class="view-our-work">View Our Work</a>
+                    </header>
 
                     <div class="services-grid">
-                        <div class="service-item bespoke-hover">
-                            <span class="icon-laptop"></span>
+                        <article class="service-item bespoke-hover">
+                            <span class="icon-laptop" aria-hidden="true"></span>
                             <h3>Bespoke Software</h3>
                             <p>Bespoke software solutions for all your business needs including integrations and reporting.</p>
-                            <a href="#" class="service-item__link--bespoke">Read More</a>
-                        </div>
-                        <div class="service-item it-hover">
-                            <span class="icon-display"></span>
+                            <a href="/bespoke-software" class="service-item__link service-item__link--bespoke">Read More</a>
+                        </article>
+                        <article class="service-item it-hover">
+                            <span class="icon-display" aria-hidden="true"></span>
                             <h3>IT Support</h3>
                             <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
-                            <a href="#" class="service-item__link--it">Read More</a>
-                        </div>
-                        <div class="service-item digital-hover">
-                            <span class="icon-stats-bars"></span>
+                            <a href="/it-support" class="service-item__link service-item__link--it">Read More</a>
+                        </article>
+                        <article class="service-item digital-hover">
+                            <span class="icon-stats-bars" aria-hidden="true"></span>
                             <h3>Digital Marketing</h3>
                             <p>Driven brand awareness &amp; ROI through creative digital marketing campaigns.</p>
-                            <a href="#" class="service-item__link--digital">Read More</a>
-                        </div>
-                    </div> <!-- closes .services-grid -->
+                            <a href="/digital-marketing" class="service-item__link service-item__link--digital">Read More</a>
+                        </article>
+                    </div>
 
-                    <div class="services-grid-Sub">
-                        <div class="service-item telecoms-hover">
-                            <span class="icon-phone_in_talk"></span>
+                    <div class="services-grid-sub">
+                        <article class="service-item telecoms-hover">
+                            <span class="icon-phone_in_talk" aria-hidden="true"></span>
                             <h3>Telecoms Services</h3>
                             <p>Business telephony solutions including mobile &amp; connectivity solutions.</p>
-                            <a href="#" class="service-item__link--telecoms">Read More</a>
-                        </div>
-                        <div class="service-item web-hover">
-                            <span class="icon-embed2"></span>
+                            <a href="/telecoms" class="service-item__link service-item__link--telecoms">Read More</a>
+                        </article>
+                        <article class="service-item web-hover">
+                            <span class="icon-embed2" aria-hidden="true"></span>
                             <h3>Web Design</h3>
                             <p>User-centric design for businesses looking to make a lasting impression.</p>
-                            <a href="#" class="service-item__link--web">Read More</a>
-                        </div>
-                        <div class="service-item cyber-hover">
-                            <span class="icon-security"></span>
+                            <a href="/web-design" class="service-item__link service-item__link--web">Read More</a>
+                        </article>
+                        <article class="service-item cyber-hover">
+                            <span class="icon-security" aria-hidden="true"></span>
                             <h3>Cyber Security</h3>
                             <p>Prevention, testing, consultancy &amp; breach management services.</p>
-                            <a href="#" class="service-item__link--cyber">Read More</a>
-                        </div>
-                        <div class="service-item developer-hover">
-                            <span class="icon-school"></span>
+                            <a href="/cyber-security" class="service-item__link service-item__link--cyber">Read More</a>
+                        </article>
+                        <article class="service-item developer-hover">
+                            <span class="icon-school" aria-hidden="true"></span>
                             <h3>Developer Training</h3>
-                            <p>Web design & software training courses designed to secure a job in tech.</p>
-                            <a href="#" class="service-item__link--developer">Read More</a>
-                        </div>
+                            <p>Web design &amp; software training courses designed to secure a job in tech.</p>
+                            <a href="/developer-training" class="service-item__link service-item__link--developer">Read More</a>
+                        </article>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="partners">
-                    <img src="img/PartnerLogos/ClientLogo4.jpeg" alt="" class="partner-logo">
-                    <img src="img/PartnerLogos/ClientLogo5.png" alt="" class="partner-logo">
-                    <img src="img/PartnerLogos/iso-27001.png" alt="" class="partner-logo">
-                    <img src="img/PartnerLogos/PPC_logo.jpg" alt="" class="partner-logo">
-                    <img src="img/PartnerLogos/princess-royal-training.png" alt="" class="partner-logo"> 
-            </div>
-
-            <div class="welcome-grid container">
-                <div class="welcome-section">
-                    <div class="welcome-grid-item">
-                        <h2>Welcome To Netmatters</h2>
-                        <p class="bold">Netmatters is a leading Bespoke Software, IT Support, and Digital Marketing company based in the East of England with offices in Cambridge, Wymondham, and Great Yarmouth.</p>
-                        <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
-                        <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
-                        <div class="welcome-links">
-                            <a href="#" class="btn color-primary">Why Choose Us?<span class="icon-arrow-right"></span></a> <br>
-                            <a href="#" class="btn color-primary">Our Culture<span class="icon-arrow-right"></span></a>
-                        </div>
-                    </div>
-                    <div class="welcome-grid-item">
-                        <h2>What Our Clients Think</h2>
-                        <div class="starsbar">
-                            <span class="icon-star-full"></span>
-                            <span class="icon-star-full"></span>
-                            <span class="icon-star-full"></span>
-                            <span class="icon-star-full"></span>
-                            <span class="icon-star-full"></span>
-                            <span class="icon-star-empty"></span>
-                        </div>
-                        <p class="bold">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</p>
-                        <p>Eleanor Bishop, Head of Marketing - <span class="bold">Ashcroft Partnership LLP</span></p>
-                        <div class="review-links">
-                            <a href="#" class="color-secondary">Google Reviews<span class="icon-arrow-right"></span></a> <br>
-                            <a href="#" class="color-accent">Trustpilot Reviews<span class="icon-arrow-right"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news">
+            <section class="partners" aria-labelledby="partners-heading">
                 <div class="container">
-                    <div class="services-title">
-                        <h2>Latest News</h2>
-                        <a href="#" class="viewourwork">View All</a>
+                    <h2 id="partners-heading" class="sr-only">Our Partners and Certifications</h2>
+                    <div class="partners-logos">
+                        <img src="img/PartnerLogos/ClientLogo4.jpeg" alt="Microsoft Partner certification logo" class="partner-logo" loading="lazy">
+                        <img src="img/PartnerLogos/ClientLogo5.png" alt="Google Partner certification logo" class="partner-logo" loading="lazy">
+                        <img src="img/PartnerLogos/iso-27001.png" alt="ISO 27001 Information Security Management certification logo" class="partner-logo" loading="lazy">
+                        <img src="img/PartnerLogos/PPC_logo.jpg" alt="Pay Per Click certification logo" class="partner-logo" loading="lazy">
+                        <img src="img/PartnerLogos/princess-royal-training.png" alt="Princess Royal Training Award logo" class="partner-logo" loading="lazy">
                     </div>
-                    <div class="news-grid">
-                        <div class="news-item">
-                            <p class="tag-bespoke">News</p>
-                            <img src="img/News/april-notables-2025-A2Np.webp" alt="News Image">
-                            <h3>April Notables 2025 - Celebrating Our Team</h3>
-                            <p>April Notables 2025 At Netmatters, we’re passionate about celebrating the people who make our succes...</p>
-                            <a href="#" class="btn-yellow">Read More</a>
-                            <div class="postedby">
-                                <img src="img/logos/NetmattersSmallLogoM.webp" alt="" class="news-logo">
-                                <div class="postedby-text">
-                                    <strong>Posted By Netmatters</strong>
-                                    <p>7th May 2025</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-item">
-                            <p class="tag-developer">News</p>
-                            <img src="img/News/netmatters-achieves-kings-lGCo.webp" alt="News Image">
-                            <h3>Netmatters Achieves King’s Award for Enterpr...</h3>
-                            <p>Netmatters is honoured to have been presented with a King’s Award for Enterprise for Promoting Oppor...</p>
-                            <a href="#" class="btn-orange">Read More</a>
-                            <div class="postedby">
-                                <img src="img/logos/NetmattersSmallLogoM.webp" alt="" class="news-logo">
-                                <div class="postedby-text">
-                                    <strong>Posted By Netmatters</strong>
-                                    <p>7th May 2025</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-item">
-                            <p class="tag-it">News</p>
-                            <img src="img/News/april-notables-2025-A2Np.png" alt="News Image">
-                            <h3>Case Study: Enhancing Security and Reducing C...</h3>
-                            <p>Who Is The Client? Greg Rowe Limited is a leading UK-based tap design and manufacturing company that...</p>
-                            <a href="#" class="btn-blue">Read More</a>
-                            <div class="postedby">
-                                <img src="img/logos/NetmattersSmallLogoM.webp" alt="" class="news-logo">
-                                <div class="postedby-text">
-                                    <strong>Posted By Netmatters</strong>
-                                    <p>7th May 2025</p>
-                                </div>
-                            </div>
-                        </div> <!-- Missing closing tag added here -->
-                    </div> <!-- closes .news-grid -->
                 </div>
-            </div>
+            </section>
 
-            <div class="clients">
-                    <img src="img/ClientLogos/beat_logo.png" alt="" class="clients-logos">
-                    <img src="img/ClientLogos/black_swan_logo.png" alt="" class="clients-logos">
-                    <img src="img/ClientLogos/girl_guides_anglia.png" alt="" class="clients-logos">
-                    <img src="img/ClientLogos/howespercivallogo.png" alt="" class="clients-logos">
-                    <img src="img/ClientLogos/searles_logo.jpg" alt="" class="clients-logos">
-            </div>
+            <section class="welcome-section" aria-labelledby="welcome-heading">
+                <div class="container">
+                    <div class="welcome-grid">
+                        <article class="welcome-grid-item">
+                            <h2 id="welcome-heading">Welcome To Netmatters</h2>
+                            <p class="bold">Netmatters is a leading Bespoke Software, IT Support, and Digital Marketing company based in the East of England with offices in Cambridge, Wymondham, and Great Yarmouth.</p>
+                            <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
+                            <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
+                            <div class="welcome-links">
+                                <a href="/why-choose-us" class="btn btn--primary">Why Choose Us?<span class="icon-arrow-right" aria-hidden="true"></span></a>
+                                <a href="/our-culture" class="btn btn--primary">Our Culture<span class="icon-arrow-right" aria-hidden="true"></span></a>
+                            </div>
+                        </article>
+                        <article class="welcome-grid-item">
+                            <h2>What Our Clients Think</h2>
+                            <div class="stars-bar" role="img" aria-label="5 out of 6 stars rating">
+                                <span class="icon-star-full" aria-hidden="true"></span>
+                                <span class="icon-star-full" aria-hidden="true"></span>
+                                <span class="icon-star-full" aria-hidden="true"></span>
+                                <span class="icon-star-full" aria-hidden="true"></span>
+                                <span class="icon-star-full" aria-hidden="true"></span>
+                                <span class="icon-star-empty" aria-hidden="true"></span>
+                            </div>
+                            <blockquote>
+                                <p class="bold">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</p>
+                                <cite>Eleanor Bishop, Head of Marketing - <span class="bold">Ashcroft Partnership LLP</span></cite>
+                            </blockquote>
+                            <div class="review-links">
+                                <a href="https://www.google.com/search?q=netmatters+reviews" class="review-link review-link--google">Google Reviews<span class="icon-arrow-right" aria-hidden="true"></span></a>
+                                <a href="https://www.trustpilot.com/review/netmatters.co.uk" class="review-link review-link--trustpilot">Trustpilot Reviews<span class="icon-arrow-right" aria-hidden="true"></span></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news" aria-labelledby="news-heading">
+                <div class="container">
+                    <header class="services-title">
+                        <h2 id="news-heading">Latest News</h2>
+                        <a href="/news" class="view-our-work">View All</a>
+                    </header>
+                    <div class="news-grid">
+                        <article class="news-item">
+                            <span class="tag tag--bespoke">News</span>
+                            <img src="img/News/april-notables-2025-A2Np.webp" alt="Team celebration at Netmatters April 2025 notable achievements event" loading="lazy">
+                            <h3>April Notables 2025 - Celebrating Our Team</h3>
+                            <p>April Notables 2025 At Netmatters, we're passionate about celebrating the people who make our success...</p>
+                            <a href="/news/april-notables-2025" class="btn btn--yellow">Read More</a>
+                            <footer class="news-meta">
+                                <img src="img/logos/NetmattersSmallLogoM.webp" alt="Netmatters logo" class="news-logo">
+                                <div class="news-meta-text">
+                                    <strong>Posted By Netmatters</strong>
+                                    <time datetime="2025-05-07">7th May 2025</time>
+                                </div>
+                            </footer>
+                        </article>
+                        <article class="news-item">
+                            <span class="tag tag--developer">News</span>
+                            <img src="img/News/netmatters-achieves-kings-lGCo.webp" alt="Netmatters team celebrating King's Award for Enterprise achievement" loading="lazy">
+                            <h3>Netmatters Achieves King's Award for Enterprise...</h3>
+                            <p>Netmatters is honoured to have been presented with a King's Award for Enterprise for Promoting Opportunity...</p>
+                            <a href="/news/kings-award" class="btn btn--orange">Read More</a>
+                            <footer class="news-meta">
+                                <img src="img/logos/NetmattersSmallLogoM.webp" alt="Netmatters logo" class="news-logo">
+                                <div class="news-meta-text">
+                                    <strong>Posted By Netmatters</strong>
+                                    <time datetime="2025-05-07">7th May 2025</time>
+                                </div>
+                            </footer>
+                        </article>
+                        <article class="news-item">
+                            <span class="tag tag--it">News</span>
+                            <img src="img/News/april-notables-2025-A2Np.png" alt="Case study showcasing security enhancement project results" loading="lazy">
+                            <h3>Case Study: Enhancing Security and Reducing Costs...</h3>
+                            <p>Who Is The Client? Greg Rowe Limited is a leading UK-based tap design and manufacturing company that...</p>
+                            <a href="/case-studies/greg-rowe-security" class="btn btn--blue">Read More</a>
+                            <footer class="news-meta">
+                                <img src="img/logos/NetmattersSmallLogoM.webp" alt="Netmatters logo" class="news-logo">
+                                <div class="news-meta-text">
+                                    <strong>Posted By Netmatters</strong>
+                                    <time datetime="2025-05-07">7th May 2025</time>
+                                </div>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="clients" aria-labelledby="clients-heading">
+                <div class="container">
+                    <h2 id="clients-heading" class="sr-only">Our Clients</h2>
+                    <div class="clients-logos">
+                        <img src="img/ClientLogos/beat_logo.png" alt="Beat client logo" class="client-logo" loading="lazy">
+                        <img src="img/ClientLogos/black_swan_logo.png" alt="Black Swan client logo" class="client-logo" loading="lazy">
+                        <img src="img/ClientLogos/girl_guides_anglia.png" alt="Girl Guides Anglia client logo" class="client-logo" loading="lazy">
+                        <img src="img/ClientLogos/howespercivallogo.png" alt="Howes Percival client logo" class="client-logo" loading="lazy">
+                        <img src="img/ClientLogos/searles_logo.jpg" alt="Searles client logo" class="client-logo" loading="lazy">
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <footer>
+        <footer role="contentinfo">
             <div class="container">
                 <div class="footer-row">
-
                     <div class="footer-logo">
-                        <img src="img/logos/nm-logo-white-med.png" alt="Netmatters Logo">
+                        <img src="img/logos/nm-logo-white-med.png" alt="Netmatters white logo">
                         <h4>Follow Us On:</h4>
-                        <div class="footer-social-logos">
-                            <a href="#"><span class="icon-facebook"></span></a>
-                            <a href="#"><span class="icon-linkedin"></span></a>
-                            <a href="#"><span class="icon-x"></span></a>
-                            <a href="#"><span class="icon-instagram"></span></a>
-                        </div>
+                        <nav class="footer-social" aria-label="Social media links">
+                            <a href="https://www.facebook.com/netmatters" aria-label="Follow us on Facebook">
+                                <span class="icon-facebook" aria-hidden="true"></span>
+                            </a>
+                            <a href="https://www.linkedin.com/company/netmatters" aria-label="Follow us on LinkedIn">
+                                <span class="icon-linkedin" aria-hidden="true"></span>
+                            </a>
+                            <a href="https://twitter.com/netmatters" aria-label="Follow us on X (formerly Twitter)">
+                                <span class="icon-x" aria-hidden="true"></span>
+                            </a>
+                            <a href="https://www.instagram.com/netmatters" aria-label="Follow us on Instagram">
+                                <span class="icon-instagram" aria-hidden="true"></span>
+                            </a>
+                        </nav>
                     </div>
 
-                    <div class="footer-menus-grid">
+                    <nav class="footer-menus-grid" aria-label="Footer navigation">
                         <div class="footer-menus-grid-item">
                             <h4>About Netmatters</h4>
                             <ul>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Our Careers</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Cookie Policy</a></li>
-                                <li><a href="#">Data Retention</a></li>
-                                <li><a href="#">CCTV Policy</a></li>
-                                <li><a href="#">Environmental Policy</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
+                                <li><a href="/news">News</a></li>
+                                <li><a href="/careers">Our Careers</a></li>
+                                <li><a href="/team">Our Team</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/cookie-policy">Cookie Policy</a></li>
+                                <li><a href="/data-retention">Data Retention</a></li>
+                                <li><a href="/cctv-policy">CCTV Policy</a></li>
+                                <li><a href="/environmental-policy">Environmental Policy</a></li>
+                                <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
                             </ul>
                         </div>
 
                         <div class="footer-menus-grid-item">
                             <h4>Our Services</h4>
                             <ul>
-                                <li><a href="#">Bespoke Software</a></li>
-                                <li><a href="#">IT support</a></li>
-                                <li><a href="#">Digital Marketing</a></li>
-                                <li><a href="#">Telecoms Services</a></li>
-                                <li><a href="#">Web Design</a></li>
-                                <li><a href="#">Cyber Security</a></li>
-                                <li><a href="#">Developer Training</a></li>
+                                <li><a href="/bespoke-software">Bespoke Software</a></li>
+                                <li><a href="/it-support">IT Support</a></li>
+                                <li><a href="/digital-marketing">Digital Marketing</a></li>
+                                <li><a href="/telecoms">Telecoms Services</a></li>
+                                <li><a href="/web-design">Web Design</a></li>
+                                <li><a href="/cyber-security">Cyber Security</a></li>
+                                <li><a href="/developer-training">Developer Training</a></li>
                             </ul>
                         </div>
 
                         <div class="footer-menus-grid-item">
                             <h4>Our Industries</h4>
                             <ul>
-                                <li><a href="#">Financial Services</a></li>
-                                <li><a href="#">Construction</a></li>
-                                <li><a href="#">Retail & E-Commerce</a></li>
-                                <li><a href="#">Non-Profits</a></li>
-                                <li><a href="#">SME's</a></li>
-                                <li><a href="#">Healthcare</a></li>
-                                <li><a href="#">Education & Training</a></li>
-                                <li><a href="#">Travel & Leisure</a></li>
-                                <li><a href="#">Manufacturing & Offshore</a></li>
+                                <li><a href="/industries/financial-services">Financial Services</a></li>
+                                <li><a href="/industries/construction">Construction</a></li>
+                                <li><a href="/industries/retail-ecommerce">Retail & E-Commerce</a></li>
+                                <li><a href="/industries/non-profits">Non-Profits</a></li>
+                                <li><a href="/industries/sme">SME's</a></li>
+                                <li><a href="/industries/healthcare">Healthcare</a></li>
+                                <li><a href="/industries/education">Education & Training</a></li>
+                                <li><a href="/industries/travel-leisure">Travel & Leisure</a></li>
+                                <li><a href="/industries/manufacturing">Manufacturing & Offshore</a></li>
                             </ul>
                         </div>
 
                         <div class="footer-menus-grid-item">
                             <h4>Locations</h4>
                             <ul>
-                                <li><a href="#">Cambridge Office</a></li>
-                                <li><a href="#">Wymondham Office</a></li>
-                                <li><a href="#">Great Yarmouth Office</a></li>
+                                <li><a href="/locations/cambridge">Cambridge Office</a></li>
+                                <li><a href="/locations/wymondham">Wymondham Office</a></li>
+                                <li><a href="/locations/great-yarmouth">Great Yarmouth Office</a></li>
                             </ul>                        
                         </div>                    
-                    </div>
+                    </nav>
                 </div>
             </div>
 
-
-                <div class="footer-bottom">
-                    <div class="footer-bottom-content">
-                        <p>&#169; Copyright Netmatters 2025.</p>
-                        <p>All rights reserved. - </p>
-                        <p><a href="#">Sitemap</a></p>
-                    </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; Copyright Netmatters <time datetime="2025">2025</time>. All rights reserved. - <a href="/sitemap">Sitemap</a></p>
                 </div>
+            </div>
 
-                <div class="chat">
-                    <span class="icon-chat"></span>
-                </div>
+            <button class="chat-toggle" aria-label="Open chat support">
+                <span class="icon-chat" aria-hidden="true"></span>
+            </button>
 
-                <div class="consent">
-                    <p>Manage Consent</p>
-                </div>
-
+            <button class="consent-toggle" aria-label="Manage cookie consent">
+                <span>Manage Consent</span>
+            </button>
         </footer>
+
+        <!-- Screen reader only styles should be added to CSS -->
+        <style>
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+        </style>
     </body>
 </html>

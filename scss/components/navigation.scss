@@ -1,0 +1,28 @@
+// ===================================================================
+// NAVIGATION STYLES
+// ===================================================================
+
+// Mixin for nav item background color
+@mixin nav-item-bg($key) {
+  background-color: map-get($netmatters-colors, $key);
+}
+
+// Main nav items using color map
+.main-nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  // ...existing nav styles...
+
+  // Generate color classes for each nav item
+  @each $key, $color in $netmatters-colors {
+    .#{$key} {
+      @include nav-item-bg($key);
+      // ...add any other shared nav item styles here...
+      color: #fff;
+      // Example hover effect
+      &:hover {
+        filter: brightness(0.92);
+      }
+    }
+  }
+}

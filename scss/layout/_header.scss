@@ -1,3 +1,9 @@
+// ===================================================================
+// NAVIGATION STYLES
+// ===================================================================
+
+
+
 header {
     margin: 0;
     padding: 0;
@@ -98,6 +104,25 @@ header {
         display: flex;
         align-items: center;
         gap: 10px;
+
+        img {
+            width: 402px;
+            height: 70px;
+            max-width: 100%;
+            max-height: 70px;
+            object-fit: contain;
+            display: block;
+        }
+    }
+
+    // Ensure the Netmatters header logo is always 402x70px
+    .logo img {
+        width: 402px !important;
+        height: 70px !important;
+        max-width: 402px !important;
+        max-height: 70px !important;
+        object-fit: contain;
+        display: block;
     }
 
     .header-icons {
@@ -129,7 +154,7 @@ header {
 
             .icon-search {
                 background: #999AA2;
-                border-radius: 2px;
+                border-radius: 0 2px 2px 0;
                 width: 55px;
                 height: 55px;
                 display: flex;
@@ -140,6 +165,7 @@ header {
 
                 &:hover {
                     background: darken(#999AA2, 10%);
+                    cursor: pointer;
                 }
             }
         }
@@ -147,7 +173,7 @@ header {
 
     .icon-menu {
         background: #333645;
-        border-radius: 2px;
+        border-radius: 5px;
         width: 55px;
         height: 55px;
         display: flex;
@@ -156,6 +182,10 @@ header {
         color: white;
         font-size: 1.5rem;
         margin-top: 10px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     img {
@@ -212,82 +242,40 @@ header {
     }
 
 .main-nav-items {
-    width: 90vw;
-    max-width: 1260px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%; // Fill the height of .main-nav
-    display: flex;
-    align-items: center; // Make children fill height
+  width: 90vw;
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%; // Fill the height of .main-nav
+  display: flex;
+  align-items: center; // Make children fill height
+  justify-content: center;
+
+  > a {
+    display: block;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    // Remove old &.bespoke, &.it, etc. rules
+  }
 
-    > a {
-        display: block; // Use flex for centering
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
+  // Generate color classes for each nav item
+  @each $key, $color in $netmatters-colors {
+    .#{$key} {
+      @include nav-item-col($key);
+      color: #fff;
+      transition: filter 0.2s, background-color 0.2s;
 
-        &.bespoke:hover,
-        &.bespoke:focus {
-            background: $bespoke;
-
-            .icon-laptop {
-                color: $white;
-            }
-        }
-        &.it:hover,
-        &.it:focus {
-            background: $it;
-
-            .icon-display {
-                color: $white;
-            }
-        }
-        &.digital:hover,
-        &.digital:focus {
-            background: $marketing;
-
-            .icon-stats-bars {
-                color: $white;
-            }
-        }
-        &.telecoms:hover,
-        &.telecoms:focus {
-            background: $telecoms;
-
-            .icon-phone_in_talk {
-                color: $white;
-            }
-        }
-        &.web:hover,
-        &.web:focus {
-            background: $design;
-
-            .icon-embed2 {
-                color: $white;
-            }
-        }
-        &.cyber:hover,
-        &.cyber:focus {
-            background: $cyber;
-
-            .icon-security {
-                color: $white;
-            }
-        }
-        &.developer:hover,
-        &.developer:focus {
-            background: $developer;
-            
-            .icon-school {
-            color: $white;
-            }
-        }
+      &:hover,
+      &:focus {
+        filter: brightness(0.92);
+      }
     }
+  }
 }
 
 .search-bar {
@@ -317,6 +305,10 @@ header {
         justify-content: center;
         color: white;
         font-size: 1.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     @media (min-width: $brk-point-s) {
@@ -719,3 +711,4 @@ header {
         }
     }
 }
+

@@ -9,29 +9,33 @@
         color: $primary-dark;
         margin-bottom: 16px;
         text-decoration: none;
+        margin-top: 26.56px;
     }
 
     a {
-        margin-top: 26.56px;
-
         &:hover {
             text-decoration: underline;
         }
     }
 
-    .viewourwork {
-        display: none;
+.viewourwork {
+    display: none;
 
-        @media (min-width: $brk-point-s) {
-            display: block;
-        }
+    @media (min-width: $brk-point-s) {
+        display: block;
     }
 }
 
+.viewourwork::after {
+    content: "  →";
+}
+}
+
 .services-grid,
-.services-grid-Sub {
+.services-grid-sub {
     width: 100%;
     display: grid;
+    grid-template-columns: 1fr; // Single column by default
     gap: 32px;
     margin: 32px 0;
 
@@ -56,18 +60,16 @@
     .icon-school { font-size: 20px; background-color: $developer !important; }
 
     @media (min-width: $brk-point-m) {
-        & {
-            grid-template-columns: repeat(3, 1fr);
-        }
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-.services-grid-Sub {
+.services-grid-sub {
     @media (min-width: $brk-point-m) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-        @media (min-width: $brk-point-l) {
+    @media (min-width: $brk-point-l) {
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -123,10 +125,6 @@
         &.service-item__link--cyber { background: $cyber; }
         &.service-item__link--developer { background: $telecoms; }
     }
-}
-
-.viewourwork::after {
-    content: "  →";
 }
 
 // Hover states for service items

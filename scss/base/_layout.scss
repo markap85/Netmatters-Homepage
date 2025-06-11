@@ -9,23 +9,42 @@
 }
 
 .container {
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+    width: 100%;
+    max-width: 100%;
 
+    /* Small tablets and large phones (576px and up) */
     @media (min-width: $brk-point-s) {
-        width: 750px;
+        max-width: 750px;
     }
 
-    @media (min-width: $brk-point-m){
-        width: 970px;
+    /* Medium tablets (768px and up) */
+    @media (min-width: $brk-point-m) {
+        max-width: 970px;
     }
 
-    @media (min-width: $brk-point-m){
-        width: 1200px;
+    /* Large tablets/iPad landscape (992px and up) */
+    @media (min-width: $brk-point-l) {
+        max-width: 1170px;
     }
-    
+}
+
+/* Ensure sections don't override container alignment */
+.about-section,
+.hero-section,
+.portfolio-section,
+.contact-section {
+    /* Remove any padding or margin overrides that affect container alignment */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* If you need section-specific padding, use inner elements instead */
+.section-content {
+    padding: 2rem 0; /* Vertical padding only */
 }
 
 .debug {

@@ -23,7 +23,7 @@
 .news-item {
     background: $white;
     border: 1px solid $grey;
-    padding: 0 0 0 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -72,7 +72,7 @@
         padding-right: 20px;
     }
 
-    a {
+    .btn {
         margin-top: auto;
         color: $white;
         display: flex;
@@ -86,25 +86,35 @@
         transition: background 0.2s;
         max-width: 40%;
         height: 50px;
-        margin-left: 5%;;
+        margin-left: 5%;
+        margin-bottom: 16px;
     }
 }
 
-// colors
-
-.btn-yellow {
+// Button colors - matching your HTML classes
+.btn--yellow {
     background-color: $yellow !important;
     color: $white;
 }
 
-.btn-orange {
+.btn--orange {
     background-color: $developer !important;
     color: $white;
 }
 
-.btn-blue {
+.btn--blue {
     background-color: $it !important;
     color: $white;
+}
+
+// News meta section (replaces postedby)
+.news-meta {
+    margin-top: auto;
+    border-top: 1px solid $grey;
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    flex-direction: row;
 }
 
 .news-logo {
@@ -112,73 +122,50 @@
     max-height: 50px;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 20px
+    margin-right: 12px;
 }
 
-.postedby {
-    margin-top: 20px;
-    border-top: 1px solid $grey;
+.news-meta-text {
     display: flex;
-    align-items: center;
-
-    flex-direction: row;
-
-    .postedby-text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        margin-left: 20px;
-
-        p {
-            display: block;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        strong {
-            display: block;
-            width: 100%;
-            margin: 0;
-            padding-top: 10px;
-            color: $primary-dark;
-        }
+    flex-direction: column;
+    align-items: flex-start;
+    
+    strong {
+        display: block;
+        margin: 0;
+        color: $primary-dark;
+        font-size: 0.9rem;
+    }
+    
+    time {
+        display: block;
+        margin: 2px 0 0 0;
+        color: $grey-mid;
+        font-size: 0.85rem;
     }
 }
 
-// NEWS ITEM DEPARTMENT TAGS
-// These tags are used to indicate the department responsible for the news item
-
-.tag-bespoke {
-    position:absolute;
-    top: -5px;
+// Department tags - matching your HTML classes with double dashes
+.tag {
+    position: absolute;
+    top: 10px;
     right: 0;
+    color: $white !important;
+    padding: 4px 10px !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.tag--bespoke {
     background-color: $bespoke;
-    color: $white !important;
-    padding: 0px 10px !important;
-    font-size: 0.7rem !important;
-    text-transform: uppercase;
 }
 
-.tag-developer {
-    position:absolute;
-    top: -5px;
-    right: 0;
+.tag--developer {
     background-color: $developer;
-    color: $white !important;
-    padding: 0px 10px !important;
-    font-size: 0.7rem !important;
-    text-transform: uppercase;
 }
 
-.tag-it {
-    position:absolute;
-    top: -5px;
-    right: 0;
+.tag--it {
     background-color: $it;
-    color: $white !important;
-    padding: 0px 10px !important;
-    font-size: 0.7rem !important;
-    text-transform: uppercase;
 }
