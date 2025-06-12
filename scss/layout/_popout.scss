@@ -1,176 +1,56 @@
 .nav-popout-bespoke {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px; // Added fixed height for debugging
+    @extend %nav-popout-shared;
     background: $bespoke;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-
-    .container {
-        display: block;
-        position: relative;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px; // Added fixed height for debugging
-        z-index: 1002;
-    }
 }
 
 .nav-popout-it {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
+    @extend %nav-popout-shared;
     background: $it;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-
-    .container {
-        display: block;
-        position: relative;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        z-index: 1002;
-    }
 }
 
 .nav-popout-marketing {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
+    @extend %nav-popout-shared;
     background: $marketing;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-
-    .container {
-        display: block;
-        position: relative;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        z-index: 1002;
-    }
 }
 
 .nav-popout-telecoms {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
+    @extend %nav-popout-shared;
     background: $telecoms;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-
-    .container {
-        display: block;
-        position: relative;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        z-index: 1002;
-    }
 }
 
 .nav-popout-design {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
+    @extend %nav-popout-shared;
     background: $design;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-
-    .container {
-        display: block;
-        position: relative;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        z-index: 1002;
-    }
 }
 
 .nav-popout-cyber {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
+    @extend %nav-popout-shared;
     background: $cyber;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-
-    .container {
-        display: block;
-        position: relative;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        z-index: 1002;
-    }
 }
 
 .nav-popout-developer {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
+    @extend %nav-popout-shared;
     background: $developer;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
+}
 
-    .container {
-        display: block;
-        position: relative;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        z-index: 1002;
-    }
+.nav-popout-telecoms {
+    @extend %nav-popout-shared;
+    background: $telecoms;
+}
+
+.nav-popout-design {
+    @extend %nav-popout-shared;
+    background: $design;
+}
+
+.nav-popout-cyber {
+    @extend %nav-popout-shared;
+    background: $cyber;
+}
+
+.nav-popout-developer {
+    @extend %nav-popout-shared;
+    background: $developer;
 }
 
 // Show popout when any main nav item is hovered
@@ -282,61 +162,7 @@
     }
 }
 
-.nav-popout-telecoms {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
-    background: $telecoms;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-}
-
-.nav-popout-design {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
-    background: $design;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-}
-
-.nav-popout-cyber {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
-    background: $cyber;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-}
-
-.nav-popout-developer {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
-    background: $developer;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
-    padding: 40px 0;
-}
+// BREAKPOINTS
 
 @media (min-width: $brk-point-m) {
     .main-nav {

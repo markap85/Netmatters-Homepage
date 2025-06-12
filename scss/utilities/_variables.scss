@@ -114,3 +114,28 @@ $instagram: #D93175;
     opacity: 0.6;
   }
 }
+
+
+%nav-popout-shared {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    min-height: 250px;
+    height: 400px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1002;
+    padding: 40px 0;
+
+    .container {
+        display: block;
+        position: relative;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        min-height: 250px;
+        height: 400px;
+        z-index: 1002;
+    }
+}
