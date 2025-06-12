@@ -1,8 +1,4 @@
 @charset "UTF-8";
-.nav-popout-bespoke, .nav-popout-it, .nav-popout-marketing, .nav-popout-telecoms, .nav-popout-design, .nav-popout-cyber, .nav-popout-developer { display: block; position: relative; top: 100%; left: 0; width: 100vw; min-height: 250px; height: 400px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); z-index: 1002; padding: 40px 0; }
-
-.nav-popout-bespoke .container, .nav-popout-it .container, .nav-popout-marketing .container, .nav-popout-telecoms .container, .nav-popout-design .container, .nav-popout-cyber .container, .nav-popout-developer .container { display: block; position: relative; top: 100%; left: 0; width: 100vw; min-height: 250px; height: 400px; z-index: 1002; }
-
 @font-face { font-family: 'icomoon'; src: url("../fonts/icomoon.eot?fp678g"); src: url("../fonts/icomoon.eot?fp678g#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?fp678g") format("truetype"), url("../fonts/icomoon.woff?fp678g") format("woff"), url("../fonts/icomoon.svg?fp678g#icomoon") format("svg"); font-weight: normal; font-style: normal; font-display: block; }
 
 [class^="icon-"], [class*=" icon-"] { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'icomoon' !important; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -46,6 +42,12 @@
 .icon-linkedin:before { content: "\eac9"; }
 
 .icon-codepen:before { content: "\eae8"; }
+
+.nav-popout-bespoke, .nav-popout-it, .nav-popout-marketing, .nav-popout-telecoms, .nav-popout-design, .nav-popout-cyber, .nav-popout-developer { display: block; position: relative; top: 100%; left: 0; width: 100vw; min-height: 250px; height: 400px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); z-index: 1002; padding: 40px 0; }
+
+.nav-popout-bespoke .container, .nav-popout-it .container, .nav-popout-marketing .container, .nav-popout-telecoms .container, .nav-popout-design .container, .nav-popout-cyber .container, .nav-popout-developer .container { display: block; position: relative; top: 100%; left: 0; width: 100vw; min-height: 250px; height: 400px; z-index: 1002; }
+
+.icon-facebook, .icon-instagram, .icon-x, .icon-linkedin { color: #fff !important; font-size: 20px !important; transition: background-color 0.3s; margin-right: 10px; margin-bottom: 10px; background-color: #212330 !important; padding: 12px 22px 16px 22px; display: flex; align-items: center; justify-content: center; }
 
 html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
@@ -548,8 +550,6 @@ footer .footer-social a:hover { color: #ccc; }
 footer .footer-copyright { text-align: center; font-size: 0.875rem; margin-top: 20px; }
 
 @media (max-width: 767px) { footer .footer-logo { flex: 0 0 100%; max-width: 100%; } }
-
-.icon-facebook, .icon-instagram, .icon-x, .icon-linkedin { color: #fff !important; font-size: 20px !important; transition: background-color 0.3s; margin-right: 10px; margin-bottom: 10px; background-color: #212330 !important; padding: 12px 22px 16px 22px; display: flex; align-items: center; justify-content: center; }
 
 .icon-facebook:hover { background-color: #3B5998 !important; }
 
