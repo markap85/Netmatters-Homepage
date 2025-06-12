@@ -1,33 +1,44 @@
-// This script creates a seamless scrolling effect for accreditation logos on the homepage
-  document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".carousel-track");
-    const logos = Array.from(track.children);
-    const logoCount = logos.length;
 
-    // Duplicate all logos once for seamless looping
-    logos.forEach(logo => {
-      const clone = logo.cloneNode(true);
-      track.appendChild(clone);
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".client-carousel");
+    const track = carousel.querySelector(".client-carousel-track");
+    const wrappers = Array.from(track.children);
+    const wrapperCount = wrappers.length;
+
+    // Clone for seamless scroll
+    wrappers.forEach(wrapper => {
+      track.appendChild(wrapper.cloneNode(true));
     });
 
     let index = 0;
-    const logoWidth = logos[0].getBoundingClientRect().width + 100; // 100px gap
+    let interval;
+    const wrapperWidth = wrappers[0].getBoundingClientRect().width + 100;
 
-    const scrollStep = () => {
+    const stepScroll = () => {
       index++;
       track.style.transition = 'transform 0.3s ease-in-out';
-      track.style.transform = `translateX(-${index * logoWidth}px)`;
+      track.style.transform = `translateX(-${index * wrapperWidth}px)`;
 
-      // Seamlessly reset after scrolling through the original set
-      if (index >= logoCount) {
+      if (index >= wrapperCount) {
         setTimeout(() => {
           track.style.transition = 'none';
           track.style.transform = 'translateX(0)';
           index = 0;
-        }, 650); // Just after transition ends
+        }, 650);
       }
     };
 
-    // Trigger the scroll every 2.5s
-    setInterval(scrollStep, 5000); // 5000ms = 5 seconds
+    const startScrolling = () => {
+      if (!interval) interval = setInterval(stepScroll, 5000);
+    };
+
+    const stopScrolling = () => {
+      clearInterval(interval);
+      interval = null;
+    };
+
+    carousel.addEventListener("mouseover", stopScrolling);
+    carousel.addEventListener("mouseout", startScrolling);
+
+    startScrolling();
   });

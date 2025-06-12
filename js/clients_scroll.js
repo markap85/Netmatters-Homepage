@@ -16,7 +16,7 @@
 
     const stepScroll = () => {
       index++;
-      track.style.transition = 'transform 0.6s ease-in-out';
+      track.style.transition = 'transform 0.3s ease-in-out';
       track.style.transform = `translateX(-${index * wrapperWidth}px)`;
 
       if (index >= wrapperCount) {
@@ -29,7 +29,7 @@
     };
 
     const startScrolling = () => {
-      if (!interval) interval = setInterval(stepScroll, 2500);
+      if (!interval) interval = setInterval(stepScroll, 5000);
     };
 
     const stopScrolling = () => {

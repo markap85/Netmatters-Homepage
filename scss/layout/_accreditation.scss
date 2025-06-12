@@ -6,7 +6,7 @@
     background: white;
 }
 
-.carousel-track {
+.client-carousel-track {
   display: flex;
   transition: transform 0.6s ease-in-out;
   will-change: transform;
@@ -16,7 +16,7 @@
 
 }
 
-.carousel-track img {
+.client-carousel-track img {
     width: auto;
     height: 70px;
     flex-shrink: 0;

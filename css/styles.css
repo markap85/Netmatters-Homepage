@@ -344,11 +344,11 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .client-carousel { width: 100%; overflow: clip; margin: 0; padding: 50px 0; background: white; }
 
-.carousel-track { display: flex; transition: transform 0.6s ease-in-out; will-change: transform; gap: 100px; }
+.client-carousel-track { display: flex; transition: transform 0.6s ease-in-out; will-change: transform; gap: 100px; }
 
-.carousel-track img { width: auto; height: 70px; flex-shrink: 0; margin: 0; padding: 0; filter: grayscale(100%); }
+.client-carousel-track img { width: auto; height: 70px; flex-shrink: 0; margin: 0; padding: 0; filter: grayscale(100%); }
 
-.carousel-track img:hover { filter: grayscale(0%); }
+.client-carousel-track img:hover { filter: grayscale(0%); }
 
 .welcome-section { width: 100vw; position: relative; margin-left: 50%; transform: translateX(-50%); background-color: #323544; }
 
@@ -462,6 +462,12 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .tag--it { background-color: #4183D7; }
 
+.carousel-track { display: flex; transition: transform 0.6s ease-in-out; will-change: transform; gap: 100px; }
+
+.carousel-track img { width: auto; height: 70px; flex-shrink: 0; margin: 0; padding: 0; filter: grayscale(100%); }
+
+.carousel-track img:hover { filter: grayscale(0%); }
+
 /* 1. Container around each logo */
 .tooltip-wrapper { position: relative; display: inline-block; /* shrink to fit the img */ margin: 50px; /* just so it’s not flush to the edge */ }
 
@@ -469,13 +475,17 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 .tooltip-wrapper img { height: 70px; display: block; }
 
 /* 3. Tooltip box—hidden by default via opacity & visibility only */
-.tooltip { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 6px 10px; border-radius: 4px; white-space: normal; max-width: 200px; text-align: center; opacity: 0; visibility: hidden; transition: opacity 0.2s ease-in-out, visibility 0.2s; pointer-events: none; z-index: 1000; }
+.tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-16px); min-width: 220px; max-width: 320px; background: #323544; color: #ffffff; padding: 18px 22px 14px 22px; z-index: 10; text-align: left; pointer-events: none; opacity: 0; visibility: hidden; white-space: normal; }
+
+.tooltip h2 { font-size: 1.1rem; margin: 0 0 6px 0; color: #fff; font-weight: 700; white-space: normal; }
+
+.tooltip p { font-size: 0.95rem; margin: 0; color: #eee; white-space: normal; }
 
 /* 4. Arrow under the tooltip */
-.tooltip::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid #333; }
+.tooltip::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 12px solid #323544; }
 
 /* 5. Hover state—makes the tooltip visible */
-.tooltip-wrapper:hover .tooltip { opacity: 1; visibility: visible; pointer-events: auto; }
+.tooltip-wrapper:hover .tooltip { display: block; opacity: 1; visibility: visible; z-index: 9999; }
 
 footer { background-color: #323544; color: #fff; padding: 30px 0 0; position: relative; }
 
