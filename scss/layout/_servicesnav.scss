@@ -61,32 +61,59 @@
 .icon-laptop {
     color: $bespoke;
     font-size: 23px;
-    background-color: transparent !important;
-}
+    }
+
+// a.development:hover .icon-laptop {
+//     color: $white;
+// }
 .icon-display {
     color: $it;
     font-size: 23px;
 }
+a.it:hover .icon-display {
+    color: $white !important;
+}
+
 .icon-stats-bars {
     color: $marketing;
     font-size: 23px;
 }
+a.marketing:hover .icon-stats-bars {
+    color: $white;
+}
+
 .icon-phone_in_talk {
     color: $telecoms;
     font-size: 23px;
 }
+a.telecoms:hover .icon-phone_in_talk {
+    color: $white;
+}
+
 .icon-embed2 {
     color: $design;
     font-size: 23px;
 }
+a.design:hover .icon-embed2 {
+    color: $white;
+}
+
 .icon-security {
     color: $cyber;
     font-size: 23px;
 }
+a.cyber:hover .icon-security {
+    color: $white;
+}
+
 .icon-school {
     color: $developer;
     font-size: 23px;
 }
+a.developer:hover .icon-school {
+    color: $white;
+}
+
 .icon-paper-plane {
     font-size: 23px;
 }
@@ -95,9 +122,167 @@
 }
 
 // Hover effects for nav items with background color matching icon color
-a.bespoke:hover {
-    background-color: lighten($bespoke, 10%);
+a.development {
+    position: relative; // Ensure positioning context for ::after
+
+    &:hover {
+        background-color: lighten($bespoke, 10%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            border-top: 30px solid lighten($bespoke, 10%);
+            z-index: 5000; // Ensure it appears above other elements
+            display: block;
+        }
+    }
 }
+
+a.it {
+    position: relative;
+
+    &:hover {
+        background-color: lighten($it, 10%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            border-top: 30px solid lighten($it, 10%);
+            z-index: 5000;
+            display: block;
+        }
+    }
+}
+
+a.marketing {
+    position: relative;
+
+    &:hover {
+        background-color: lighten($marketing, 10%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            border-top: 30px solid lighten($marketing, 10%);
+            z-index: 5000;
+            display: block;
+        }
+    }
+}
+
+a.telecoms {
+    position: relative;
+
+    &:hover {
+        background-color: lighten($telecoms, 10%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            border-top: 30px solid lighten($telecoms, 10%);
+            z-index: 5000;
+            display: block;
+        }
+    }
+}
+
+a.design {
+    position: relative;
+
+    &:hover {
+        background-color: lighten($design, 10%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            border-top: 30px solid lighten($design, 10%);
+            z-index: 5000;
+            display: block;
+        }
+    }
+}
+
+a.cyber {
+    position: relative;
+
+    &:hover {
+        background-color: lighten($cyber, 10%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            border-top: 30px solid lighten($cyber, 10%);
+            z-index: 5000;
+            display: block;
+        }
+    }
+}
+
+a.developer {
+    position: relative;
+
+    &:hover {
+        background-color: lighten($developer, 10%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            border-top: 30px solid lighten($developer, 10%);
+            z-index: 5000;
+            display: block;
+        }
+    }
+}
+
 a.it:hover {
     background-color: lighten($it, 10%);
 }

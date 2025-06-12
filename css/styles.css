@@ -638,7 +638,7 @@ footer .footer-copyright { text-align: center; font-size: 0.875rem; margin-top: 
 
 @media (min-width: 992px) { .main-nav { position: relative; z-index: 1001; }
   .nav-popout-bespoke { display: none; position: absolute; left: 0; right: 0; top: 100%; width: 100vw; min-height: 250px; height: 400px; background: #67809F; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); z-index: 1002; padding: 20px 200px; color: #fff; }
-  .main-nav-items > a.bespoke:hover ~ .nav-popout-bespoke, .nav-popout-bespoke:hover, .nav-popout-bespoke:focus-within { display: block !important; } }
+  .main-nav-items > a.development:hover ~ .nav-popout-bespoke, .nav-popout-bespoke:hover, .nav-popout-bespoke:focus-within { display: block !important; } }
 
 .nav-popout-it { display: block; position: relative; top: 100%; left: 0; width: 100vw; min-height: 250px; height: 400px; background: #4183D7; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); z-index: 1002; }
 
@@ -706,25 +706,77 @@ footer .footer-copyright { text-align: center; font-size: 0.875rem; margin-top: 
 
 .main-nav-items > a { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-top: 20px; padding-bottom: 20px; box-sizing: border-box; gap: 5px; }
 
-.main-nav-items .icon-laptop { color: #67809F; font-size: 23px; background-color: transparent !important; }
+.main-nav-items .icon-laptop { color: #67809F; font-size: 23px; }
 
 .main-nav-items .icon-display { color: #4183D7; font-size: 23px; }
 
+.main-nav-items a.it:hover .icon-display { color: #fff !important; }
+
 .main-nav-items .icon-stats-bars { color: #2ECC71; font-size: 23px; }
+
+.main-nav-items a.marketing:hover .icon-stats-bars { color: #fff; }
 
 .main-nav-items .icon-phone_in_talk { color: #D64541; font-size: 23px; }
 
+.main-nav-items a.telecoms:hover .icon-phone_in_talk { color: #fff; }
+
 .main-nav-items .icon-embed2 { color: #926FB1; font-size: 23px; }
+
+.main-nav-items a.design:hover .icon-embed2 { color: #fff; }
 
 .main-nav-items .icon-security { color: #F62459; font-size: 23px; }
 
+.main-nav-items a.cyber:hover .icon-security { color: #fff; }
+
 .main-nav-items .icon-school { color: #D64541; font-size: 23px; }
+
+.main-nav-items a.developer:hover .icon-school { color: #fff; }
 
 .main-nav-items .icon-paper-plane { font-size: 23px; }
 
 .main-nav-items .icon-mouse { font-size: 23px; }
 
-.main-nav-items a.bespoke:hover { background-color: #869ab3; }
+.main-nav-items a.development { position: relative; }
+
+.main-nav-items a.development:hover { background-color: #869ab3; }
+
+.main-nav-items a.development:hover::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 90px solid transparent; border-right: 90px solid transparent; border-top: 30px solid #869ab3; z-index: 5000; display: block; }
+
+.main-nav-items a.it { position: relative; }
+
+.main-nav-items a.it:hover { background-color: #6b9ee0; }
+
+.main-nav-items a.it:hover::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 90px solid transparent; border-right: 90px solid transparent; border-top: 30px solid #6b9ee0; z-index: 5000; display: block; }
+
+.main-nav-items a.marketing { position: relative; }
+
+.main-nav-items a.marketing:hover { background-color: #54d98c; }
+
+.main-nav-items a.marketing:hover::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 90px solid transparent; border-right: 90px solid transparent; border-top: 30px solid #54d98c; z-index: 5000; display: block; }
+
+.main-nav-items a.telecoms { position: relative; }
+
+.main-nav-items a.telecoms:hover { background-color: #df6e6b; }
+
+.main-nav-items a.telecoms:hover::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 90px solid transparent; border-right: 90px solid transparent; border-top: 30px solid #df6e6b; z-index: 5000; display: block; }
+
+.main-nav-items a.design { position: relative; }
+
+.main-nav-items a.design:hover { background-color: #ab90c3; }
+
+.main-nav-items a.design:hover::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 90px solid transparent; border-right: 90px solid transparent; border-top: 30px solid #ab90c3; z-index: 5000; display: block; }
+
+.main-nav-items a.cyber { position: relative; }
+
+.main-nav-items a.cyber:hover { background-color: #f8557e; }
+
+.main-nav-items a.cyber:hover::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 90px solid transparent; border-right: 90px solid transparent; border-top: 30px solid #f8557e; z-index: 5000; display: block; }
+
+.main-nav-items a.developer { position: relative; }
+
+.main-nav-items a.developer:hover { background-color: #df6e6b; }
+
+.main-nav-items a.developer:hover::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 90px solid transparent; border-right: 90px solid transparent; border-top: 30px solid #df6e6b; z-index: 5000; display: block; }
 
 .main-nav-items a.it:hover { background-color: #6b9ee0; }
 
