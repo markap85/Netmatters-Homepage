@@ -19,6 +19,7 @@
         display: flex; // Center content vertically
         align-items: center; // Center content vertically
         justify-content: center; // Center content horizontally
+        transition: background-color 0.2s ease; // Add smooth transition
     }
 
     strong {
@@ -54,25 +55,8 @@
     padding-top: 20px;
     padding-bottom: 20px;
     box-sizing: border-box;
-
-    
-    // Remove old &.bespoke, &.it, etc. rules
+    gap: 5px; // Reduce gap between icon and text
   }
-
-//   // Generate color classes for each nav item
-//   @each $key, $color in $netmatters-colors {
-//     .#{$key} {
-//       @include nav-item-col($key);
-//       color: #fff;
-//       transition: filter 0.2s, background-color 0.2s;
-
-//       &:hover,
-//       &:focus {
-//         filter: brightness(0.92);
-//       }
-//     }
-//   }
-// }
 
 .icon-laptop {
     color: $bespoke;
@@ -108,5 +92,28 @@
 }
 .icon-mouse {
     font-size: 23px;
+}
+
+// Hover effects for nav items with background color matching icon color
+a.bespoke:hover {
+    background-color: lighten($bespoke, 10%);
+}
+a.it:hover {
+    background-color: lighten($it, 10%);
+}
+a.marketing:hover {
+    background-color: lighten($marketing, 10%);
+}
+a.telecoms:hover {
+    background-color: lighten($telecoms, 10%);
+}
+a.design:hover {
+    background-color: lighten($design, 10%);
+}
+a.cyber:hover {
+    background-color: lighten($cyber, 10%);
+}
+a.developer:hover {
+    background-color: lighten($developer, 10%);
 }
 }

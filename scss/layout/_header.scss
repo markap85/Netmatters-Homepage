@@ -33,7 +33,6 @@ header {
                 $bg-color: #4285f4,
                 $hover-bg: #3367d6
             );
-            // Optional: Add icon alignment for buttons with icons
             display: none !important; // Hide buttons by default on smaller screens
             align-items: center;
             gap: 8px;
@@ -45,6 +44,15 @@ header {
             line-height: normal;
             padding: 0 25px;
             justify-content: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            // Proper hover effects
+            &:hover {
+                background-color: #3367d6;
+            }
 
             .icon-mouse,
             .icon-paper-plane {
@@ -56,7 +64,7 @@ header {
             }
         }
 
-        @media (min-width: $brk-point-m) { // Show buttons on larger screens
+        @media (min-width: $brk-point-m) {
             .btn {
                 display: inline-flex !important; // Show buttons on larger screens
             }
@@ -64,8 +72,8 @@ header {
 
         .btn.secondary {
             background-color: #84858F !important;
-            &:hover,
-            &:focus {
+            
+            &:hover {
                 background-color: darken(#84858F, 10%) !important;
             }
         }
@@ -76,30 +84,21 @@ header {
         align-items: center;
 
         img {
-            width: 402px;
-            height: 70px;
-            max-width: 100%;
-            max-height: 70px;
+            width: 402px !important;
+            height: 70px !important;
+            max-width: 402px !important;
+            max-height: 70px !important;
             object-fit: contain;
             display: block;
         }
     }
 
-    // Ensure the Netmatters header logo is always 402x70px
-    .logo img {
-        width: 402px !important;
-        height: 70px !important;
-        max-width: 402px !important;
-        max-height: 70px !important;
-        object-fit: contain;
-        display: block;
-    }
-
-    .header-icons { // support, contact, seartch and burger
+    .header-icons {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 15px; // Equal spacing between elements
 
+        // Large screen search bar
         .search-bar-large {
             display: none;
             margin-left: 10px;
@@ -107,27 +106,28 @@ header {
             height: 55px;
             align-items: center;
             border-radius: 2px;
-            /* Add these for centering */
-            display: flex; // Ensure flex context
-            align-items: center; // Vertically center input and icon
-            justify-content: center; // Horizontally center content
 
             @media (min-width: $brk-point-s) {
                 display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             input {
-                border: 1px rgb(180, 180, 180) solid;
+                border: 1px solid rgb(180, 180, 180);
+                border-right: none;
+                border-radius: 2px 0 0 2px; // Rounded left corners only
                 background: transparent;
                 height: 100%;
                 font-size: 1rem;
                 outline: none;
                 padding: 10px;
+                width: 200px;
             }
 
             .icon-search {
                 background: #999AA2;
-                border-radius: 0 2px 2px 0;
+                border-radius: 0 2px 2px 0; // Rounded right corners only
                 width: 55px;
                 height: 55px;
                 display: flex;
@@ -135,122 +135,30 @@ header {
                 justify-content: center;
                 color: white;
                 font-size: 1.5rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
 
                 &:hover {
                     background: darken(#999AA2, 10%);
-                    cursor: pointer;
                 }
             }
         }
 
-        .mobile-menu-toggle {
-            display: none;
-            background: $secondary-dark;
-            border: none;
-            border-radius: 7px;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 55px;
-            height: 55px;
-            cursor: pointer;
-
-            &:hover {
-                background: darken($secondary-dark, 10%);
-            }
-
-            .burger-bar {
-                display: block;
-                width: 32px;
-                height: 4px;
-                margin: 4px 0;
-                background: white;
-                transition: all 0.3s;
-            }
-        }
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        img {
-            width: 402px;
-            height: 70px;
-            max-width: 100%;
-            max-height: 70px;
-            object-fit: contain;
+        // Phone icon (hidden on larger screens)
+        .phoneicon {
             display: block;
-        }
-    }
-
-    // Ensure the Netmatters header logo is always 402x70px
-    .logo img {
-        width: 402px !important;
-        height: 70px !important;
-        max-width: 402px !important;
-        max-height: 70px !important;
-        object-fit: contain;
-        display: block;
-    }
-
-    .header-icons { // support, contact, seartch and burger
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        .search-bar-large {
-            display: none;
-            margin-left: 10px;
-            margin-right: 10px;
-            height: 55px;
-            align-items: center;
-            border-radius: 2px;
-            /* Add these for centering */
-            display: flex; // Ensure flex context
-            align-items: center; // Vertically center input and icon
-            justify-content: center; // Horizontally center content
-
+            
             @media (min-width: $brk-point-s) {
-                display: flex;
-            }
-
-            input {
-                border: 1px rgb(180, 180, 180) solid;
-                background: transparent;
-                height: 100%;
-                font-size: 1rem;
-                outline: none;
-                padding: 10px;
-            }
-
-            .icon-search {
-                background: #999AA2;
-                border-radius: 0 2px 2px 0;
-                width: 55px;
-                height: 55px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 1.5rem;
-
-                &:hover {
-                    background: darken(#999AA2, 10%);
-                    cursor: pointer;
-                }
+                display: none;
             }
         }
 
+        // Burger menu with spans for animation
         .mobile-menu-toggle {
-            display: none;
             background: $secondary-dark;
             border: none;
             border-radius: 7px;
-            padding: 0 20px;
+            padding: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -258,22 +166,27 @@ header {
             width: 55px;
             height: 55px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
 
             &:hover {
                 background: darken($secondary-dark, 10%);
             }
 
-            .burger-bar {
+            // Use spans instead of elements with burger-bar class
+            span {
                 display: block;
-                width: 32px;
-                height: 4px;
-                margin: 4px 0;
+                width: 25px;
+                height: 3px;
+                margin: 3px 0;
                 background: white;
-                transition: all 0.3s;
+                border-radius: 1px;
+                transition: all 0.3s ease;
             }
+
         }
     }
 
+    // General image sizing
     img {
         max-height: 80px;
         width: auto;
@@ -281,87 +194,42 @@ header {
         object-fit: contain;
         display: block;
     }
-
-    .phoneicon {
-        @media (min-width: $brk-point-s) {
-            width: 750px;
-            display: none;
-        }
-    }
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 10px 0 10px;
-    height: 50px;
-    border-radius: 2px;
-
-    input {
-        border: 1px rgb(180, 180, 180) solid;
-        background: transparent;
-        height: 100%;
-        font-size: 1rem;
-        outline: none;
-        padding: 10px;
-    }
-
-    .icon-search {
-        background: #999AA2;
-        border-radius: 2px;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 1.5rem;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    @media (min-width: $brk-point-s) {
-        display: none;
-    }
-}
-
-
-
+// Mobile search bar (separate from header-icons)
 .mobile-search-bar {
     display: none;
     margin: 0 auto;
     height: 50px;
     align-items: center;
     border-radius: 2px;
-    width: 85vw !important;
+    width: 85vw;
     max-width: 90vw;
     justify-content: center;
     position: relative;
     z-index: 2;
     background: $white;
 
-    // Add padding below header for mobile search bar
     @media (max-width: $brk-point-s) {
         display: flex;
-        margin-bottom: 20px; // Add space below search bar
+        margin-bottom: 20px;
     }
 
     input {
-        border: 1px rgb(180, 180, 180) solid;
+        border: 1px solid rgb(180, 180, 180);
+        border-right: none;
+        border-radius: 2px 0 0 2px;
         background: transparent;
         height: 100%;
         font-size: 1rem;
         outline: none;
         padding: 10px;
-        flex: 1 1 auto;
+        flex: 1;
     }
 
     .icon-search {
         background: #999AA2;
-        border-radius: 2px;
+        border-radius: 0 2px 2px 0;
         width: 50px;
         height: 50px;
         display: flex;
@@ -369,12 +237,48 @@ header {
         justify-content: center;
         color: white;
         font-size: 1.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background: darken(#999AA2, 10%);
+        }
     }
 }
 
-// Add padding to the bottom of the header on mobile to prevent overlap
+// Responsive behavior
 @media (max-width: $brk-point-s) {
     header {
-        padding-bottom: 70px; // Adjust as needed to fit the mobile search bar
+        padding-bottom: 70px;
+        
+        .header-icons {
+            gap: 10px; // Smaller gap on mobile
+            
+            // On mobile, only show phone icon and burger menu
+            .search-bar-large {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media (min-width: $brk-point-s) and (max-width: $brk-point-m) {
+    header {
+        .header-icons {
+            gap: 15px; // Medium gap on tablet
+            
+            // On tablet, show search bar and burger menu, hide phone icon
+            .phoneicon {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: $brk-point-m) {
+    header {
+        .header-icons {
+            gap: 20px; // Larger gap on desktop
+        }
     }
 }
