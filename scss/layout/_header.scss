@@ -112,7 +112,7 @@ header {
     .header-icons {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 20px;
 
         .icon-phone_in_talk {
             font-size: 3rem;
@@ -134,8 +134,6 @@ header {
                 justify-content: center;
             }
 
-            margin-left: 10px;
-            margin-right: 10px;
             height: 55px;
             align-items: center;
             border-radius: 2px;
