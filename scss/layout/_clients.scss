@@ -1,111 +1,137 @@
+.tooltip-carousel {
+  width: 100%;
+  overflow-x: clip;
+  position: relative;
+  overflow: visible; /* <-- allow tooltips to overflow vertically */
+  z-index: 1; /* ensure stacking */
+  padding: 2rem 0;
+}
+
+.tooltip-carousel .carousel-viewport {
+  width: 100%;
+}
+
 .carousel-track {
   display: flex;
+  flex-wrap: nowrap;
   transition: transform 0.6s ease-in-out;
   will-change: transform;
-  gap: 100px;
-
-  .btn {
-    margin-top: 10px;
-    @include button(
-      $bg-color: #2ECC71,
-      $hover-bg: #249b55,
-      $font-size: 10px,
-
-    );
-  }
+  gap: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .carousel-track img {
-    width: auto;
-    height: 70px;
-    flex-shrink: 0;
-    margin: 0;
-    padding: 0;
-    filter: grayscale(100%);
-
-    &:hover {
-    filter: grayscale(0%);
-    }
+  width: auto;
+  height: 70px;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  filter: grayscale(100%);
 }
 
-/* 1. Container around each logo */
+.carousel-track img:hover {
+  filter: grayscale(0%);
+}
+
 .tooltip-wrapper {
   position: relative;
+  overflow: visible;
+  z-index: 2;
   display: inline-block;
-  margin: 50px;
+  margin: 2rem;
 }
 
-/* 2. The image itself */
 .tooltip-wrapper img {
   height: 70px;
   display: block;
 }
 
-/* 3. Tooltip box—hidden by default */
 .tooltip {
-    display: none;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-8px); /* Reduced gap */
-    min-width: 220px;
-    max-width: 320px;
-    background: $primary-dark;
-    color: #ffffff;
-    padding: 18px 22px 14px 22px;
-    z-index: 10;
-    text-align: left;
-    pointer-events: auto; /* Enable pointer events */
-    opacity: 0;
-    visibility: hidden;
-    white-space: normal;
-
-    /* Add invisible bridge to prevent gap issues */
-    &::before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        height: 8px; /* Matches the translateY gap */
-        background: transparent;
-        pointer-events: auto;
-    }
-
-    h2 {
-        font-size: 1.1rem;
-        margin: 0 0 6px 0;
-        color: #fff;
-        font-weight: 700;
-        white-space: normal;
-    }
-    
-    p {
-        font-size: 0.95rem;
-        margin: 0;
-        color: #eee;
-        white-space: normal;
-    }
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 220px;
+  max-width: 320px;
+  background: #222; /* Replace $primary-dark */
+  color: #ffffff;
+  padding: 18px 22px 14px 22px;
+  z-index: 9999;
+  text-align: left;
+  pointer-events: auto;
+  opacity: 0;
+  white-space: normal;
 }
 
-/* 4. Arrow under the tooltip */
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: transparent;
+  pointer-events: auto;
+}
+
 .tooltip::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-top: 12px solid $primary-dark;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #222; /* Match background */
 }
 
-/* 5. Hover state—makes the tooltip visible */
+.tooltip h2 {
+  font-size: 1.1rem;
+  margin: 0 0 6px 0;
+  color: #fff;
+  font-weight: 700;
+  white-space: normal;
+}
+
+.tooltip p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #eee;
+  white-space: normal;
+}
+
 .tooltip-wrapper:hover .tooltip {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    z-index: 9999;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .carousel-track {
+    gap: 30px;
+  }
+
+  .tooltip-wrapper {
+    margin: 1rem;
+  }
+
+  .tooltip {
+    min-width: 180px;
+    max-width: 90vw;
+    font-size: 0.85rem;
+  }
+
+  .tooltip h2 {
+    font-size: 1rem;
+  }
+
+  .tooltip p {
+    font-size: 0.85rem;
+  }
 }

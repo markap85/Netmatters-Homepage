@@ -84,12 +84,29 @@ header {
         align-items: center;
 
         img {
-            width: 402px !important;
-            height: 70px !important;
-            max-width: 402px !important;
-            max-height: 70px !important;
+            // Mobile-first approach - small logo for mobile
+            width: 200px;
+            height: 35px;
+            max-width: 200px;
+            max-height: 35px;
             object-fit: contain;
             display: block;
+
+            // Tablet size
+            @media (min-width: $brk-point-s) {
+                width: 300px;
+                height: 52px;
+                max-width: 300px;
+                max-height: 52px;
+            }
+
+            // Desktop size
+            @media (min-width: $brk-point-m) {
+                width: 402px;
+                height: 70px;
+                max-width: 402px;
+                max-height: 70px;
+            }
         }
     }
 

@@ -174,7 +174,11 @@ header .header-row .btn.secondary:hover { background-color: #6b6c75 !important; 
 
 header .logo { display: flex; align-items: center; }
 
-header .logo img { width: 402px !important; height: 70px !important; max-width: 402px !important; max-height: 70px !important; object-fit: contain; display: block; }
+header .logo img { width: 200px; height: 35px; max-width: 200px; max-height: 35px; object-fit: contain; display: block; }
+
+@media (min-width: 768px) { header .logo img { width: 300px; height: 52px; max-width: 300px; max-height: 52px; } }
+
+@media (min-width: 992px) { header .logo img { width: 402px; height: 70px; max-width: 402px; max-height: 70px; } }
 
 header .header-icons { display: flex; align-items: center; gap: 15px; }
 
@@ -336,13 +340,13 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .service-item.developer-hover:hover .service-item__link--developer { background: #fff !important; color: #D64541 !important; }
 
-.client-carousel { width: 100%; overflow: clip; margin: 0; padding: 50px 0; background: white; }
+.accreditation-carousel { width: 100%; overflow: clip; margin: 0; padding: 50px 0; background: white; }
 
-.client-carousel-track { display: flex; transition: transform 0.6s ease-in-out; will-change: transform; gap: 100px; }
+.accreditation-carousel-track { display: flex; transition: transform 0.6s ease-in-out; will-change: transform; gap: 100px; }
 
-.client-carousel-track img { width: auto; height: 70px; flex-shrink: 0; margin: 0; padding: 0; filter: grayscale(100%); }
+.accreditation-carousel-track img { width: auto; height: 70px; flex-shrink: 0; margin: 0; padding: 0; filter: grayscale(100%); }
 
-.client-carousel-track img:hover { filter: grayscale(0%); }
+.accreditation-carousel-track img:hover { filter: grayscale(0%); }
 
 .welcome-section { width: 100vw; position: relative; margin-left: 50%; transform: translateX(-50%); background-color: #323544; }
 
@@ -456,42 +460,38 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .tag--it { background-color: #4183D7; }
 
-.carousel-track { display: flex; transition: transform 0.6s ease-in-out; will-change: transform; gap: 100px; }
+.tooltip-carousel { width: 100%; overflow-x: clip; position: relative; overflow: visible; /* <-- allow tooltips to overflow vertically */ z-index: 1; /* ensure stacking */ padding: 2rem 0; }
 
-.carousel-track .btn { margin-top: 10px; display: inline-block; padding: 0.75rem 1.5rem; background-color: #2ECC71; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 10px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; }
+.tooltip-carousel .carousel-viewport { width: 100%; }
 
-.carousel-track .btn:hover:not(:disabled) { background-color: #249b55; color: #fff; text-decoration: none; }
-
-.carousel-track .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-
-.carousel-track .btn:active:not(:disabled) { transform: translateY(1px); }
-
-.carousel-track .btn:disabled { background-color: #6c757d; color: #fff; cursor: not-allowed; opacity: 0.6; }
+.carousel-track { display: flex; flex-wrap: nowrap; transition: transform 0.6s ease-in-out; will-change: transform; gap: 60px; position: relative; z-index: 1; }
 
 .carousel-track img { width: auto; height: 70px; flex-shrink: 0; margin: 0; padding: 0; filter: grayscale(100%); }
 
 .carousel-track img:hover { filter: grayscale(0%); }
 
-/* 1. Container around each logo */
-.tooltip-wrapper { position: relative; display: inline-block; margin: 50px; }
+.tooltip-wrapper { position: relative; overflow: visible; z-index: 2; display: inline-block; margin: 2rem; }
 
-/* 2. The image itself */
 .tooltip-wrapper img { height: 70px; display: block; }
 
-/* 3. Tooltip box—hidden by default */
-.tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); /* Reduced gap */ min-width: 220px; max-width: 320px; background: #323544; color: #ffffff; padding: 18px 22px 14px 22px; z-index: 10; text-align: left; pointer-events: auto; /* Enable pointer events */ opacity: 0; visibility: hidden; white-space: normal; /* Add invisible bridge to prevent gap issues */ }
+.tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); min-width: 220px; max-width: 320px; background: #222; /* Replace $primary-dark */ color: #ffffff; padding: 18px 22px 14px 22px; z-index: 9999; text-align: left; pointer-events: auto; opacity: 0; white-space: normal; }
 
-.tooltip::before { content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 8px; /* Matches the translateY gap */ background: transparent; pointer-events: auto; }
+.tooltip::before { content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 8px; background: transparent; pointer-events: auto; }
+
+.tooltip::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 12px solid #222; /* Match background */ }
 
 .tooltip h2 { font-size: 1.1rem; margin: 0 0 6px 0; color: #fff; font-weight: 700; white-space: normal; }
 
 .tooltip p { font-size: 0.95rem; margin: 0; color: #eee; white-space: normal; }
 
-/* 4. Arrow under the tooltip */
-.tooltip::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 12px solid #323544; }
-
-/* 5. Hover state—makes the tooltip visible */
 .tooltip-wrapper:hover .tooltip { display: block; opacity: 1; visibility: visible; z-index: 9999; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) { .carousel-track { gap: 30px; }
+  .tooltip-wrapper { margin: 1rem; }
+  .tooltip { min-width: 180px; max-width: 90vw; font-size: 0.85rem; }
+  .tooltip h2 { font-size: 1rem; }
+  .tooltip p { font-size: 0.85rem; } }
 
 footer { background-color: #323544; color: #fff; padding: 30px 0 0; position: relative; }
 

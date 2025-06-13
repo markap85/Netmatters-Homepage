@@ -1,4 +1,4 @@
-.client-carousel {
+.accreditation-carousel {
     width: 100%;
     overflow: clip;
     margin: 0;
@@ -6,7 +6,7 @@
     background: white;
 }
 
-.client-carousel-track {
+.accreditation-carousel-track {
   display: flex;
   transition: transform 0.6s ease-in-out;
   will-change: transform;
@@ -16,7 +16,7 @@
 
 }
 
-.client-carousel-track img {
+.accreditation-carousel-track img {
     width: auto;
     height: 70px;
     flex-shrink: 0;
