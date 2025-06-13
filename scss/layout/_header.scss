@@ -224,15 +224,15 @@ header {
 
         // Burger menu - always visible
         .mobile-menu-toggle {
-            background: $secondary-dark;
+            background: $primary-dark;
             border: none;
-            border-radius: 7px;
-            padding: 0;
+            border-radius: 3px;
+            padding: 5px 15px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 55px;
+            width: 65px;
             height: 55px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -243,8 +243,8 @@ header {
 
             span {
                 display: block;
-                width: 25px;
-                height: 3px;
+                width: 35px;
+                height: 5px;
                 margin: 3px 0;
                 background: white;
                 border-radius: 1px;

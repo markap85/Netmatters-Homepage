@@ -12,14 +12,48 @@
 
 // News grid layout
 
+// .news-grid {
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     gap: 32px;
+//     margin: 32px 0;
+//     width: 100%;
+//     max-width: 100%;
+
+//     @media (min-width: $brk-point-s) {
+//         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+//     }
+// }
+
 .news-grid {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 32px;
     margin: 32px 0;
-
-    @media (min-width: $brk-point-s) {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    width: 100%;
+    max-width: 100%;
+    
+    // Below 768px: Single column, show all 3 items
+    grid-template-columns: 1fr;
+    
+    // 768px to 1259px: Two columns, hide third item
+    @media (min-width: 768px) and (max-width: 1259px) {
+        grid-template-columns: repeat(2, 1fr);
+        
+        // Hide the third news item
+        .news-item:nth-child(3) {
+            display: none;
+        }
+    }
+    
+    // 1260px and above: Three columns or auto-fit, show all items
+    @media (min-width: 1260px) {
+        grid-template-columns: repeat(3, 1fr);
+        // or use: grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        
+        // Ensure all items are visible
+        .news-item:nth-child(3) {
+            display: flex;
+        }
     }
 }
 
@@ -34,16 +68,23 @@
     position: relative;
     top: 0;
     transition: top 0.5s ease;
+    
+    // Keep your fixes
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 
     &:hover {
         top: -10px;
     }
 
-
-.news-item img,
-.news-item .news-icon {
-  @include responsive-img;
-}
+    // Your existing styles...
+    img,
+    .news-icon {
+        @include responsive-img;
+    }
 
     h3 {
         margin: 16px 0 8px 0;
@@ -64,26 +105,27 @@
     }
 
     .btn {
-                    padding: 0.5rem 0.5rem;
+        padding: 0.5rem 0.5rem;
         @include button(
             $bg-color: #272936,
             $hover-bg: #121318,
-
         );
         text-transform: uppercase;
-        margin-right: 50%;
+        
+        // Fix the button margins to prevent overflow
+        margin-right:50%;
         margin-left: 5%;
-        margin-bottom: 5%;
-
-        // Ensure all buttons are the same height and aligned
-        min-height: 44px; // Set a minimum height for all buttons
+        max-width: 90%;
+        
+        min-height: 44px;
         display: flex;
-        align-items: center;
+        align-items: left;
         justify-content: center;
         box-sizing: border-box;
 
         @media (min-width: $brk-point-m) {
             flex: 1;
+            max-width: 95%;
         }
 
         .icon-arrow-right {
