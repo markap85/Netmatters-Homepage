@@ -5,7 +5,7 @@
 // =======================
 // Combined Button Mixin
 // Styles a button with customizable colors, padding, border, icons, and states.
-// Supports service style, hover, focus, disabled, and optional icon styling.
+// Supports service style, hover, disabled, and optional icon styling.
 // =======================
 @mixin button(
   $bg-color: #007bff,
@@ -19,7 +19,6 @@
   $transition: all 0.2s ease-in-out,
   $hover-bg: darken(#007bff, 10%),
   $hover-text: #fff,
-  $focus-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25),
   $disabled-bg: #6c757d,
   $disabled-text: #fff,
   $text-transform: uppercase,
@@ -70,11 +69,6 @@
     background-color: $hover-bg;
     color: $hover-text;
     text-decoration: none;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: $focus-shadow;
   }
 
   &:active:not(:disabled) {

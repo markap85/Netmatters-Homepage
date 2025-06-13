@@ -164,8 +164,6 @@ header .header-row .btn { display: inline-block; padding: 0.75rem 1.5rem; backgr
 
 header .header-row .btn:hover:not(:disabled), header .header-row .btn:focus:not(:disabled) { background-color: #3367d6; color: #fff; text-decoration: none; }
 
-header .header-row .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-
 header .header-row .btn:active:not(:disabled) { transform: translateY(1px); }
 
 header .header-row .btn:disabled { background-color: #6c757d; color: #fff; cursor: not-allowed; opacity: 0.6; }
@@ -198,6 +196,8 @@ header .header-icons .search-bar-desktop { display: none; margin-left: 10px; mar
 
 header .header-icons .search-bar-desktop input { border: 1px solid #b4b4b4; border-right: none; border-radius: 2px 0 0 2px; background: transparent; height: 100%; font-size: 1rem; outline: none; padding: 10px; width: 200px; display: none; }
 
+header .header-icons .search-bar-desktop input:focus { border-color: #5bc0de; outline: 0; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6); }
+
 @media (min-width: 768px) { header .header-icons .search-bar-desktop input { display: flex; } }
 
 @media (min-width: 992px) { header .header-icons .search-bar-desktop input { display: none; } }
@@ -207,16 +207,6 @@ header .header-icons .search-bar-desktop input { border: 1px solid #b4b4b4; bord
 header .header-icons .search-bar-desktop .icon-search { background: #999AA2; border-radius: 0 2px 2px 0; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; }
 
 header .header-icons .search-bar-desktop .icon-search:hover { background: #7e808a; }
-
-header .header-icons .search-bar-full { display: none; margin-left: 10px; margin-right: 10px; height: 55px; align-items: center; border-radius: 2px; }
-
-@media (min-width: 1260px) { header .header-icons .search-bar-full { display: flex; align-items: center; justify-content: center; } }
-
-header .header-icons .search-bar-full input { border: 1px solid #b4b4b4; border-right: none; border-radius: 2px 0 0 2px; background: transparent; height: 100%; font-size: 1rem; outline: none; padding: 10px; width: 300px; }
-
-header .header-icons .search-bar-full .icon-search { background: #999AA2; border-radius: 0 2px 2px 0; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; }
-
-header .header-icons .search-bar-full .icon-search:hover { background: #7e808a; }
 
 header .header-icons .search-icon-only { display: none; background: #999AA2; border-radius: 2px; width: 55px; height: 55px; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; border: none; }
 
@@ -408,8 +398,6 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .welcome-section .welcome-links .btn:hover:not(:disabled), .welcome-section .welcome-links .btn:focus:not(:disabled), .welcome-section .review-links .btn:hover:not(:disabled), .welcome-section .review-links .btn:focus:not(:disabled) { background-color: #0062cc; color: #fff; text-decoration: none; }
 
-.welcome-section .welcome-links .btn:focus, .welcome-section .review-links .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-
 .welcome-section .welcome-links .btn:active:not(:disabled), .welcome-section .review-links .btn:active:not(:disabled) { transform: translateY(1px); }
 
 .welcome-section .welcome-links .btn:disabled, .welcome-section .review-links .btn:disabled { background-color: #6c757d; color: #fff; cursor: not-allowed; opacity: 0.6; }
@@ -422,8 +410,6 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .welcome-section .welcome-links .btn--google:hover:not(:disabled), .welcome-section .welcome-links .btn--google:focus:not(:disabled), .welcome-section .review-links .btn--google:hover:not(:disabled), .welcome-section .review-links .btn--google:focus:not(:disabled) { background-color: #0062cc; color: #fff; text-decoration: none; }
 
-.welcome-section .welcome-links .btn--google:focus, .welcome-section .review-links .btn--google:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-
 .welcome-section .welcome-links .btn--google:active:not(:disabled), .welcome-section .review-links .btn--google:active:not(:disabled) { transform: translateY(1px); }
 
 .welcome-section .welcome-links .btn--google:disabled, .welcome-section .review-links .btn--google:disabled { background-color: #6c757d; color: #fff; cursor: not-allowed; opacity: 0.6; }
@@ -431,8 +417,6 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 .welcome-section .welcome-links .btn--trustpilot, .welcome-section .review-links .btn--trustpilot { display: inline-block; padding: 0.75rem 1.5rem; background-color: #00b67a; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; }
 
 .welcome-section .welcome-links .btn--trustpilot:hover:not(:disabled), .welcome-section .welcome-links .btn--trustpilot:focus:not(:disabled), .welcome-section .review-links .btn--trustpilot:hover:not(:disabled), .welcome-section .review-links .btn--trustpilot:focus:not(:disabled) { background-color: #0062cc; color: #fff; text-decoration: none; }
-
-.welcome-section .welcome-links .btn--trustpilot:focus, .welcome-section .review-links .btn--trustpilot:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
 .welcome-section .welcome-links .btn--trustpilot:active:not(:disabled), .welcome-section .review-links .btn--trustpilot:active:not(:disabled) { transform: translateY(1px); }
 
@@ -459,8 +443,6 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 .news-item .btn { padding: 0.5rem 0.5rem; display: inline-block; padding: 0.75rem 1.5rem; background-color: #272936; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; text-transform: uppercase; margin-right: 50%; margin-left: 5%; margin-bottom: 5%; min-height: 44px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; }
 
 .news-item .btn:hover:not(:disabled), .news-item .btn:focus:not(:disabled) { background-color: #121318; color: #fff; text-decoration: none; }
-
-.news-item .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
 .news-item .btn:active:not(:disabled) { transform: translateY(1px); }
 
@@ -528,8 +510,6 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 .btn { margin: 10px 0; display: inline-block; padding: 0 0.5rem; background-color: #4285f4; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 10px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; }
 
 .btn:hover:not(:disabled), .btn:focus:not(:disabled) { background-color: #3367d6; color: #fff; text-decoration: none; }
-
-.btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
 .btn:active:not(:disabled) { transform: translateY(1px); }
 
@@ -630,8 +610,6 @@ footer .footer-copyright { text-align: center; font-size: 0.875rem; margin-top: 
 .banner .btn { display: inline-block; padding: 0.75rem 1.5rem; background-color: #a689bf; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; text-transform: uppercase; }
 
 .banner .btn:hover:not(:disabled), .banner .btn:focus:not(:disabled) { background-color: #926FB1; color: #fff; text-decoration: none; }
-
-.banner .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
 .banner .btn:active:not(:disabled) { transform: translateY(1px); }
 
