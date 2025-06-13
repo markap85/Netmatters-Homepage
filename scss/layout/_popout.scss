@@ -1,3 +1,25 @@
+
+
+// Show popout when any main nav item is hovered
+@media (min-width: $brk-point-m) {
+    .main-nav {
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-popout-bespoke {
+        @include nav-popout-shared($bespoke);
+    }
+    .main-nav-items > a.development:hover ~ .nav-popout-bespoke,
+    .nav-popout-bespoke:hover,
+    .nav-popout-bespoke:focus-within {
+        display: block !important;
+    }
+}
+
+// ===================================================================
+// NAV POPOUT BACKGROUNDS
+// ===================================================================
+
 .nav-popout-bespoke {
     @extend %nav-popout-shared;
     background: $bespoke;
@@ -53,66 +75,14 @@
     background: $developer;
 }
 
-// Show popout when any main nav item is hovered
-@media (min-width: $brk-point-m) {
-    .main-nav {
-        position: relative;
-        z-index: 1001;
-    }
-    .nav-popout-bespoke {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        background: $bespoke;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        z-index: 1002;
-        padding: 20px 200px;
-        color: $white;
-    }
-    .main-nav-items > a.development:hover ~ .nav-popout-bespoke,
-    .nav-popout-bespoke:hover,
-    .nav-popout-bespoke:focus-within {
-        display: block !important;
-    }
-}
-
 .nav-popout-it {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px; // Added fixed height for debugging
-    background: $it;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    z-index: 1002;
+        @include nav-popout-shared($it);
 }
 
 @media (min-width: $brk-point-m) {
     .main-nav {
         position: relative;
         z-index: 1001;
-    }
-    .nav-popout-it {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        background: $it;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        z-index: 1002;
-        padding: 20px 200px;
-        color: $white;
     }
     .main-nav-items > a.it:hover ~ .nav-popout-it,
     .nav-popout-it:hover,
@@ -122,15 +92,7 @@
 }
 
 .nav-popout-marketing {
-    display: block;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    min-height: 250px;
-    height: 400px;
-    background: $marketing; // <-- FIX: was $it, should be $marketing
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    @include nav-popout-shared($marketing);
     z-index: 1002;
     padding: 40px 0;
 }
@@ -141,19 +103,7 @@
         z-index: 1001;
     }
     .nav-popout-marketing {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        background: $marketing; // <-- FIX: was $marketing in your code, keep as $marketing
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        z-index: 1002;
-        padding: 20px 200px;
-        color: $white;
+        @include nav-popout-shared($marketing);
     }
     .main-nav-items > a.marketing:hover ~ .nav-popout-marketing, // <-- FIX: was a.digital, should be a.marketing
     .nav-popout-marketing:hover,
@@ -170,19 +120,7 @@
         z-index: 1001;
     }
     .nav-popout-telecoms {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        background: $telecoms;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        z-index: 1002;
-        padding: 20px 200px;
-        color: $white;
+        @include nav-popout-shared($telecoms);
     }
     .main-nav-items > a.telecoms:hover ~ .nav-popout-telecoms,
     .nav-popout-telecoms:hover,
@@ -191,19 +129,7 @@
     }
 
     .nav-popout-design {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        background: $design;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        z-index: 1002;
-        padding: 20px 200px;
-        color: $white;
+        @include nav-popout-shared($design);
     }
     .main-nav-items > a.design:hover ~ .nav-popout-design, // <-- FIX: was a.web, should be a.design
     .nav-popout-design:hover,
@@ -212,19 +138,7 @@
     }
 
     .nav-popout-cyber {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        background: $cyber;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        z-index: 1002;
-        padding: 20px 200px;
-        color: $white;
+        @include nav-popout-shared($cyber);
     }
     .main-nav-items > a.cyber:hover ~ .nav-popout-cyber,
     .nav-popout-cyber:hover,
@@ -233,19 +147,7 @@
     }
 
     .nav-popout-developer {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        background: $developer;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        z-index: 1002;
-        padding: 20px 200px;
-        color: $white;
+        @include nav-popout-shared($developer);
     }
     .main-nav-items > a.developer:hover ~ .nav-popout-developer,
     .nav-popout-developer:hover,

@@ -1,323 +1,136 @@
-// Services Title Section
 .services-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 
-    h2,
-    a {
-        font-size: 2rem;
-        color: $primary-dark;
-        margin-bottom: 16px;
-        text-decoration: none;
-        margin-top: 26.56px;
-    }
+  h2,
+  a {
+    font-size: 2rem;
+    color: $primary-dark;
+    margin-top: 26.56px;
+    margin-bottom: 16px;
+    text-decoration: none;
+  }
 
-    a {
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
-// View Our Work Link
 .viewourwork {
-    display: none;
+  display: none;
 
-    @media (min-width: $brk-point-s) {
-        display: block;
-        
-        &::after {
-            content: "  →";
-        }
+  @media (min-width: $brk-point-s) {
+    display: block;
+    &::after {
+      content: "  →";
     }
+  }
 }
 
-// Services Grid Layouts
-.services-grid,
-.services-grid-sub {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr; // Single column by default
-    gap: 32px;
-    margin: 32px 0;
+.services-grid {
+  @extend %grid-default;
 
-    @media (min-width: $brk-point-m) {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  @media (min-width: $brk-point-m) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .services-grid-sub {
-    @media (min-width: $brk-point-m) {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  @extend %grid-default;
 
-    @media (min-width: $brk-point-l) {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  @media (min-width: $brk-point-m) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $brk-point-l) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Service Icons
 .services-grid,
 .services-grid-sub {
-    .icon-laptop,
-    .icon-display,
-    .icon-stats-bars,
-    .icon-phone_in_talk,
-    .icon-embed2,
-    .icon-security,
-    .icon-school {
-        color: $white;
-        padding: 10px;
-        border-radius: 50%;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .icon-laptop { 
-        font-size: 40px; 
-        background-color: $bespoke !important; 
-    }
-    
-    .icon-display { 
-        font-size: 40px; 
-        background-color: $it !important; 
-    }
-    
-    .icon-stats-bars { 
-        font-size: 40px; 
-        background-color: $marketing !important; 
-    }
-    
-    .icon-phone_in_talk { 
-        font-size: 20px; 
-        background-color: $telecoms !important; 
-    }
-    
-    .icon-embed2 { 
-        font-size: 20px; 
-        background-color: $design !important; 
-    }
-    
-    .icon-security { 
-        font-size: 20px; 
-        background-color: $cyber !important; 
-    }
-    
-    .icon-school { 
-        font-size: 20px; 
-        background-color: $developer !important; 
-    }
+  .icon-laptop { @include service-icon($bespoke, 40px); }
+  .icon-display { @include service-icon($it, 40px); }
+  .icon-stats-bars { @include service-icon($marketing, 40px); }
+  .icon-phone_in_talk { @include service-icon($telecoms); }
+  .icon-embed2 { @include service-icon($design); }
+  .icon-security { @include service-icon($cyber); }
+  .icon-school { @include service-icon($developer); }
 }
 
-// Service Item Cards
 .service-item {
-    background: $white;
-    border-radius: 8px;
-    border: 1px solid $grey;
-    padding: 32px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    top: 0;
-    transition: top 0.5s ease, background-color 0.5s ease;
+  background: $white;
+  border-radius: 8px;
+  border: 1px solid $grey;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 0;
+  transition: top 0.5s ease, background-color 0.5s ease;
 
-    &:hover {
-        top: -10px;
-    }
+  &:hover {
+    top: -10px;
+  }
 
-    h3 {
-        margin: 16px 0 8px 0;
-        font-size: 1.25rem;
-        font-weight: 400;
-        color: $grey-mid;
-        transition: color 0.3s ease;
-    }
+  h3 {
+    margin: 16px 0 8px 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $grey-mid;
+    transition: color 0.3s ease;
+  }
 
-    p {
-        font-size: 0.8rem;
-        color: $grey-mid;
-        margin-bottom: 16px;
-        transition: color 0.3s ease;
-    }
+  p {
+    font-size: 0.8rem;
+    color: $grey-mid;
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+  }
 
-    a {
-        margin-top: auto;
-        background: $design;
-        color: $white;
-        padding: 8px 20px;
-        border-radius: 4px;
-        text-decoration: none;
-        transition: background 0.3s ease, color 0.3s ease;
+  a {
+    margin-top: auto;
+    @include service-button($design);
 
-        &:hover {
-            background: $design;
-        }
+    &.service-item__link--bespoke { @include service-button($yellow); }
+    &.service-item__link--it { @include service-button($it); }
+    &.service-item__link--digital { @include service-button($marketing); }
+    &.service-item__link--telecoms { @include service-button($telecoms); }
+    &.service-item__link--web { @include service-button($design); }
+    &.service-item__link--cyber { @include service-button($cyber); }
+    &.service-item__link--developer { @include service-button($telecoms); }
+  }
 
-        // Service-specific button colors
-        &.service-item__link--bespoke { 
-            background: $yellow; 
-        }
-        
-        &.service-item__link--it { 
-            background: $it; 
-        }
-        
-        &.service-item__link--digital { 
-            background: $marketing; 
-        }
-        
-        &.service-item__link--telecoms { 
-            background: $telecoms; 
-        }
-        
-        &.service-item__link--web { 
-            background: $design; 
-        }
-        
-        &.service-item__link--cyber { 
-            background: $cyber; 
-        }
-        
-        &.service-item__link--developer { 
-            background: $telecoms; 
-        }
-    }
-}
+  // Hover States
+  &.bespoke-hover:hover {
+    @include service-hover($bespoke, "icon-laptop", "service-item__link--bespoke");
+  }
 
-// Hover States for Service Items
-.service-item {
-    // Bespoke hover
-    &.bespoke-hover:hover {
-        background-color: $bespoke !important;
-        
-        h3, p { 
-            color: $white !important; 
-        }
-        
-        .icon-laptop { 
-            background-color: $white !important; 
-            color: $bespoke !important; 
-        }
-        
-        .service-item__link--bespoke { 
-            background: $white !important; 
-            color: $bespoke !important; 
-        }
-    }
+  &.it-hover:hover {
+    @include service-hover($it, "icon-display", "service-item__link--it");
+  }
 
-    // IT hover
-    &.it-hover:hover {
-        background-color: $it !important;
-        
-        h3, p { 
-            color: $white !important; 
-        }
-        
-        .icon-display { 
-            background-color: $white !important; 
-            color: $it !important; 
-        }
-        
-        .service-item__link--it { 
-            background: $white !important; 
-            color: $it !important; 
-        }
-    }
+  &.digital-hover:hover {
+    @include service-hover($marketing, "icon-stats-bars", "service-item__link--digital");
+  }
 
-    // Digital/Marketing hover
-    &.digital-hover:hover {
-        background-color: $marketing !important;
-        
-        h3, p { 
-            color: $white !important; 
-        }
-        
-        .icon-stats-bars { 
-            background-color: $white !important; 
-            color: $marketing !important; 
-        }
-        
-        .service-item__link--digital { 
-            background: $white !important; 
-            color: $marketing !important; 
-        }
-    }
+  &.telecoms-hover:hover {
+    @include service-hover($telecoms, "icon-phone_in_talk", "service-item__link--telecoms");
+  }
 
-    // Telecoms hover
-    &.telecoms-hover:hover {
-        background-color: $telecoms !important;
-        
-        h3, p { 
-            color: $white !important; 
-        }
-        
-        .icon-phone_in_talk { 
-            background-color: $white !important; 
-            color: $telecoms !important; 
-        }
-        
-        .service-item__link--telecoms { 
-            background: $white !important; 
-            color: $telecoms !important; 
-        }
-    }
+  &.web-hover:hover {
+    @include service-hover($design, "icon-embed2", "service-item__link--web");
+  }
 
-    // Web/Design hover
-    &.web-hover:hover {
-        background-color: $design !important;
-        
-        h3, p { 
-            color: $white !important; 
-        }
-        
-        .icon-embed2 { 
-            background-color: $white !important; 
-            color: $design !important; 
-        }
-        
-        .service-item__link--web { 
-            background: $white !important; 
-            color: $design !important; 
-        }
-    }
+  &.cyber-hover:hover {
+    @include service-hover($cyber, "icon-security", "service-item__link--cyber");
+  }
 
-    // Cyber Security hover
-    &.cyber-hover:hover {
-        background-color: $cyber !important;
-        
-        h3, p { 
-            color: $white !important; 
-        }
-        
-        .icon-security { 
-            background-color: $white !important; 
-            color: $cyber !important; 
-        }
-        
-        .service-item__link--cyber { 
-            background: $white !important; 
-            color: $cyber !important; 
-        }
-    }
-
-    // Developer hover
-    &.developer-hover:hover {
-        background-color: $telecoms !important;
-        
-        h3, p { 
-            color: $white !important; 
-        }
-        
-        .icon-school { 
-            background-color: $white !important; 
-            color: $telecoms !important; 
-        }
-        
-        .service-item__link--developer { 
-            background: $white !important; 
-            color: $telecoms !important; 
-        }
-    }
+  &.developer-hover:hover {
+    @include service-hover($telecoms, "icon-school", "service-item__link--developer");
+  }
 }

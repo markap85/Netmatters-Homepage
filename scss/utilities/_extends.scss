@@ -35,3 +35,24 @@
     align-items: center;
     justify-content: center;
 }
+
+// Department tags - matching your HTML classes with double dashes
+%tag-base {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  color: $white !important;
+  padding: 4px 10px !important;
+  font-size: 0.7rem !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 10;
+}
+
+%grid-default {
+  display: grid;
+  width: 100%;
+  gap: 32px;
+  margin: 32px 0;
+  grid-template-columns: 1fr;
+}

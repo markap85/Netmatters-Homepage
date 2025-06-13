@@ -30,10 +30,6 @@ $netmatters-colors: (
   developer: $developer
 );
 
-@mixin nav-item-col($key) {
-  color: map-get($netmatters-colors, $key);
-}
-
 // Primary Site Colors
 
 $primary-dark: #323544;
@@ -59,58 +55,3 @@ $X: #1DA1F2;
 $linkedin: #0077B5;
 $instagram: #D93175;
 
-// Button Mixin Definition
-@mixin button(
-  $bg-color: #007bff,
-  $text-color: #fff,
-  $padding: 0.75rem 1.5rem,
-  $border-radius: 3px,
-  $border: 1px solid transparent,
-  $font-size: 18px,
-  $font-weight: 400,
-  $transition: all 0.2s ease-in-out,
-  $hover-bg: darken(#007bff, 10%),
-  $hover-text: #fff,
-  $focus-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25),
-  $disabled-bg: #6c757d,
-  $disabled-text: #fff
-) {
-  display: inline-block;
-  padding: $padding;
-  background-color: $bg-color;
-  color: $text-color;
-  border: $border;
-  border-radius: $border-radius;
-  font-size: $font-size;
-  font-weight: $font-weight;
-  text-align: center;
-  text-decoration: none;
-  line-height: 35px;
-  transition: $transition;
-  user-select: none;
-  vertical-align: middle;
-  text-transform: uppercase;
-  cursor: pointer;
-  
-  &:hover:not(:disabled) {
-    background-color: $hover-bg;
-    color: $hover-text;
-    text-decoration: none;
-  }
-  
-  &:focus {
-    outline: none;
-    box-shadow: $focus-shadow;
-  }
-  
-  &:active:not(:disabled) {
-    transform: translateY(1px);
-  }
-  
-  &:disabled {
-    background-color: $disabled-bg;
-    color: $disabled-text;
-    cursor: not-allowed;
-    opacity: 0.6;
-  }
-}
