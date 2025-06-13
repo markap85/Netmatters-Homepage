@@ -146,7 +146,7 @@ td, th { padding: 0; }
 
 header { margin: 0; width: 100%; }
 
-@media (min-width: 992px) { header .container { flex-direction: row; height: 110px; } }
+@media (min-width: 768px) { header .container { flex-direction: row; height: 110px; } }
 
 header .container { display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 20px 0; height: 110px; }
 
@@ -182,15 +182,37 @@ header .logo img { width: 200px; height: 35px; max-width: 200px; max-height: 35p
 
 header .header-icons { display: flex; align-items: center; gap: 15px; }
 
-header .header-icons .search-bar-large { display: none; margin-left: 10px; margin-right: 10px; height: 55px; align-items: center; border-radius: 2px; }
+header .header-icons .search-bar-desktop { display: none; margin-left: 10px; margin-right: 10px; height: 55px; align-items: center; border-radius: 2px; }
 
-@media (min-width: 768px) { header .header-icons .search-bar-large { display: flex; align-items: center; justify-content: center; } }
+@media (min-width: 768px) { header .header-icons .search-bar-desktop { display: flex; align-items: center; justify-content: center; } }
 
-header .header-icons .search-bar-large input { border: 1px solid #b4b4b4; border-right: none; border-radius: 2px 0 0 2px; background: transparent; height: 100%; font-size: 1rem; outline: none; padding: 10px; width: 200px; }
+header .header-icons .search-bar-desktop input { border: 1px solid #b4b4b4; border-right: none; border-radius: 2px 0 0 2px; background: transparent; height: 100%; font-size: 1rem; outline: none; padding: 10px; width: 200px; display: none; }
 
-header .header-icons .search-bar-large .icon-search { background: #999AA2; border-radius: 0 2px 2px 0; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; }
+@media (min-width: 768px) { header .header-icons .search-bar-desktop input { display: flex; } }
 
-header .header-icons .search-bar-large .icon-search:hover { background: #7e808a; }
+@media (min-width: 992px) { header .header-icons .search-bar-desktop input { display: none; } }
+
+@media (min-width: 1260px) { header .header-icons .search-bar-desktop input { display: flex; } }
+
+header .header-icons .search-bar-desktop .icon-search { background: #999AA2; border-radius: 0 2px 2px 0; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; }
+
+header .header-icons .search-bar-desktop .icon-search:hover { background: #7e808a; }
+
+header .header-icons .search-bar-full { display: none; margin-left: 10px; margin-right: 10px; height: 55px; align-items: center; border-radius: 2px; }
+
+@media (min-width: 1260px) { header .header-icons .search-bar-full { display: flex; align-items: center; justify-content: center; } }
+
+header .header-icons .search-bar-full input { border: 1px solid #b4b4b4; border-right: none; border-radius: 2px 0 0 2px; background: transparent; height: 100%; font-size: 1rem; outline: none; padding: 10px; width: 300px; }
+
+header .header-icons .search-bar-full .icon-search { background: #999AA2; border-radius: 0 2px 2px 0; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; }
+
+header .header-icons .search-bar-full .icon-search:hover { background: #7e808a; }
+
+header .header-icons .search-icon-only { display: none; background: #999AA2; border-radius: 2px; width: 55px; height: 55px; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; border: none; }
+
+@media (min-width: 992px) and (max-width: 1259px) { header .header-icons .search-icon-only { display: flex; } }
+
+header .header-icons .search-icon-only:hover { background: #7e808a; }
 
 header .header-icons .phoneicon { display: block; }
 
@@ -204,22 +226,20 @@ header .header-icons .mobile-menu-toggle span { display: block; width: 25px; hei
 
 header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain; display: block; }
 
-.mobile-search-bar { display: none; margin: 0 auto; height: 50px; align-items: center; border-radius: 2px; width: 85vw; max-width: 90vw; justify-content: center; position: relative; z-index: 2; background: #fff; }
+.search-bar-mobile { display: flex; margin: 0 auto; height: 50px; align-items: center; border-radius: 2px; width: 85vw; max-width: 90vw; justify-content: center; position: relative; z-index: 2; background: #fff; }
 
-@media (max-width: 768px) { .mobile-search-bar { display: flex; margin-bottom: 20px; } }
+@media (min-width: 768px) { .search-bar-mobile { display: none; } }
 
-.mobile-search-bar input { border: 1px solid #b4b4b4; border-right: none; border-radius: 2px 0 0 2px; background: transparent; height: 100%; font-size: 1rem; outline: none; padding: 10px; flex: 1; }
+.search-bar-mobile input { border: 1px solid #b4b4b4; border-right: none; border-radius: 2px 0 0 2px; background: transparent; height: 100%; font-size: 1rem; outline: none; padding: 10px; flex: 1; }
 
-.mobile-search-bar .icon-search { background: #999AA2; border-radius: 0 2px 2px 0; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; }
+.search-bar-mobile .icon-search { background: #999AA2; border-radius: 0 2px 2px 0; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; }
 
-.mobile-search-bar .icon-search:hover { background: #7e808a; }
+.search-bar-mobile .icon-search:hover { background: #7e808a; }
 
-@media (max-width: 768px) { header { padding-bottom: 70px; }
-  header .header-icons { gap: 10px; }
-  header .header-icons .search-bar-large { display: none !important; } }
+@media (max-width: 767px) { header { padding-bottom: 70px; }
+  header .header-icons { gap: 10px; } }
 
-@media (min-width: 768px) and (max-width: 992px) { header .header-icons { gap: 15px; }
-  header .header-icons .phoneicon { display: none; } }
+@media (min-width: 768px) and (max-width: 991px) { header .header-icons { gap: 15px; } }
 
 @media (min-width: 992px) { header .header-icons { gap: 20px; } }
 

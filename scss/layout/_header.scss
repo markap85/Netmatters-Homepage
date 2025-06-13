@@ -1,12 +1,17 @@
 // ===================================================================
-// NAVIGATION STYLES
+// NAVIGATION STYLES - FIXED RESPONSIVE BEHAVIOR
 // ===================================================================
+
+// Assuming your breakpoints are:
+// $brk-point-s: 768px (tablet)
+// $brk-point-m: 992px (desktop)
+// $brk-point-l: 1260px (large desktop)
 
 header {
     margin: 0;
     width: 100%;
 
-    @media (min-width: $brk-point-m) {
+    @media (min-width: $brk-point-s) {
         .container {
             flex-direction: row;
             height: 110px;
@@ -33,7 +38,8 @@ header {
                 $bg-color: #4285f4,
                 $hover-bg: #3367d6
             );
-            display: none !important; // Hide buttons by default on smaller screens
+            // Hide buttons by default (mobile and tablet)
+            display: none !important;
             align-items: center;
             gap: 8px;
             font-size: 20px;
@@ -49,7 +55,6 @@ header {
             cursor: pointer;
             transition: background-color 0.3s ease;
 
-            // Proper hover effects
             &:hover {
                 background-color: #3367d6;
             }
@@ -62,11 +67,10 @@ header {
                 justify-content: center;
                 height: auto;
             }
-        }
 
-        @media (min-width: $brk-point-m) {
-            .btn {
-                display: inline-flex !important; // Show buttons on larger screens
+            // Show buttons from 992px (desktop) onwards
+            @media (min-width: $brk-point-m) {
+                display: inline-flex !important;
             }
         }
 
@@ -92,7 +96,7 @@ header {
             object-fit: contain;
             display: block;
 
-            // Tablet size
+            // Tablet size (768px+)
             @media (min-width: $brk-point-s) {
                 width: 300px;
                 height: 52px;
@@ -100,7 +104,7 @@ header {
                 max-height: 52px;
             }
 
-            // Desktop size
+            // Desktop size (992px+)
             @media (min-width: $brk-point-m) {
                 width: 402px;
                 height: 70px;
@@ -113,38 +117,56 @@ header {
     .header-icons {
         display: flex;
         align-items: center;
-        gap: 15px; // Equal spacing between elements
+        gap: 15px;
 
-        // Large screen search bar
-        .search-bar-large {
+        // Search bar behavior:
+        // Hidden on mobile (< 768px)
+        // Visible on tablet (768px - 1259px) 
+        // Hidden on desktop when full search bar shows (1260px+)
+        .search-bar-desktop {
             display: none;
+
+            // Show on tablet and small desktop (768px - 1259px)
+            @media (min-width: $brk-point-s){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
             margin-left: 10px;
             margin-right: 10px;
             height: 55px;
             align-items: center;
             border-radius: 2px;
 
-            @media (min-width: $brk-point-s) {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
             input {
                 border: 1px solid rgb(180, 180, 180);
                 border-right: none;
-                border-radius: 2px 0 0 2px; // Rounded left corners only
+                border-radius: 2px 0 0 2px;
                 background: transparent;
                 height: 100%;
                 font-size: 1rem;
                 outline: none;
                 padding: 10px;
                 width: 200px;
+                display: none;
+
+                @media (min-width: $brk-point-s){
+                display: flex;
+            }
+
+                @media (min-width: $brk-point-m){
+                display: none;
+            }
+
+                @media (min-width: $brk-point-l){
+                display: flex;
+            }
             }
 
             .icon-search {
                 background: #999AA2;
-                border-radius: 0 2px 2px 0; // Rounded right corners only
+                border-radius: 0 2px 2px 0;
                 width: 55px;
                 height: 55px;
                 display: flex;
@@ -161,7 +183,79 @@ header {
             }
         }
 
-        // Phone icon (hidden on larger screens)
+        // Full search bar for large screens (1260px+)
+        .search-bar-full {
+            display: none;
+
+            @media (min-width: 1260px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 55px;
+            align-items: center;
+            border-radius: 2px;
+
+            input {
+                border: 1px solid rgb(180, 180, 180);
+                border-right: none;
+                border-radius: 2px 0 0 2px;
+                background: transparent;
+                height: 100%;
+                font-size: 1rem;
+                outline: none;
+                padding: 10px;
+                width: 300px; // Wider for full search bar
+            }
+
+            .icon-search {
+                background: #999AA2;
+                border-radius: 0 2px 2px 0;
+                width: 55px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background: darken(#999AA2, 10%);
+                }
+            }
+        }
+
+        // Search icon only (992px - 1259px)
+        .search-icon-only {
+            display: none;
+
+            @media (min-width: $brk-point-m) and (max-width: 1259px) {
+                display: flex;
+            }
+
+            background: #999AA2;
+            border-radius: 2px;
+            width: 55px;
+            height: 55px;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: none;
+
+            &:hover {
+                background: darken(#999AA2, 10%);
+            }
+        }
+
+        // Phone icon - only visible on mobile (< 768px)
         .phoneicon {
             display: block;
             
@@ -170,7 +264,7 @@ header {
             }
         }
 
-        // Burger menu with spans for animation
+        // Burger menu - always visible
         .mobile-menu-toggle {
             background: $secondary-dark;
             border: none;
@@ -189,7 +283,6 @@ header {
                 background: darken($secondary-dark, 10%);
             }
 
-            // Use spans instead of elements with burger-bar class
             span {
                 display: block;
                 width: 25px;
@@ -199,7 +292,6 @@ header {
                 border-radius: 1px;
                 transition: all 0.3s ease;
             }
-
         }
     }
 
@@ -213,9 +305,9 @@ header {
     }
 }
 
-// Mobile search bar (separate from header-icons)
-.mobile-search-bar {
-    display: none;
+// Mobile search bar - only visible on mobile (< 768px)
+.search-bar-mobile {
+    display: flex; // Show by default (mobile)
     margin: 0 auto;
     height: 50px;
     align-items: center;
@@ -227,9 +319,9 @@ header {
     z-index: 2;
     background: $white;
 
-    @media (max-width: $brk-point-s) {
-        display: flex;
-        margin-bottom: 20px;
+    // Hide on tablet and above (768px+)
+    @media (min-width: $brk-point-s) {
+        display: none;
     }
 
     input {
@@ -263,39 +355,31 @@ header {
     }
 }
 
-// Responsive behavior
-@media (max-width: $brk-point-s) {
+// Mobile specific adjustments (< 768px)
+@media (max-width: 767px) {
     header {
         padding-bottom: 70px;
         
         .header-icons {
-            gap: 10px; // Smaller gap on mobile
-            
-            // On mobile, only show phone icon and burger menu
-            .search-bar-large {
-                display: none !important;
-            }
+            gap: 10px;
         }
     }
 }
 
-@media (min-width: $brk-point-s) and (max-width: $brk-point-m) {
+// Tablet specific adjustments (768px - 991px)
+@media (min-width: $brk-point-s) and (max-width: 991px) {
     header {
         .header-icons {
-            gap: 15px; // Medium gap on tablet
-            
-            // On tablet, show search bar and burger menu, hide phone icon
-            .phoneicon {
-                display: none;
-            }
+            gap: 15px;
         }
     }
 }
 
+// Desktop specific adjustments (992px+)
 @media (min-width: $brk-point-m) {
     header {
         .header-icons {
-            gap: 20px; // Larger gap on desktop
+            gap: 20px;
         }
     }
 }
