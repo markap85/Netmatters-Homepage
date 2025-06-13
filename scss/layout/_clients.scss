@@ -1,8 +1,8 @@
 .tooltip-carousel {
   width: 100%;
   overflow-x: clip;
+  overflow-y: visible; /* <-- allow vertical overflow for tooltips */
   position: relative;
-  overflow: visible; /* <-- allow tooltips to overflow vertically */
   z-index: 1; /* ensure stacking */
   padding: 2rem 0;
 }
@@ -55,7 +55,7 @@
   transform: translateX(-50%) translateY(-8px);
   min-width: 220px;
   max-width: 320px;
-  background: #222; /* Replace $primary-dark */
+  background: $primary-dark;
   color: #ffffff;
   padding: 18px 22px 14px 22px;
   z-index: 9999;
@@ -134,4 +134,15 @@
   .tooltip p {
     font-size: 0.85rem;
   }
+}
+
+.btn {
+  margin: 10px 0;
+            @include button(
+                $bg-color: #4285f4,
+                $hover-bg: #3367d6,
+                $font-size: 10px,
+                $padding: 0 0.5rem,
+
+            );
 }

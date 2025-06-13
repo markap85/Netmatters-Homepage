@@ -460,7 +460,7 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .tag--it { background-color: #4183D7; }
 
-.tooltip-carousel { width: 100%; overflow-x: clip; position: relative; overflow: visible; /* <-- allow tooltips to overflow vertically */ z-index: 1; /* ensure stacking */ padding: 2rem 0; }
+.tooltip-carousel { width: 100%; overflow-x: clip; overflow-y: visible; /* <-- allow vertical overflow for tooltips */ position: relative; z-index: 1; /* ensure stacking */ padding: 2rem 0; }
 
 .tooltip-carousel .carousel-viewport { width: 100%; }
 
@@ -474,7 +474,7 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .tooltip-wrapper img { height: 70px; display: block; }
 
-.tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); min-width: 220px; max-width: 320px; background: #222; /* Replace $primary-dark */ color: #ffffff; padding: 18px 22px 14px 22px; z-index: 9999; text-align: left; pointer-events: auto; opacity: 0; white-space: normal; }
+.tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); min-width: 220px; max-width: 320px; background: #323544; color: #ffffff; padding: 18px 22px 14px 22px; z-index: 9999; text-align: left; pointer-events: auto; opacity: 0; white-space: normal; }
 
 .tooltip::before { content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 8px; background: transparent; pointer-events: auto; }
 
@@ -492,6 +492,16 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
   .tooltip { min-width: 180px; max-width: 90vw; font-size: 0.85rem; }
   .tooltip h2 { font-size: 1rem; }
   .tooltip p { font-size: 0.85rem; } }
+
+.btn { margin: 10px 0; display: inline-block; padding: 0 0.5rem; background-color: #4285f4; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 10px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; }
+
+.btn:hover:not(:disabled) { background-color: #3367d6; color: #fff; text-decoration: none; }
+
+.btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+
+.btn:active:not(:disabled) { transform: translateY(1px); }
+
+.btn:disabled { background-color: #6c757d; color: #fff; cursor: not-allowed; opacity: 0.6; }
 
 footer { background-color: #323544; color: #fff; padding: 30px 0 0; position: relative; }
 
