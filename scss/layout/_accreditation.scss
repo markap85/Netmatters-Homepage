@@ -1,6 +1,6 @@
 .accreditation-carousel {
     width: 100%;
-    overflow: clip;
+    overflow-x: hidden;
     margin: 0;
     padding: 50px 0;
     background: white;
@@ -11,9 +11,7 @@
   transition: transform 0.6s ease-in-out;
   will-change: transform;
   gap: 100px;
-
-
-
+  /* Remove overflow: clip; */
 }
 
 .accreditation-carousel-track img {

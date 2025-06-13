@@ -1,14 +1,9 @@
 // ===================================================================
-// NAVIGATION STYLES - FIXED RESPONSIVE BEHAVIOR
+// NAVIGATION STYLES
 // ===================================================================
 
-// Assuming your breakpoints are:
-// $brk-point-s: 768px (tablet)
-// $brk-point-m: 992px (desktop)
-// $brk-point-l: 1260px (large desktop)
-
 header {
-    margin: 0;
+    margin: 0px;
     width: 100%;
 
     @media (min-width: $brk-point-s) {
@@ -118,6 +113,12 @@ header {
         display: flex;
         align-items: center;
         gap: 15px;
+
+        .icon-phone_in_talk {
+            font-size: 3rem;
+            color: $primary-dark;
+            text-decoration: none;
+        }
 
         // Search bar behavior:
         // Hidden on mobile (< 768px)

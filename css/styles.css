@@ -144,7 +144,7 @@ td, th { padding: 0; }
 
 .section-content { padding: 2rem 0; /* Vertical padding only */ }
 
-header { margin: 0; width: 100%; }
+header { margin: 0px; width: 100%; }
 
 @media (min-width: 768px) { header .container { flex-direction: row; height: 110px; } }
 
@@ -181,6 +181,8 @@ header .logo img { width: 200px; height: 35px; max-width: 200px; max-height: 35p
 @media (min-width: 992px) { header .logo img { width: 402px; height: 70px; max-width: 402px; max-height: 70px; } }
 
 header .header-icons { display: flex; align-items: center; gap: 15px; }
+
+header .header-icons .icon-phone_in_talk { font-size: 3rem; color: #323544; text-decoration: none; }
 
 header .header-icons .search-bar-desktop { display: none; margin-left: 10px; margin-right: 10px; height: 55px; align-items: center; border-radius: 2px; }
 
@@ -360,9 +362,9 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .service-item.developer-hover:hover .service-item__link--developer { background: #fff !important; color: #D64541 !important; }
 
-.accreditation-carousel { width: 100%; overflow: clip; margin: 0; padding: 50px 0; background: white; }
+.accreditation-carousel { width: 100%; overflow-x: hidden; margin: 0; padding: 50px 0; background: white; }
 
-.accreditation-carousel-track { display: flex; transition: transform 0.6s ease-in-out; will-change: transform; gap: 100px; }
+.accreditation-carousel-track { display: flex; transition: transform 0.6s ease-in-out; will-change: transform; gap: 100px; /* Remove overflow: clip; */ }
 
 .accreditation-carousel-track img { width: auto; height: 70px; flex-shrink: 0; margin: 0; padding: 0; filter: grayscale(100%); }
 
@@ -607,11 +609,13 @@ footer .footer-copyright { text-align: center; font-size: 0.875rem; margin-top: 
 
 .banner::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, black, rgba(0, 0, 0, 0)); z-index: 1; }
 
-.banner h1 { color: #fff; font-size: 4rem; line-height: 80px; font-weight: 400; letter-spacing: 0.4px; width: 900px; margin-bottom: 0; }
+.banner h1, .banner #hero-heading { color: #fff; font-size: 4rem; line-height: 5rem; font-weight: 600; letter-spacing: 0.4px; width: 1000px; margin-bottom: 0; }
 
-@media (max-width: 992px) { .banner h1 { font-size: 30px; line-height: 100px; width: 100%; } }
+@media (max-width: 992px) { .banner h1, .banner #hero-heading { font-size: 30px; line-height: 2rem; width: 90%; } }
 
-.banner .subtext { font-size: 1.5rem; color: #fff; }
+.banner .subtext { font-size: 2rem; color: #fff; margin: 0; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: 600; padding: 4.5rem 0; width: 100%; max-width: 800px; }
+
+@media (max-width: 992px) { .banner .subtext { font-size: 1rem; width: 90%; } }
 
 .banner .btn { display: inline-block; padding: 0.75rem 1.5rem; background-color: #a689bf; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; text-transform: uppercase; }
 
@@ -627,8 +631,7 @@ footer .footer-copyright { text-align: center; font-size: 0.875rem; margin-top: 
 
 .banner .banner-content { position: relative; z-index: 2; width: 100%; margin-bottom: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 
-@media (min-width: 992px) { .banner .banner-content { align-items: flex-start; justify-content: flex-start; text-align: left; margin-left: 10px; max-width: 50%; }
-  .banner .banner-content .subtext, .banner .banner-content a { text-align: left; align-self: flex-start; margin: 0; text-transform: uppercase; font-size: 1.2rem; height: 60px; display: flex; align-items: center; justify-content: center; } }
+@media (min-width: 992px) { .banner .banner-content { align-items: flex-start; justify-content: flex-start; text-align: left; margin-left: 10px; max-width: 50%; } }
 
 .chat-toggle, .icon-chat, .consent { color: #fff; }
 
