@@ -2,60 +2,93 @@
 // Button Mixin
 // Styles a button with customizable colors, padding, border, and states.
 // =======================
+// =======================
+// Combined Button Mixin
+// Styles a button with customizable colors, padding, border, icons, and states.
+// Supports service style, hover, focus, disabled, and optional icon styling.
+// =======================
 @mixin button(
-    $bg-color: #007bff,
-    $text-color: #fff,
-    $padding: 0.75rem 1.5rem,
-    $border-radius: 3px,
-    $border: 1px solid transparent,
-    $font-size: 18px,
-    $font-weight: 400,
-    $transition: all 0.2s ease-in-out,
-    $hover-bg: darken(#007bff, 10%),
-    $hover-text: #fff,
-    $focus-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25),
-    $disabled-bg: #6c757d,
-    $disabled-text: #fff
+  $bg-color: #007bff,
+  $text-color: #fff,
+  $color: white,
+  $padding: 0.75rem 1.5rem,
+  $border-radius: 3px,
+  $border: 1px solid transparent,
+  $font-size: 18px,
+  $font-weight: 400,
+  $transition: all 0.2s ease-in-out,
+  $hover-bg: darken(#007bff, 10%),
+  $hover-text: #fff,
+  $focus-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25),
+  $disabled-bg: #6c757d,
+  $disabled-text: #fff,
+  $text-transform: uppercase,
+  $cursor: pointer,
+  // Optional icon parameters inside the button
+  $icon-color: null,
+  $icon-size: null,
+  // Service button variants
+  $is-service-button: false,
+  $service-padding: 8px 20px,
+  $service-border-radius: 4px
 ) {
-    display: inline-block;
-    padding: $padding;
-    background-color: $bg-color;
-    color: $text-color;
-    border: $border;
-    border-radius: $border-radius;
-    font-size: $font-size;
-    font-weight: $font-weight;
-    text-align: center;
+  display: inline-block;
+  padding: if($is-service-button, $service-padding, $padding);
+  background-color: $bg-color;
+  color: $white;
+  border: $border;
+  border-radius: if($is-service-button, $service-border-radius, $border-radius);
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-align: center;
+  text-decoration: none;
+  line-height: 35px;
+  transition: $transition;
+  user-select: none;
+  vertical-align: middle;
+  text-transform: $text-transform;
+  cursor: $cursor;
+
+  // Icon styling inside button, if icon color or size passed
+  @if $icon-color != null or $icon-size != null {
+    > .icon, // or any icon inside
+    > i,
+    > svg {
+      @if $icon-color != null {
+        color: $icon-color;
+      }
+      @if $icon-size != null {
+        font-size: $icon-size;
+      }
+      vertical-align: middle;
+      margin-right: 0.5em;
+    }
+  }
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    background-color: $hover-bg;
+    color: $hover-text;
     text-decoration: none;
-    line-height: 35px;
-    transition: $transition;
-    user-select: none;
-    vertical-align: middle;
-    text-transform: uppercase;
-    cursor: pointer;
-    
-    &:hover:not(:disabled) {
-        background-color: $hover-bg;
-        color: $hover-text;
-        text-decoration: none;
-    }
-    
-    &:focus {
-        outline: none;
-        box-shadow: $focus-shadow;
-    }
-    
-    &:active:not(:disabled) {
-        transform: translateY(1px);
-    }
-    
-    &:disabled {
-        background-color: $disabled-bg;
-        color: $disabled-text;
-        cursor: not-allowed;
-        opacity: 0.6;
-    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: $focus-shadow;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+
+  &:disabled {
+    background-color: $disabled-bg;
+    color: $disabled-text;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
 }
+
 
 // =======================
 // Icon Style Mixin
@@ -164,4 +197,9 @@
     background: $white !important;
     color: $color !important;
   }
+}
+
+@mixin star($color, $size: 50px) {
+  font-size: $size;
+  color: $color;
 }

@@ -9,6 +9,10 @@
 
 .services-grid, .services-grid-sub { display: grid; width: 100%; gap: 32px; margin: 32px 0; grid-template-columns: 1fr; }
 
+.welcome-section .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.welcome-section .welcome-links, .welcome-section .review-links { display: flex; flex-direction: column; gap: 16px; }
+
 @font-face { font-family: 'icomoon'; src: url("../fonts/icomoon.eot?fp678g"); src: url("../fonts/icomoon.eot?fp678g#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?fp678g") format("truetype"), url("../fonts/icomoon.woff?fp678g") format("woff"), url("../fonts/icomoon.svg?fp678g#icomoon") format("svg"); font-weight: normal; font-style: normal; font-display: block; }
 
 [class^="icon-"], [class*=" icon-"] { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'icomoon' !important; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -158,7 +162,7 @@ header .header-row { width: 100%; display: flex; align-items: center; justify-co
 
 header .header-row .btn { display: inline-block; padding: 0.75rem 1.5rem; background-color: #4285f4; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; display: none !important; align-items: center; gap: 8px; font-size: 20px; width: 149.5px; height: 56px; text-align: center !important; font-weight: 400; line-height: normal; padding: 0 25px; justify-content: center; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s ease; }
 
-header .header-row .btn:hover:not(:disabled) { background-color: #3367d6; color: #fff; text-decoration: none; }
+header .header-row .btn:hover:not(:disabled), header .header-row .btn:focus:not(:disabled) { background-color: #3367d6; color: #fff; text-decoration: none; }
 
 header .header-row .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
@@ -370,8 +374,6 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .welcome-section { width: 100vw; position: relative; margin-left: 50%; transform: translateX(-50%); background-color: #323544; }
 
-.welcome-section .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
 .welcome-section .welcome-grid { display: grid; grid-template-columns: 1fr; gap: 32px; padding: 32px 0; color: #fff; }
 
 @media (min-width: 992px) { .welcome-section .welcome-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; } }
@@ -394,17 +396,17 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .welcome-section .stars-bar { display: flex; gap: 4px; }
 
-.welcome-section .stars-bar .icon-star-full { color: #F7B322; font-size: 50px; }
+.welcome-section .stars-bar .icon-star-full { font-size: 50px; color: #F7B322; }
 
-.welcome-section .stars-bar .icon-star-empty { color: rgba(255, 255, 255, 0.3); font-size: 50px; }
+.welcome-section .stars-bar .icon-star-empty { font-size: 50px; color: rgba(255, 255, 255, 0.3); }
 
-.welcome-section .welcome-links, .welcome-section .review-links { display: flex; flex-direction: column; gap: 16px; margin-top: auto; }
+.welcome-section .welcome-links, .welcome-section .review-links { margin-top: auto; }
 
 @media (min-width: 992px) { .welcome-section .welcome-links, .welcome-section .review-links { flex-direction: row; } }
 
-.welcome-section .welcome-links .btn, .welcome-section .review-links .btn { display: inline-block; padding: 0.75rem 1.5rem; background-color: #272936; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; text-transform: uppercase; }
+.welcome-section .welcome-links .btn, .welcome-section .review-links .btn { display: inline-block; padding: 0.75rem 1.5rem; background-color: #272936; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; }
 
-.welcome-section .welcome-links .btn:hover:not(:disabled), .welcome-section .review-links .btn:hover:not(:disabled) { background-color: #121318; color: #fff; text-decoration: none; }
+.welcome-section .welcome-links .btn:hover:not(:disabled), .welcome-section .welcome-links .btn:focus:not(:disabled), .welcome-section .review-links .btn:hover:not(:disabled), .welcome-section .review-links .btn:focus:not(:disabled) { background-color: #0062cc; color: #fff; text-decoration: none; }
 
 .welcome-section .welcome-links .btn:focus, .welcome-section .review-links .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
@@ -416,13 +418,25 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .welcome-section .welcome-links .btn .icon-arrow-right, .welcome-section .review-links .btn .icon-arrow-right { font-size: 16px; }
 
-.welcome-section .welcome-links .btn--google, .welcome-section .review-links .btn--google { background-color: #4285f4 !important; color: #fff !important; }
+.welcome-section .welcome-links .btn--google, .welcome-section .review-links .btn--google { display: inline-block; padding: 0.75rem 1.5rem; background-color: #4285f4; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; }
 
-.welcome-section .welcome-links .btn--google:hover, .welcome-section .welcome-links .btn--google:focus, .welcome-section .review-links .btn--google:hover, .welcome-section .review-links .btn--google:focus { background-color: #3367d6 !important; }
+.welcome-section .welcome-links .btn--google:hover:not(:disabled), .welcome-section .welcome-links .btn--google:focus:not(:disabled), .welcome-section .review-links .btn--google:hover:not(:disabled), .welcome-section .review-links .btn--google:focus:not(:disabled) { background-color: #0062cc; color: #fff; text-decoration: none; }
 
-.welcome-section .welcome-links .btn--trustpilot, .welcome-section .review-links .btn--trustpilot { background-color: #00b67a !important; color: #fff !important; }
+.welcome-section .welcome-links .btn--google:focus, .welcome-section .review-links .btn--google:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
-.welcome-section .welcome-links .btn--trustpilot:hover, .welcome-section .welcome-links .btn--trustpilot:focus, .welcome-section .review-links .btn--trustpilot:hover, .welcome-section .review-links .btn--trustpilot:focus { background-color: #009a66 !important; }
+.welcome-section .welcome-links .btn--google:active:not(:disabled), .welcome-section .review-links .btn--google:active:not(:disabled) { transform: translateY(1px); }
+
+.welcome-section .welcome-links .btn--google:disabled, .welcome-section .review-links .btn--google:disabled { background-color: #6c757d; color: #fff; cursor: not-allowed; opacity: 0.6; }
+
+.welcome-section .welcome-links .btn--trustpilot, .welcome-section .review-links .btn--trustpilot { display: inline-block; padding: 0.75rem 1.5rem; background-color: #00b67a; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; }
+
+.welcome-section .welcome-links .btn--trustpilot:hover:not(:disabled), .welcome-section .welcome-links .btn--trustpilot:focus:not(:disabled), .welcome-section .review-links .btn--trustpilot:hover:not(:disabled), .welcome-section .review-links .btn--trustpilot:focus:not(:disabled) { background-color: #0062cc; color: #fff; text-decoration: none; }
+
+.welcome-section .welcome-links .btn--trustpilot:focus, .welcome-section .review-links .btn--trustpilot:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+
+.welcome-section .welcome-links .btn--trustpilot:active:not(:disabled), .welcome-section .review-links .btn--trustpilot:active:not(:disabled) { transform: translateY(1px); }
+
+.welcome-section .welcome-links .btn--trustpilot:disabled, .welcome-section .review-links .btn--trustpilot:disabled { background-color: #6c757d; color: #fff; cursor: not-allowed; opacity: 0.6; }
 
 .news { background-color: #fff; padding: 20px; }
 
@@ -442,9 +456,9 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .news-item p { font-size: 1rem; color: #999AA2; margin-bottom: 16px; text-align: left; padding-left: 20px; padding-right: 20px; }
 
-.news-item .btn { display: inline-block; padding: 0.5rem 0.5rem; background-color: #272936; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; text-transform: uppercase; margin-right: 50%; margin-left: 5%; margin-bottom: 5%; min-height: 44px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; }
+.news-item .btn { padding: 0.5rem 0.5rem; display: inline-block; padding: 0.75rem 1.5rem; background-color: #272936; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; text-transform: uppercase; margin-right: 50%; margin-left: 5%; margin-bottom: 5%; min-height: 44px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; }
 
-.news-item .btn:hover:not(:disabled) { background-color: #121318; color: #fff; text-decoration: none; }
+.news-item .btn:hover:not(:disabled), .news-item .btn:focus:not(:disabled) { background-color: #121318; color: #fff; text-decoration: none; }
 
 .news-item .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
@@ -513,7 +527,7 @@ header img { max-height: 80px; width: auto; max-width: 100%; object-fit: contain
 
 .btn { margin: 10px 0; display: inline-block; padding: 0 0.5rem; background-color: #4285f4; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 10px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; }
 
-.btn:hover:not(:disabled) { background-color: #3367d6; color: #fff; text-decoration: none; }
+.btn:hover:not(:disabled), .btn:focus:not(:disabled) { background-color: #3367d6; color: #fff; text-decoration: none; }
 
 .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
@@ -615,7 +629,7 @@ footer .footer-copyright { text-align: center; font-size: 0.875rem; margin-top: 
 
 .banner .btn { display: inline-block; padding: 0.75rem 1.5rem; background-color: #a689bf; color: #fff; border: 1px solid transparent; border-radius: 3px; font-size: 18px; font-weight: 400; text-align: center; text-decoration: none; line-height: 35px; transition: all 0.2s ease-in-out; user-select: none; vertical-align: middle; text-transform: uppercase; cursor: pointer; text-transform: uppercase; }
 
-.banner .btn:hover:not(:disabled) { background-color: #926FB1; color: #fff; text-decoration: none; }
+.banner .btn:hover:not(:disabled), .banner .btn:focus:not(:disabled) { background-color: #926FB1; color: #fff; text-decoration: none; }
 
 .banner .btn:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 

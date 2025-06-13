@@ -64,10 +64,11 @@
     }
 
     .btn {
+                    padding: 0.5rem 0.5rem;
         @include button(
             $bg-color: #272936,
             $hover-bg: #121318,
-            $padding: 0.5rem 0.5rem
+
         );
         text-transform: uppercase;
         margin-right: 50%;

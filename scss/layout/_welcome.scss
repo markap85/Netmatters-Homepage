@@ -1,130 +1,106 @@
 .welcome-section {
-    width: 100vw;
-    position: relative;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    background-color: $primary-dark;
-    
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
+  width: 100vw;
+  position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: $primary-dark;
+
+  .container {
+    @extend %centered-container;
+  }
+
+  .welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 0;
+    color: $white;
+
+    @media (min-width: $brk-point-m) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+    }
+  }
+
+  .welcome-grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+      color: $white;
+      font-weight: bold;
+      font-size: 36px;
+      margin: 0 0 16px 0;
     }
 
-    .welcome-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 32px 0;
-        color: $white;
+    p {
+      margin: 0 0 16px 0;
+      line-height: 1.6;
 
-        @media (min-width: $brk-point-m) {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 48px;
-        }
+      &.bold {
+        font-weight: bold;
+      }
     }
 
-    .welcome-grid-item {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+    blockquote {
+      margin: 16px 0;
 
-        h2 {
-            color: $white;
-            font-weight: bold;
-            font-size: 36px;
-            margin: 0 0 16px 0;
-        }
+      p {
+        margin-bottom: 16px;
+      }
 
-        p {
-            margin: 0 0 16px 0;
-            line-height: 1.6;
-            
-            &.bold {
-                font-weight: bold;
-            }
-        }
+      cite {
+        font-style: italic;
+        font-size: 14px;
 
-        blockquote {
-            margin: 16px 0;
-            
-            p {
-                margin-bottom: 16px;
-            }
-            
-            cite {
-                font-style: italic;
-                font-size: 14px;
-                
-                .bold {
-                    font-weight: bold;
-                }
-            }
+        .bold {
+          font-weight: bold;
         }
+      }
+    }
+  }
+
+  .stars-bar {
+    display: flex;
+    gap: 4px;
+
+    .icon-star-full {
+      @include star($yellow);
     }
 
-    // Star rating styles
-    .stars-bar {
-        display: flex;
-        gap: 4px;
-        
-        .icon-star-full {
-            color: $yellow;
-            font-size: 50px;
-        }
-        
-        .icon-star-empty {
-            color: rgba($white, 0.3);
-            font-size: 50px;
-        }
+    .icon-star-empty {
+      @include star(rgba($white, 0.3));
+    }
+  }
+
+  .welcome-links,
+  .review-links {
+    @extend %column-gap;
+    margin-top: auto;
+
+    @media (min-width: $brk-point-m) {
+      flex-direction: row;
     }
 
-    // Welcome section buttons (Why Choose Us, Our Culture)
-    .welcome-links, .review-links {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-top: auto;
+    .btn {
+      @include button(#272936, #121318);
 
-        @media (min-width: $brk-point-m) {
-            flex-direction: row;
-        }
+      @media (min-width: $brk-point-m) {
+        flex: 1;
+      }
 
-        .btn {
-            @include button(
-                $bg-color: #272936,
-                $hover-bg: #121318
-            );
-            text-transform: uppercase;
-
-            @media (min-width: $brk-point-m) {
-                flex: 1;
-            }
-
-            .icon-arrow-right {
-                font-size: 16px;
-            }
-        }
-
-        // Used direct selector for modifier classes to avoid specificity issues
-        .btn--google {
-            background-color: #4285f4 !important;
-            color: #fff !important;
-
-            &:hover,
-            &:focus {
-                background-color: #3367d6 !important;
-            }
-        }
-
-        .btn--trustpilot {
-            background-color: #00b67a !important;
-            color: #fff !important;
-
-            &:hover,
-            &:focus {
-                background-color: #009a66 !important;
-            }
-        }
+      .icon-arrow-right {
+        font-size: 16px;
+      }
     }
+
+    .btn--google {
+      @include button(#4285f4, #3367d6);
+    }
+
+    .btn--trustpilot {
+      @include button(#00b67a, #009a66);
+    }
+  }
 }
