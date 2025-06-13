@@ -23,10 +23,11 @@ header {
     }
 
     .header-row {
-        width: 100%;
+        width: 85%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 10px;
 
         .btn {
             @include button(
@@ -81,15 +82,16 @@ header {
     .logo {
         display: flex;
         align-items: center;
+        overflow: hidden;
 
         img {
-            // Mobile-first approach - small logo for mobile
-            width: 200px;
-            height: 35px;
-            max-width: 200px;
-            max-height: 35px;
-            object-fit: contain;
-            display: block;
+        // Mobile-first approach - logo shrinks to fit available space
+        width: calc(100vw - 120px); // Subtract space for phone icon, burger menu, and margins
+        height: auto; // Maintain aspect ratio
+        max-width: 200px; // Only constrain maximum size
+        object-fit: contain;
+        display: block;
+        margin-right: 20px;
 
             // Tablet size (768px+)
             @media (min-width: $brk-point-s) {
@@ -101,9 +103,7 @@ header {
 
             // Desktop size (992px+)
             @media (min-width: $brk-point-m) {
-                width: 402px;
                 height: 70px;
-                max-width: 402px;
                 max-height: 70px;
             }
         }
@@ -259,7 +259,7 @@ header {
         width: auto;
         max-width: 100%;
         object-fit: contain;
-        display: block;
+        display: inline-block;
     }
 }
 

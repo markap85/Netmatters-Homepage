@@ -7,10 +7,11 @@
 // Styles a button with customizable colors, padding, border, icons, and states.
 // Supports service style, hover, disabled, and optional icon styling.
 // =======================
+$white: #fff;
+
 @mixin button(
   $bg-color: #007bff,
-  $text-color: #fff,
-  $color: white,
+  $text-color: white,
   $padding: 0.75rem 1.5rem,
   $border-radius: 3px,
   $border: 1px solid transparent,
@@ -23,10 +24,8 @@
   $disabled-text: #fff,
   $text-transform: uppercase,
   $cursor: pointer,
-  // Optional icon parameters inside the button
   $icon-color: null,
   $icon-size: null,
-  // Service button variants
   $is-service-button: false,
   $service-padding: 8px 20px,
   $service-border-radius: 4px
@@ -48,9 +47,8 @@
   text-transform: $text-transform;
   cursor: $cursor;
 
-  // Icon styling inside button, if icon color or size passed
   @if $icon-color != null or $icon-size != null {
-    > .icon, // or any icon inside
+    > .icon,
     > i,
     > svg {
       @if $icon-color != null {
@@ -81,7 +79,20 @@
     cursor: not-allowed;
     opacity: 0.6;
   }
+
+  // @media (max-width: 480px) {
+  //   font-size: max(5px, 2vw);
+  //   padding: max(4px, 1vw) max(8px, 2vw);
+  //   line-height: max(20px, 4.5vw);
+  // }
+
+  // @media (max-width: 320px) {
+  //   font-size: max(10px, 3vw);
+  //   padding: max(2px, 0.5vw) max(6px, 1.5vw);
+  //   line-height: max(18px, 4vw);
+  // }
 }
+
 
 
 // =======================

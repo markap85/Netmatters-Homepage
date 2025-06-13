@@ -10,21 +10,6 @@
     }
 }
 
-// News grid layout
-
-// .news-grid {
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     gap: 32px;
-//     margin: 32px 0;
-//     width: 100%;
-//     max-width: 100%;
-
-//     @media (min-width: $brk-point-s) {
-//         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-//     }
-// }
-
 .news-grid {
     display: grid;
     gap: 32px;
