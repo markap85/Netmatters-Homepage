@@ -8,6 +8,11 @@
     align-items: center;
     justify-content: center;
 
+    // Add margin-top when body has sticky header active
+    body.sticky-header-active & {
+        margin-top: 99px;
+    }
+
     &::before { // Gradient Overlay over Image Banner
         content: "";
         position: absolute;
