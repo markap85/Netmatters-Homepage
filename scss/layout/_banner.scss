@@ -1,3 +1,184 @@
+// Banner Slideshow Styles
+.banner-slideshow {
+    position: relative;
+    overflow: hidden;
+    
+    // Add margin-top when body has sticky header active
+    body.sticky-header-active & {
+        margin-top: 99px;
+    }
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 550px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    // Set background image based on data attribute
+    &[data-bg="banner.png"] {
+        background-image: url('../img/Backgrounds/banner.png');
+    }
+    
+    &[data-bg="01_Home.png"] {
+        background-image: url('../img/Backgrounds/01_Home.png');
+    }
+    
+    &[data-bg="02_Bespoke.jpg"] {
+        background-image: url('../img/Backgrounds/02_Bespoke.jpg');
+    }
+    
+    &[data-bg="03_IT.png"] {
+        background-image: url('../img/Backgrounds/03_IT.png');
+    }
+    
+    &[data-bg="04_Marketing.png"] {
+        background-image: url('../img/Backgrounds/04_Marketing.png');
+    }
+    
+    &[data-bg="05_Telecoms.png"] {
+        background-image: url('../img/Backgrounds/05_Telecoms.png');
+    }
+    
+    &[data-bg="06_WebDesign.jpg"] {
+        background-image: url('../img/Backgrounds/06_WebDesign.jpg');
+    }
+    
+    &[data-bg="07_Security.png"] {
+        background-image: url('../img/Backgrounds/07_Security.png');
+    }
+    
+    &.active {
+        opacity: 1;
+    }
+
+    &::before { // Gradient Overlay over Image Banner
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right , rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        z-index: 1;
+    }
+
+    h1, #hero-heading {
+        color: $white;
+        font-size: 4rem;
+        line-height: 5rem;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        width: 1000px;
+        margin-bottom: 0;
+
+        @media (max-width: $brk-point-m) {
+            font-size: 30px;
+            line-height: 2rem;
+            width: 90%;
+        }
+    }
+
+    .subtext {
+        font-size: 2rem;
+        color: $white;
+        margin: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        padding: 4.5rem 0;
+        width: 100%;
+        max-width: 800px;
+
+        @media (max-width: $brk-point-m) {
+            font-size: 1rem;
+            width: 90%;
+        }
+    }
+
+    .btn {
+        @include button(
+            $bg-color: lighten(#926FB1, 8%),
+            $hover-bg: #926FB1
+        );
+
+        text-transform: uppercase;
+        
+        @media (min-width: $brk-point-m) {
+            flex: 1;
+        }
+    }
+
+    .banner-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        @media (min-width: $brk-point-m) {
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            margin-left: 10px;
+            max-width: 50%;
+        }
+    }
+}
+
+// Navigation Dots
+.slideshow-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+    
+    .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: scale(1.1);
+        }
+        
+        &.active {
+            background-color: rgba(255, 255, 255, 1);
+            border-color: rgba(255, 255, 255, 1);
+            transform: scale(1.2);
+        }
+    }
+}
+
+// Legacy banner class for backward compatibility
 .banner {
     background-image: url('../img/Backgrounds/banner.png');
     background-size: cover;
