@@ -8,6 +8,18 @@
     box-sizing: border-box;
 }
 
+// Body styles for sticky header
+body {
+    // Add top padding when header becomes sticky to prevent content jump
+    &.sticky-header-active {
+        padding-top: 110px; // Match header height
+        
+        @media (min-width: $brk-point-s) {
+            padding-top: 110px; // Maintain consistent height across breakpoints
+        }
+    }
+}
+
 .container {
     margin-right: auto;
     margin-left: auto;
