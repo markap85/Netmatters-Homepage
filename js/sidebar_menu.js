@@ -2,6 +2,7 @@
 const openSidebar = document.querySelector('.mobile-menu-toggle');
 const closeSidebar = document.getElementById('closeSidebar');
 const body = document.body;
+const screenOverlay = document.querySelector('.screen-overlay');
 
 console.log('Sidebar script loaded');
 
@@ -23,4 +24,14 @@ if (closeSidebar) {
     });
 } else {
     console.error('Close Sidebar button not found');
+}
+
+if (screenOverlay) {
+    console.log('Screen overlay found');
+    screenOverlay.addEventListener('click', () => {
+        console.log('Screen overlay clicked');
+        body.classList.remove('sidebar-active');
+    });
+} else {
+    console.error('Screen overlay not found');
 }
