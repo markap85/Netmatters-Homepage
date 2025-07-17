@@ -157,13 +157,14 @@
     z-index: 10;
     
     .dot {
-        width: 15px;
-        height: 15px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.5);
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        background-color: #666;
         cursor: pointer;
         transition: all 0.3s ease;
+        margin: 0; // Ensure no margin affects the size
+        box-sizing: border-box; // Explicitly set to match global setting
         
         &:hover {
             background-color: rgba(255, 255, 255, 0.8);
@@ -172,7 +173,6 @@
         
         &.active {
             background-color: rgba(255, 255, 255, 1);
-            border-color: rgba(255, 255, 255, 1);
             transform: scale(1.2);
         }
     }
