@@ -13,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    overflow-y: auto; // Allow vertical scrolling within the sidebar
 }
 
 .sidebar-menu ul {
@@ -46,7 +47,7 @@
 
 body.sidebar-active {
     margin-left: -300px; // Push content left
-    overflow-x: hidden;
+    overflow: hidden; // Lock scrolling on the site
     transition: margin-left 0.3s;
 }
 

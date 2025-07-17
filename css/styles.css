@@ -2865,19 +2865,20 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px; }
+  padding: 20px;
+  overflow-y: auto; }
 
-/* line 18, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 19, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .sidebar-menu ul {
   padding: 0;
   margin: 0;
   width: 100%; }
 
-/* line 25, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 26, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .sidebar-menu ul li {
   margin: 15px 0; }
 
-/* line 29, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 30, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .sidebar-menu ul li a {
   color: #fff;
   text-decoration: none;
@@ -2886,7 +2887,7 @@ footer {
   text-align: center;
   text-align: left; }
 
-/* line 38, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 39, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .sidebar-menu .close-btn {
   align-self: flex-end;
   background: none;
@@ -2895,13 +2896,13 @@ footer {
   font-size: 2rem;
   cursor: pointer; }
 
-/* line 47, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 48, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 body.sidebar-active {
   margin-left: -300px;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: margin-left 0.3s; }
 
-/* line 53, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 54, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 body.sidebar-active .sidebar-menu {
   right: 0; }
 
