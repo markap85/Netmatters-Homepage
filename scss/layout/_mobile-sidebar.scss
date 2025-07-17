@@ -45,11 +45,11 @@
 }
 
 body.sidebar-active {
-    transform: translateX(-300px); // Push content left
+    margin-left: -300px; // Push content left
     overflow-x: hidden;
-    transition: transform 0.3s ease;
+    transition: margin-left 0.3s ease;
 }
 
 body.sidebar-active .sidebar-menu {
-    right: 0; // Slide in the sidebar
+    right: 0; // Sidebar stays fixed
 }

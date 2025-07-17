@@ -2893,9 +2893,9 @@ footer {
 
 /* line 47, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 body.sidebar-active {
-  transform: translateX(-300px);
+  margin-left: -300px;
   overflow-x: hidden;
-  transition: transform 0.3s ease; }
+  transition: margin-left 0.3s ease; }
 
 /* line 53, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 body.sidebar-active .sidebar-menu {
