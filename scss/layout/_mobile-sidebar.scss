@@ -5,10 +5,9 @@
     right: -300px; // Initially off-screen
     width: 300px;
     height: 100vh;
-    background-color: #333;
+    background-color: #3D404E;
     color: #fff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease;
+    transition: right 0.3s;
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -17,7 +16,7 @@
 }
 
 .sidebar-menu ul {
-    list-style: none;
+    // list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -33,6 +32,7 @@
     font-size: 1.2rem;
     display: block;
     text-align: center;
+    text-align: left;
 }
 
 .sidebar-menu .close-btn {
@@ -47,7 +47,7 @@
 body.sidebar-active {
     margin-left: -300px; // Push content left
     overflow-x: hidden;
-    transition: margin-left 0.3s ease;
+    transition: margin-left 0.3s;
 }
 
 body.sidebar-active .sidebar-menu {

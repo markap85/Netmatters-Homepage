@@ -362,3 +362,8 @@ header {
         }
     }
 }
+
+body.sidebar-active header {
+    transform: translateX(-300px); // Move header to the right
+    transition: transform 0.3s;
+}
