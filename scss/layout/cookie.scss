@@ -1,0 +1,109 @@
+// Cookie Consent Popup Styles
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $primary-dark;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1002; // Above sidebar
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+
+    &.hidden {
+        transform: translateY(100%);
+        visibility: hidden;
+    }
+
+    .cookie-consent-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+    }
+
+    .cookie-consent-text {
+        flex: 1;
+
+        h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+    }
+
+    .cookie-consent-buttons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+
+            &.btn-accept {
+                background-color: $it;
+                color: white;
+
+                &:hover {
+                    background-color: darken($it, 10%);
+                }
+            }
+
+            &.btn-decline {
+                background-color: transparent;
+                color: white;
+                border: 2px solid white;
+
+                &:hover {
+                    background-color: white;
+                    color: #333;
+                }
+            }
+
+            @media (max-width: 768px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .cookie-policy-link {
+            color: #ccc;
+            text-decoration: underline;
+            font-size: 0.85rem;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}

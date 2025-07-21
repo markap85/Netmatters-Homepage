@@ -151,6 +151,7 @@
     .sidebar-nav-item.telecoms i { color: $telecoms !important; }
     .sidebar-nav-item.design i { color: $design !important; }
     .sidebar-nav-item.cyber i { color: $cyber !important; }
+    .sidebar-nav-item.developer i { color: $developer !important; }
     
     .sidebar-nav-item .text-group {
         display: flex !important;
@@ -219,6 +220,23 @@
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
     margin-left: 10px !important;
     margin-right: 10px !important;
+    list-style: none !important;
+}
+
+.sidebar-link-mobile a {
+    color: #fff !important;
+    text-decoration: none !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+// Ensure ul elements containing sidebar-link-mobile items are centered
+ul:has(.sidebar-link-mobile) {
+    text-align: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
 }
 
 .sidebar-link-mobile:hover {
