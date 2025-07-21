@@ -2,8 +2,8 @@
 .sidebar-menu {
     position: fixed;
     top: 0;
-    right: -300px; // Initially off-screen
-    width: 300px;
+    right: -370px; // Initially off-screen
+    width: 370px;
     height: 100vh;
     background-color: #3D404E;
     color: #fff;
@@ -11,8 +11,7 @@
     z-index: 1001; // Ensure it's above other content
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start;
     overflow-y: auto; // Allow vertical scrolling within the sidebar
 }
 
@@ -24,7 +23,10 @@
 }
 
 .sidebar-menu ul li {
-    margin: 15px 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-decoration: none;
+    list-style: none; // Hide the li dots
 }
 
 .sidebar-menu ul li a {
@@ -32,7 +34,7 @@
     text-decoration: none;
     font-size: 1.2rem;
     display: block;
-    text-align: center;
+    text-align: left;
     text-align: left;
 }
 
@@ -43,6 +45,34 @@
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
+}
+
+// High priority sidebar classes
+.sidebar-title {
+    color: #fff !important;
+    background-color: $black-dark;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+    text-align: left !important;
+    padding: 10px 0;
+    padding-left: 10px !important;
+}
+
+.sidebarlink {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 1.2rem !important;
+    display: block !important;
+    padding: 10px 15px !important;
+    margin: 5px 0 !important;
+    border-radius: 5px !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.sidebarlink:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
 }
 
 body.sidebar-active {
