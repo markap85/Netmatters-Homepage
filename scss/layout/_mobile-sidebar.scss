@@ -53,6 +53,40 @@
     background-color: #3D404E !important;
     font-size: 1.5rem !important;
     font-weight: bold !important;
+    margin-bottom: 20px !important;
+    text-align: left !important;
+    padding: 10px 0;
+    padding-left: 10px !important;
+}
+
+// Responsive sidebar content visibility
+.sidebar-desktop {
+    display: block;
+}
+
+.sidebar-mobile {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .sidebar-desktop {
+        display: none;
+    }
+    
+    .sidebar-mobile {
+        display: block;
+    }
+    
+    .sidebar-menu {
+        width: 300px; // Smaller width for mobile
+        right: -300px; // Adjust off-screen position
+    }
+}
+.sidebar-title {
+    color: #fff !important;
+    background-color: #3D404E !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
     text-align: left !important;
     padding: 10px 0;
     padding-left: 10px !important;
