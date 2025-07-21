@@ -1,7 +1,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector(".client-carousel");
-    const track = carousel.querySelector(".client-carousel-track");
+    const carousel = document.querySelector(".accreditation-carousel");
+    const track = carousel.querySelector(".accreditation-carousel-track");
     const wrappers = Array.from(track.children);
     const wrapperCount = wrappers.length;
 
