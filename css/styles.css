@@ -2860,7 +2860,7 @@ footer {
   height: 100vh;
   background-color: #3D404E;
   color: #fff;
-  transition: right 0.3s;
+  transition: right 0.4s;
   z-index: 1001;
   display: flex;
   flex-direction: column;
@@ -2963,7 +2963,7 @@ body.sidebar-active .mobile-menu-toggle span:nth-child(3) {
 body.sidebar-active {
   margin-left: -300px;
   overflow: hidden;
-  transition: margin-left 0.3s; }
+  transition: margin-left 0.4s; }
 
 /* line 120, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 body.sidebar-active .sidebar-menu {
