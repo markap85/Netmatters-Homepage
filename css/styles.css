@@ -2876,18 +2876,18 @@ footer {
 /* line 25, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .sidebar-menu ul li {
   margin-top: 0;
-  margin-bottom: 15px;
   text-decoration: none;
   list-style: none; }
 
-/* line 32, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 31, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .sidebar-menu ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
   display: block;
   text-align: left;
-  text-align: left; }
+  text-align: left;
+  text-transform: uppercase !important; }
 
 /* line 41, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .sidebar-menu .close-btn {
@@ -2901,45 +2901,79 @@ footer {
 /* line 51, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .sidebar-title {
   color: #fff !important;
-  background-color: #181924;
+  background-color: #3D404E !important;
   font-size: 1.5rem !important;
   font-weight: bold !important;
-  margin-bottom: 20px !important;
   text-align: left !important;
   padding: 10px 0;
   padding-left: 10px !important; }
 
-/* line 62, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
-.sidebarlink {
+/* line 61, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+.sidebar-link {
   color: #fff !important;
+  background-color: #262834 !important;
   text-decoration: none !important;
-  font-size: 1.2rem !important;
+  font-size: 0.85rem !important;
   display: block !important;
   padding: 10px 15px !important;
-  margin: 5px 0 !important;
-  border-radius: 5px !important;
-  transition: background-color 0.3s ease !important; }
+  transition: background-color 0.3s ease !important;
+  text-transform: uppercase !important;
+  padding-left: 20px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important; }
 
-/* line 73, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 74, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .sidebarlink:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
   color: #fff !important; }
 
-/* line 78, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 80, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  padding: 0; }
+
+/* line 92, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+  transform-origin: center; }
+
+/* line 102, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+body.sidebar-active .mobile-menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px); }
+
+/* line 106, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+body.sidebar-active .mobile-menu-toggle span:nth-child(2) {
+  opacity: 0; }
+
+/* line 110, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+body.sidebar-active .mobile-menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px); }
+
+/* line 114, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 body.sidebar-active {
   margin-left: -300px;
   overflow: hidden;
   transition: margin-left 0.3s; }
 
-/* line 84, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 120, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 body.sidebar-active .sidebar-menu {
   right: 0; }
 
-/* line 88, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 124, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 body.sidebar-active .screen-overlay {
   display: block; }
 
-/* line 92, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
+/* line 128, ../Netmatters-Homepage/scss/layout/_mobile-sidebar.scss */
 .screen-overlay {
   position: fixed;
   top: 0;
