@@ -70,16 +70,101 @@
 
 @media (max-width: 991px) {
     .sidebar-desktop {
-        display: none;
+        display: block; // Keep desktop content visible
     }
     
     .sidebar-mobile {
         display: block;
+        width: 100%; // Full width for mobile
+        order: -1;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        align-self: center;
     }
     
     .sidebar-menu {
         width: 300px; // Smaller width for mobile
         right: -300px; // Adjust off-screen position
+    }
+
+    .banner-slideshow {
+        margin-top: 0; // Adjust banner margin for mobile
+    }
+    
+    // Mobile sidebar specific styles
+    .sidebar-contact-btn {
+        display: block;
+        background-color: #f39c12 !important;
+        color: #fff !important;
+        text-decoration: none !important;
+        text-align: center !important;
+        padding: 15px !important;
+        margin: 0 auto 20px auto !important;
+        border-radius: 5px !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        transition: background-color 0.3s ease !important;
+        width: 90% !important;
+    }
+    
+    .sidebar-contact-btn:hover {
+        background-color: #e67e22 !important;
+    }
+    
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .sidebar-nav-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 20px 15px !important;
+        text-decoration: none !important;
+        color: #fff !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 5px !important;
+        transition: background-color 0.3s ease !important;
+        width: 90% !important;
+    }
+    
+    .sidebar-nav-item i {
+        font-size: 32px !important;
+        margin-bottom: 10px !important;
+        margin-right: 0 !important;
+        min-width: auto !important;
+        text-align: center !important;
+    }
+    
+    .sidebar-nav-item .text-group {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .sidebar-nav-item .text-group small {
+        font-size: 0.8rem !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+        text-transform: uppercase !important;
+        margin-bottom: 2px !important;
+    }
+    
+    .sidebar-nav-item .text-group strong {
+        font-size: 1rem !important;
+        color: #fff !important;
+        text-transform: uppercase !important;
+    }
+    
+    .sidebar-nav-item:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
     }
 }
 .sidebar-title {
