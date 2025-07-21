@@ -37,6 +37,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Sidebar integration - pause/resume slideshow when sidebar opens/closes
+    const body = document.body;
+    let wasPausedBySidebar = false;
+    
+    // Function to check if sidebar is active and control slideshow
+    function handleSidebarState() {
+        if (body.classList.contains('sidebar-active')) {
+            // Sidebar is open - pause the slideshow
+            if (splide.Components.Autoplay.isPaused() === false) {
+                wasPausedBySidebar = true;
+                splide.Components.Autoplay.pause();
+                console.log('Slideshow paused due to sidebar opening');
+            }
+        } else {
+            // Sidebar is closed - resume the slideshow if we paused it
+            if (wasPausedBySidebar && splide.Components.Autoplay.isPaused()) {
+                wasPausedBySidebar = false;
+                splide.Components.Autoplay.play();
+                console.log('Slideshow resumed after sidebar closing');
+            }
+        }
+    }
+    
+    // Use MutationObserver to watch for changes to the body class
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                handleSidebarState();
+            }
+        });
+    });
+    
+    // Start observing changes to the body class
+    observer.observe(body, {
+        attributes: true,
+        attributeFilter: ['class']
+    });
+
     // Add event listeners for additional functionality
     splide.on('moved', function(newIndex) {
         console.log('Slide moved to:', newIndex);
