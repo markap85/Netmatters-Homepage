@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const splide = new Splide('.banner-slideshow', {
         type: 'loop',           // Infinite loop
         autoplay: true,         // Auto-advance slides
-        interval: 5000,         // 5 seconds between slides (same as your original)
+        interval: 5000,         // 5 seconds between slides
         pauseOnHover: true,     // Pause on hover
         pauseOnFocus: true,     // Pause when focused
-        arrows: true,           // Show navigation arrows
+        arrows: false,          // Hide navigation arrows
         pagination: true,       // Show dots/pagination
         drag: true,             // Allow drag/swipe
         keyboard: true,         // Keyboard navigation
         speed: 600,             // Transition speed
         easing: 'ease',         // Transition easing
-        height: '550px',        // Match your original banner height
+        height: '550px',        // Match original banner height
         cover: true,            // Cover background images
         heightRatio: 0,         // Disable automatic height ratio
         breakpoints: {

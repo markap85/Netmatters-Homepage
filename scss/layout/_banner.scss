@@ -91,6 +91,56 @@
                 flex: 1;
             }
         }
+        
+        // Service-specific button colors for each slide
+        &[data-bg="01_Home.png"] .btn {
+            @include button(
+                $bg-color: lighten(#926FB1, 8%),
+                $hover-bg: #926FB1
+            );
+        }
+        
+        &[data-bg="02_Bespoke.jpg"] .btn {
+            @include button(
+                $bg-color: lighten($bespoke, 8%),
+                $hover-bg: $bespoke
+            );
+        }
+        
+        &[data-bg="03_IT.png"] .btn {
+            @include button(
+                $bg-color: lighten($it, 8%),
+                $hover-bg: $it
+            );
+        }
+        
+        &[data-bg="04_Marketing.png"] .btn {
+            @include button(
+                $bg-color: lighten($marketing, 8%),
+                $hover-bg: $marketing
+            );
+        }
+        
+        &[data-bg="05_Telecoms.png"] .btn {
+            @include button(
+                $bg-color: lighten($telecoms, 8%),
+                $hover-bg: $telecoms
+            );
+        }
+        
+        &[data-bg="06_WebDesign.jpg"] .btn {
+            @include button(
+                $bg-color: lighten($design, 8%),
+                $hover-bg: $design
+            );
+        }
+        
+        &[data-bg="07_Security.png"] .btn {
+            @include button(
+                $bg-color: lighten($cyber, 8%),
+                $hover-bg: $cyber
+            );
+        }
 
         .banner-content {
             position: relative;
@@ -112,29 +162,6 @@
                 max-width: 50%;
                 padding: 2rem 0 2rem 2rem;
             }
-        }
-    }
-    
-    // Customize Splide arrows
-    .splide__arrow {
-        background: rgba(255, 255, 255, 0.1);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        transition: all 0.3s ease;
-        
-        &:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-        
-        svg {
-            fill: white;
-        }
-        
-        &:disabled {
-            opacity: 0.3;
         }
     }
     
