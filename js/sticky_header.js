@@ -1,8 +1,3 @@
-/**
- * Sticky Header Script
- * Implements a header that hides when scrolling down and shows when scrolling up
- */
-
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
     const body = document.body;

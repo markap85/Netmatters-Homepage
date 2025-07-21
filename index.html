@@ -20,6 +20,8 @@
         <meta name="twitter:description" content="Performance-driven digital and technology services with complete transparency">
         
         <link rel="stylesheet" href="./css/styles.css">
+        <!-- Splide.js CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
         <title>Full Service Digital Agency | Cambridgeshire &amp; Norfolk | Netmatters</title>
         <link rel="icon" href="./Favicon/favicon.ico" type="image/x-icon">
     </head>
@@ -421,98 +423,89 @@
             </header>
 
             <!-- =======================
-            BANNER SLIDESHOW SECTION
+            BANNER SLIDESHOW SECTION - Now using Splide.js
             ======================= -->
 
-            <section class="banner-slideshow" aria-labelledby="hero-heading">
-                <div class="slideshow-container">
-                    <!-- Slide 1 -->
-                    <div class="slide active" data-bg="01_Home.png">
-                        <div class="container">
-                            <div class="banner-content">
-                                <h1 id="hero-heading">The East Of England's Leading Technology Company</h1>
-                                <p class="subtext">Performance-driven digital and technology services with complete transparency</p>
-                                <a href="/why-choose-us" class="btn">Why Choose Us?</a>
+            <section class="splide banner-slideshow" aria-labelledby="hero-heading">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <!-- Slide 1 -->
+                        <li class="splide__slide" data-bg="01_Home.png">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1 id="hero-heading">The East Of England's Leading Technology Company</h1>
+                                    <p class="subtext">Performance-driven digital and technology services with complete transparency</p>
+                                    <a href="/why-choose-us" class="btn">Why Choose Us?</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
 
-                    <!-- Slide 2 -->
-                    <div class="slide" data-bg="02_Bespoke.jpg">
-                        <div class="container">
-                            <div class="banner-content">
-                                <h1>Bespoke Software</h1>
-                                <p class="subtext">Delivering expert bespoke software <br>solutions across a range of industries</p>
-                                <a href="/our-services" class="btn">Find Out More</a>
+                        <!-- Slide 2 -->
+                        <li class="splide__slide" data-bg="02_Bespoke.jpg">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1>Bespoke Software</h1>
+                                    <p class="subtext">Delivering expert bespoke software <br>solutions across a range of industries</p>
+                                    <a href="/our-services" class="btn">Find Out More</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
 
-                    <!-- Slide 3 -->
-                    <div class="slide" data-bg="03_IT.png">
-                        <div class="container">
-                            <div class="banner-content">
-                                <h1>IT Support</h1>
-                                <p class="subtext">Fast and cost-effective IT support services for your business.</p>
-                                <a href="/contact" class="btn">Find Out More</a>
+                        <!-- Slide 3 -->
+                        <li class="splide__slide" data-bg="03_IT.png">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1>IT Support</h1>
+                                    <p class="subtext">Fast and cost-effective IT support services for your business.</p>
+                                    <a href="/contact" class="btn">Find Out More</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
 
-                    <!-- Slide 4 -->
-                    <div class="slide" data-bg="04_Marketing.png">
-                        <div class="container">
-                            <div class="banner-content">
-                                <h1>Digital Marketing</h1>
-                                <p class="subtext">Generating your new business through results-driven marketing activities. </p>
-                                <a href="/contact" class="btn">Find Out More</a>
+                        <!-- Slide 4 -->
+                        <li class="splide__slide" data-bg="04_Marketing.png">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1>Digital Marketing</h1>
+                                    <p class="subtext">Generating your new business through results-driven marketing activities. </p>
+                                    <a href="/contact" class="btn">Find Out More</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
 
-                    <!-- Slide 5 -->
-                    <div class="slide" data-bg="05_Telecoms.png">
-                        <div class="container">
-                            <div class="banner-content">
-                                <h1>Your Trusted Technology Partner</h1>
-                                <p class="subtext">Delivering exceptional IT support and bespoke software solutions across the UK</p>
-                                <a href="/contact" class="btn">Find Out More</a>
+                        <!-- Slide 5 -->
+                        <li class="splide__slide" data-bg="05_Telecoms.png">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1>Your Trusted Technology Partner</h1>
+                                    <p class="subtext">Delivering exceptional IT support and bespoke software solutions across the UK</p>
+                                    <a href="/contact" class="btn">Find Out More</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
 
-                    <!-- Slide 6 -->
-                    <div class="slide" data-bg="06_WebDesign.jpg">
-                        <div class="container">
-                            <div class="banner-content">
-                                <h1>Your Trusted Technology Partner</h1>
-                                <p class="subtext">Delivering exceptional IT support and bespoke software solutions across the UK</p>
-                                <a href="/contact" class="btn">Find Out More/a>
+                        <!-- Slide 6 -->
+                        <li class="splide__slide" data-bg="06_WebDesign.jpg">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1>Your Trusted Technology Partner</h1>
+                                    <p class="subtext">Delivering exceptional IT support and bespoke software solutions across the UK</p>
+                                    <a href="/contact" class="btn">Find Out More</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
 
-                    <!-- Slide 7 -->
-                    <div class="slide" data-bg="07_Security.png">
-                        <div class="container">
-                            <div class="banner-content">
-                                <h1>Your Trusted Technology Partner</h1>
-                                <p class="subtext">Delivering exceptional IT support and bespoke software solutions across the UK</p>
-                                <a href="/contact" class="btn">Find Out More</a>
+                        <!-- Slide 7 -->
+                        <li class="splide__slide" data-bg="07_Security.png">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1>Your Trusted Technology Partner</h1>
+                                    <p class="subtext">Delivering exceptional IT support and bespoke software solutions across the UK</p>
+                                    <a href="/contact" class="btn">Find Out More</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Navigation Dots -->
-                    <div class="slideshow-dots">
-                        <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
-                        <button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
-                        <button class="dot" data-slide="2" aria-label="Go to slide 3"></button>
-                        <button class="dot" data-slide="3" aria-label="Go to slide 4"></button>
-                        <button class="dot" data-slide="4" aria-label="Go to slide 5"></button>
-                        <button class="dot" data-slide="5" aria-label="Go to slide 6"></button>
-                        <button class="dot" data-slide="6" aria-label="Go to slide 7"></button>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -895,10 +888,12 @@
             </div>
         </div>
 
+        <!-- Splide.js JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <script src="js/splide_banner.js"></script>
         <script src="js/accreditation_scroll.js" defer></script>
         <script src="js/clients_scroll.js" defer></script>
         <script src="js/sticky_header.js" defer></script>
-        <script src="js/banner_slideshow.js" defer></script>
         <script src="js/sidebar_menu.js"></script>
         <script src="js/cookie_consent.js"></script>
 
