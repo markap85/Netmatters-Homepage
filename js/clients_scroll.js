@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.querySelector(".tooltip-carousel");
   const track = carousel.querySelector(".carousel-track");
-  const wrappers = Array.from(track.children).slice(0); // shallow copy
+  const wrappers = Array.from(track.children).slice(0);
   const wrapperCount = wrappers.length;
 
   // Clone original elements once only
