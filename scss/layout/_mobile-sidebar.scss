@@ -222,11 +222,29 @@
     text-transform: uppercase !important;
     padding-left: 20px !important;
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+
+    a {
+        display: flex !important;
+        align-items: center !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        
+        i {
+            margin-right: 8px !important;
+            font-size: 0.7rem !important;
+            opacity: 0.7 !important;
+            transition: opacity 0.3s ease !important;
+        }
+    }
 }
 
 .sidebar-link:hover {
     background-color: rgba(255, 255, 255, 0.1) !important;
     color: #fff !important;
+    
+    a i {
+        opacity: 1 !important;
+    }
 }
 
 .sidebar-link-mobile {
