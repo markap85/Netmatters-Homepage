@@ -27,36 +27,55 @@ header {
         transform: translateY(0);
     }
 
-    @media (min-width: $brk-point-s) {
-        .container {
-            flex-direction: row;
+    .container {
+        padding: 20px 0;
+        height: 110px;
+        
+        @media (min-width: $brk-point-s) {
             height: 110px;
         }
     }
 
-    .container {
+    .header-content {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
-        height: 110px;
+        justify-content: space-between;
+        width: 100%;
     }
 
-    .header-row {
-        width: 85%;
+    .logo {
+        flex-shrink: 0;
+        
+        img {
+            max-height: 40px;
+            width: auto;
+            
+            @media (min-width: $brk-point-s) {
+                max-height: 50px;
+            }
+        }
+    }
+
+    .header-right {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10px;
+        gap: 20px;
+        margin-left: auto;
+    }
+
+    .header-contact {
+        display: none;
+        gap: 10px;
+        
+        @media (min-width: $brk-point-m) {
+            display: flex;
+        }
 
         .btn {
             @include button(
                 $bg-color: #4285f4,
                 $hover-bg: #3367d6
             );
-            // Hide buttons by default (mobile and tablet)
-            display: none !important;
             align-items: center;
             gap: 8px;
             font-size: 20px;
@@ -71,31 +90,185 @@ header {
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            display: inline-flex;
 
             &:hover {
                 background-color: #3367d6;
             }
 
-            .icon-mouse,
-            .icon-paper-plane {
-                font-size: 30px;
+            .fa-mouse-pointer,
+            .fa-paper-plane {
+                font-size: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: auto;
             }
 
-            // Show buttons from 992px (desktop) onwards
-            @media (min-width: $brk-point-m) {
-                display: inline-flex !important;
+            &.secondary {
+                background-color: #84858F !important;
+                
+                &:hover {
+                    background-color: darken(#84858F, 10%) !important;
+                }
             }
         }
+    }
 
-        .btn.secondary {
-            background-color: #84858F !important;
+    .header-search {
+        display: none;
+        
+        @media (min-width: $brk-point-s) {
+            display: flex;
+        }
+        
+        @media (min-width: $brk-point-m) {
+            display: none;
+        }
+        
+        @media (min-width: $brk-point-l) {
+            display: flex;
+        }
+
+        .search-group {
+            display: flex;
+            align-items: center;
+            height: 55px;
+            border-radius: 2px;
+            overflow: hidden;
             
-            &:hover {
-                background-color: darken(#84858F, 10%) !important;
+            input {
+                border: 1px solid rgb(180, 180, 180);
+                border-right: none;
+                border-radius: 2px 0 0 2px;
+                background: transparent;
+                height: 100%;
+                font-size: 1rem;
+                outline: none;
+                padding: 10px;
+                width: 200px;
+                
+                &:focus {
+                    border-color: #5bc0de;
+                    outline: 0;
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+                }
+            }
+            
+            .btn-search {
+                background: #999AA2;
+                border-radius: 0 2px 2px 0;
+                width: 55px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                border: none;
+                
+                &:hover {
+                    background: darken(#999AA2, 10%);
+                }
+            }
+        }
+    }
+
+    .header-phone {
+        display: block;
+        
+        @media (min-width: $brk-point-s) {
+            display: none;
+        }
+
+        .phoneicon {
+            font-size: 3rem;
+            color: $primary-dark;
+            text-decoration: none;
+        }
+    }
+
+    .hamburger {
+        background: $primary-dark;
+        border: none;
+        border-radius: 3px;
+        padding: 5px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 65px;
+        height: 55px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background: darken($secondary-dark, 10%);
+        }
+
+        span {
+            display: block;
+            width: 35px;
+            height: 5px;
+            margin: 3px 0;
+            background: white;
+            border-radius: 1px;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .header-search-mobile {
+        display: block;
+        margin-top: 15px;
+        
+        @media (min-width: $brk-point-s) {
+            display: none;
+        }
+
+        .search-group {
+            display: flex;
+            align-items: center;
+            height: 55px;
+            border-radius: 2px;
+            overflow: hidden;
+            
+            input {
+                border: 1px solid rgb(180, 180, 180);
+                border-right: none;
+                border-radius: 2px 0 0 2px;
+                background: transparent;
+                height: 100%;
+                font-size: 1rem;
+                outline: none;
+                padding: 10px;
+                flex: 1;
+                
+                &:focus {
+                    border-color: #5bc0de;
+                    outline: 0;
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+                }
+            }
+            
+            .btn-search {
+                background: #999AA2;
+                border-radius: 0 2px 2px 0;
+                width: 55px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                border: none;
+                
+                &:hover {
+                    background: darken(#999AA2, 10%);
+                }
             }
         }
     }
