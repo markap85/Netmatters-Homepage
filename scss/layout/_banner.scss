@@ -202,7 +202,20 @@
             
             &.is-active {
                 background-color: rgba(255, 255, 255, 1);
-                transform: scale(1.2);
+                transform: scale(1.0);
+                position: relative;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -7px;
+                    left: -7px;
+                    width: 24px;
+                    height: 24px;
+                    border: 2px solid rgba(255, 255, 255, 1);
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                }
             }
         }
     }
