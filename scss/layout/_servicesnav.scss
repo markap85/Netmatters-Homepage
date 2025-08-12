@@ -65,7 +65,7 @@
 .icon-display       { @include icon-style($it); }
 .icon-stats-bars    { @include icon-style($marketing); }
 .icon-phone_in_talk { @include icon-style($telecoms); }
-.icon-embed2        { @include icon-style($design); }
+.icon-embed        { @include icon-style($design); }
 .icon-security      { @include icon-style($cyber); }
 .icon-school        { @include icon-style($developer); }
 .icon-paper-plane,

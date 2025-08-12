@@ -56,7 +56,7 @@ overflow: hidden;
   .icon-display { @include service-icon($it, 40px); }
   .icon-stats-bars { @include service-icon($marketing, 40px); }
   .icon-phone_in_talk { @include service-icon($telecoms); }
-  .icon-embed2 { @include service-icon($design); }
+  .icon-embed { @include service-icon($design); }
   .icon-security { @include service-icon($cyber); }
   .icon-school { @include service-icon($developer); }
 }
