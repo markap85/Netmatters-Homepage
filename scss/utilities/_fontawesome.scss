@@ -1,0 +1,75 @@
+// =============================================================================
+// FONT AWESOME ICONS STYLING
+// =============================================================================
+// This partial contains styling for Font Awesome icons throughout the site
+
+// Base Font Awesome icon styling
+[class^="fas "], [class*=" fas "],
+[class^="far "], [class*=" far "],
+[class^="fab "], [class*=" fab "] {
+    // Add consistent right margin to all Font Awesome icons
+    margin-right: 0.5rem;
+    
+    // Ensure icons align properly with text
+    vertical-align: middle;
+}
+
+// Navigation menu icons - specific styling
+.nav-popout-bespoke,
+.nav-popout-it,
+.nav-popout-marketing,
+.nav-popout-telecoms,
+.nav-popout-design,
+.nav-popout-cyber,
+.nav-popout-developer {
+    
+    li a {
+        i[class^="fas "],
+        i[class*=" fas "],
+        i[class^="far "],
+        i[class*=" far "],
+        i[class^="fab "],
+        i[class*=" fab "] {
+            margin-right: 0.75rem; // Slightly more space in navigation
+            width: 1.2em; // Consistent width for alignment
+            text-align: center; // Center the icons
+            color: inherit; // Inherit color from parent
+        }
+    }
+}
+
+// Optional: Different spacing for different contexts
+.sidebar-nav {
+    i[class^="fas "],
+    i[class*=" fas "],
+    i[class^="far "],
+    i[class*=" far "],
+    i[class^="fab "],
+    i[class*=" fab "] {
+        margin-right: 0.5rem;
+    }
+}
+
+// Footer social icons (if you want different spacing)
+.footer-social {
+    i[class^="fas "],
+    i[class*=" fas "],
+    i[class^="far "],
+    i[class*=" far "],
+    i[class^="fab "],
+    i[class*=" fab "] {
+        margin-right: 0.25rem;
+    }
+}
+
+// Button icons
+.btn {
+    i[class^="fas "],
+    i[class*=" fas "],
+    i[class^="far "],
+    i[class*=" far "],
+    i[class^="fab "],
+    i[class*=" fab "] {
+        margin-right: 0.4rem;
+    }
+}
