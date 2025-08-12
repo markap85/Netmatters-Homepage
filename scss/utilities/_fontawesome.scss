@@ -72,4 +72,11 @@
     i[class*=" fab "] {
         margin-right: 0.4rem;
     }
+    
+    // Arrow icons specifically - use left padding instead of right margin
+    .fa-arrow-right {
+        margin-right: 0; // Remove default right margin
+        padding-left: 8px; // Add left padding for spacing
+        font-size: 0.9em; // Slightly smaller for better proportion
+    }
 }

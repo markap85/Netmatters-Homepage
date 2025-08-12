@@ -391,6 +391,12 @@
 .btn i[class*=" fab "] {
   margin-right: 0.4rem; }
 
+/* line 77, ../Netmatters-Homepage/scss/utilities/_fontawesome.scss */
+.btn .fa-arrow-right {
+  margin-right: 0;
+  padding-left: 8px;
+  font-size: 0.9em; }
+
 /* line 8, ../Netmatters-Homepage/scss/base/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -1609,9 +1615,12 @@ body.sidebar-active header {
           flex: 1; } }
       /* line 93, ../Netmatters-Homepage/scss/layout/_welcome.scss */
       .welcome-section .welcome-links .btn .icon-arrow-right,
-      .welcome-section .review-links .btn .icon-arrow-right {
-        font-size: 16px; }
-    /* line 98, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+      .welcome-section .welcome-links .btn .fa-arrow-right,
+      .welcome-section .review-links .btn .icon-arrow-right,
+      .welcome-section .review-links .btn .fa-arrow-right {
+        font-size: 16px;
+        padding-left: 4px; }
+    /* line 100, ../Netmatters-Homepage/scss/layout/_welcome.scss */
     .welcome-section .welcome-links .btn--google,
     .welcome-section .review-links .btn--google {
       display: inline-block;
@@ -1648,7 +1657,7 @@ body.sidebar-active header {
         color: #fff;
         cursor: not-allowed;
         opacity: 0.6; }
-    /* line 102, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+    /* line 104, ../Netmatters-Homepage/scss/layout/_welcome.scss */
     .welcome-section .welcome-links .btn--trustpilot,
     .welcome-section .review-links .btn--trustpilot {
       display: inline-block;
