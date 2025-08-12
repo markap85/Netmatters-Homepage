@@ -47,6 +47,31 @@
     cursor: pointer;
 }
 
+// Close button styling
+.sidebar-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+    z-index: 1002;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: #e67e22;
+    }
+    
+    span {
+        display: block;
+        font-weight: normal;
+    }
+}
+
 // High priority sidebar classes
 .sidebar-title {
     color: #fff !important;
