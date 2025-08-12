@@ -3533,110 +3533,99 @@ body.sidebar-active .screen-overlay {
 body.cookie-popup-active {
   overflow: hidden; }
 
-/* line 8, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+/* line 9, ../Netmatters-Homepage/scss/layout/_cookie.scss */
 .cookie-consent {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  background-color: #323544;
-  color: white;
-  padding: 20px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1002;
-  transition: transform 0.3s ease-in-out;
-  transform: translateY(0); }
-  /* line 21, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  opacity: 1;
+  visibility: visible; }
+  /* line 24, ../Netmatters-Homepage/scss/layout/_cookie.scss */
   .cookie-consent.hidden {
-    transform: translateY(100%);
+    opacity: 0;
     visibility: hidden; }
-  /* line 26, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+  /* line 29, ../Netmatters-Homepage/scss/layout/_cookie.scss */
   .cookie-consent .cookie-consent-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    text-align: center; }
+    background-color: white;
+    color: #333;
+    max-width: 500px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out; }
     @media (max-width: 768px) {
-      /* line 26, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+      /* line 29, ../Netmatters-Homepage/scss/layout/_cookie.scss */
       .cookie-consent .cookie-consent-content {
-        flex-direction: column;
-        gap: 15px; } }
-    @media (min-width: 769px) {
-      /* line 26, ../Netmatters-Homepage/scss/layout/_cookie.scss */
-      .cookie-consent .cookie-consent-content {
-        justify-content: space-between;
-        text-align: left; } }
-  /* line 46, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+        padding: 25px;
+        max-width: 400px; } }
+  /* line 47, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+  .cookie-consent.hidden .cookie-consent-content {
+    transform: scale(0.9); }
+  /* line 51, ../Netmatters-Homepage/scss/layout/_cookie.scss */
   .cookie-consent .cookie-consent-text {
-    flex: 1; }
-    /* line 49, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+    margin-bottom: 25px; }
+    /* line 54, ../Netmatters-Homepage/scss/layout/_cookie.scss */
     .cookie-consent .cookie-consent-text h3 {
-      margin: 0 0 8px 0;
-      font-size: 1.2rem;
-      font-weight: bold; }
-    /* line 55, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+      margin: 0 0 15px 0;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #333; }
+    /* line 61, ../Netmatters-Homepage/scss/layout/_cookie.scss */
     .cookie-consent .cookie-consent-text p {
       margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.4;
-      opacity: 0.9; }
-  /* line 63, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #555; }
+  /* line 69, ../Netmatters-Homepage/scss/layout/_cookie.scss */
   .cookie-consent .cookie-consent-buttons {
     display: flex;
     gap: 15px;
-    align-items: center;
     justify-content: center; }
     @media (max-width: 768px) {
-      /* line 63, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+      /* line 69, ../Netmatters-Homepage/scss/layout/_cookie.scss */
       .cookie-consent .cookie-consent-buttons {
         flex-direction: column;
-        width: 100%;
-        gap: 10px; } }
-    @media (min-width: 769px) {
-      /* line 63, ../Netmatters-Homepage/scss/layout/_cookie.scss */
-      .cookie-consent .cookie-consent-buttons {
-        justify-content: flex-end; } }
+        gap: 12px; } }
     /* line 79, ../Netmatters-Homepage/scss/layout/_cookie.scss */
     .cookie-consent .cookie-consent-buttons .btn {
-      padding: 10px 20px;
+      padding: 12px 25px;
       border: none;
       border-radius: 4px;
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.3s ease;
       text-decoration: none;
-      display: inline-block; }
-      /* line 89, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+      display: inline-block;
+      font-size: 0.9rem; }
+      /* line 90, ../Netmatters-Homepage/scss/layout/_cookie.scss */
       .cookie-consent .cookie-consent-buttons .btn.btn-accept {
         background-color: #4183D7;
         color: white; }
-        /* line 93, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+        /* line 94, ../Netmatters-Homepage/scss/layout/_cookie.scss */
         .cookie-consent .cookie-consent-buttons .btn.btn-accept:hover {
           background-color: #286abd; }
-      /* line 98, ../Netmatters-Homepage/scss/layout/_cookie.scss */
+      /* line 99, ../Netmatters-Homepage/scss/layout/_cookie.scss */
       .cookie-consent .cookie-consent-buttons .btn.btn-decline {
-        background-color: transparent;
-        color: white;
-        border: 2px solid white; }
+        background-color: #6c757d;
+        color: white; }
         /* line 103, ../Netmatters-Homepage/scss/layout/_cookie.scss */
         .cookie-consent .cookie-consent-buttons .btn.btn-decline:hover {
-          background-color: white;
-          color: #333; }
+          background-color: #545b62; }
       @media (max-width: 768px) {
         /* line 79, ../Netmatters-Homepage/scss/layout/_cookie.scss */
         .cookie-consent .cookie-consent-buttons .btn {
           width: 100%;
           text-align: center; } }
-    /* line 115, ../Netmatters-Homepage/scss/layout/_cookie.scss */
-    .cookie-consent .cookie-consent-buttons .cookie-policy-link {
-      color: #ccc;
-      text-decoration: underline;
-      font-size: 0.85rem; }
-      /* line 120, ../Netmatters-Homepage/scss/layout/_cookie.scss */
-      .cookie-consent .cookie-consent-buttons .cookie-policy-link:hover {
-        color: white; }
 
 /*# sourceMappingURL=styles.css.map */
