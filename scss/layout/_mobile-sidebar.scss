@@ -1,4 +1,14 @@
 // Sidebar Menu Styles
+// 
+// Structure:
+// 1. Base sidebar menu container
+// 2. Close button styling  
+// 3. Common sidebar elements (titles, links)
+// 4. Responsive mobile styles
+// 5. Mobile menu toggle animation
+// 6. Body states and overlay
+
+// 1. Base sidebar menu container
 .sidebar-menu {
     position: fixed;
     top: 0;
@@ -16,7 +26,7 @@
 }
 
 .sidebar-menu ul {
-    // list-style: none;
+    list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -26,12 +36,12 @@
     margin-top: 0;
     text-decoration: none;
     list-style: none; // Hide the li dots
+    width: 100%;
 }
 
 .sidebar-menu ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
     display: block;
     text-align: left;
     text-align: left;
@@ -47,7 +57,7 @@
     cursor: pointer;
 }
 
-// Close button styling
+// 2. Close button styling
 .sidebar-close-btn {
     position: absolute;
     top: 20px;
@@ -72,20 +82,64 @@
     }
 }
 
-// High priority sidebar classes
+// 3. Common sidebar elements (used both desktop and mobile)
 .sidebar-title {
     color: #fff !important;
     background-color: #3D404E !important;
-    font-size: 1.5rem !important;
-    font-weight: bold !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    line-height: 16px !important;
     text-align: left !important;
     padding: 10px 0;
     padding-left: 10px !important;
 }
 
-// Responsive sidebar content visibility
+.sidebar-link {
+    color: #fff !important;
+    background-color: #262834 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 20px !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 15px !important;
+    padding-left: 20px !important;
+    transition: background-color 0.3s ease !important;
+    text-transform: uppercase !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-sizing: border-box !important;
+
+    a {
+        display: flex !important;
+        align-items: center !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        width: 100% !important;
+        
+        i {
+            margin-right: 8px !important;
+            font-size: 0.7rem !important;
+            opacity: 0.7 !important;
+            transition: opacity 0.3s ease !important;
+        }
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #fff !important;
+        
+        a i {
+            opacity: 1 !important;
+        }
+    }
+}
+
+// 4. Responsive mobile styles
 .sidebar-desktop {
     display: block;
+    width: 100%;
 }
 
 .sidebar-mobile {
@@ -201,51 +255,6 @@
         background-color: rgba(255, 255, 255, 0.2) !important;
     }
 }
-.sidebar-title {
-    color: #fff !important;
-    background-color: #3D404E !important;
-    font-size: 1.5rem !important;
-    font-weight: bold !important;
-    text-align: left !important;
-    padding: 10px 0;
-    padding-left: 10px !important;
-}
-
-.sidebar-link {
-    color: #fff !important;
-    background-color: #262834 !important;
-    text-decoration: none !important;
-    font-size: 0.5rem !important;
-    display: block !important;
-    padding: 10px 15px !important;
-    transition: background-color 0.3s ease !important;
-    text-transform: uppercase !important;
-    padding-left: 20px !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-
-    a {
-        display: flex !important;
-        align-items: center !important;
-        color: inherit !important;
-        text-decoration: none !important;
-        
-        i {
-            margin-right: 8px !important;
-            font-size: 0.7rem !important;
-            opacity: 0.7 !important;
-            transition: opacity 0.3s ease !important;
-        }
-    }
-}
-
-.sidebar-link:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    color: #fff !important;
-    
-    a i {
-        opacity: 1 !important;
-    }
-}
 
 .sidebar-link-mobile {
     display: flex !important;
@@ -286,7 +295,7 @@ ul:has(.sidebar-link-mobile) {
     color: #fff !important;
 }
 
-// Burger menu transformation to X
+// 5. Mobile menu toggle animation (burger to X)
 .mobile-menu-toggle {
     background: none;
     border: none;
@@ -321,6 +330,7 @@ body.sidebar-active .mobile-menu-toggle span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
 }
 
+// 6. Body states and overlay
 body.sidebar-active {
     margin-left: -300px; // Push content left
     overflow: hidden; // Lock scrolling on the site
