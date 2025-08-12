@@ -1,4 +1,10 @@
 // Cookie Consent Popup Styles
+
+// Body scroll lock when cookie popup is active
+body.cookie-popup-active {
+    overflow: hidden;
+}
+
 .cookie-consent {
     position: fixed;
     bottom: 0;
@@ -21,14 +27,19 @@
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: 20px;
+        text-align: center;
 
         @media (max-width: 768px) {
             flex-direction: column;
-            text-align: center;
             gap: 15px;
+        }
+
+        @media (min-width: 769px) {
+            justify-content: space-between;
+            text-align: left;
         }
     }
 
@@ -53,11 +64,16 @@
         display: flex;
         gap: 15px;
         align-items: center;
+        justify-content: center;
 
         @media (max-width: 768px) {
             flex-direction: column;
             width: 100%;
             gap: 10px;
+        }
+
+        @media (min-width: 769px) {
+            justify-content: flex-end;
         }
 
         .btn {

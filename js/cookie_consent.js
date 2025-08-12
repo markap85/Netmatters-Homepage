@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show/hide popup functions
     function showCookieConsent() {
+        document.body.classList.add('cookie-popup-active'); // Disable scroll
         cookieConsent.classList.remove('hidden');
         setTimeout(() => {
             cookieConsent.style.visibility = 'visible';
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function hideCookieConsent() {
+        document.body.classList.remove('cookie-popup-active'); // Re-enable scroll
         cookieConsent.classList.add('hidden');
         setTimeout(() => {
             cookieConsent.style.visibility = 'hidden';
