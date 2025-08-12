@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cookieConsent = document.getElementById('cookieConsent');
     const acceptButton = document.getElementById('acceptCookies');
     const declineButton = document.getElementById('declineCookies');
+    const manageConsentButton = document.querySelector('.consent');
     
     // Cookie management functions
     function setCookie(name, value, days) {
@@ -68,6 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners
     acceptButton.addEventListener('click', acceptCookies);
     declineButton.addEventListener('click', declineCookies);
+    
+    // Add event listener for manage consent button
+    if (manageConsentButton) {
+        manageConsentButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            showCookieConsent();
+        });
+    }
     
     // Close popup when clicking outside (optional)
     cookieConsent.addEventListener('click', function(e) {
