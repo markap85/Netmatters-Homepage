@@ -1,0 +1,27 @@
+# Environment variables
+.env
+
+# Composer
+/vendor/
+composer.lock
+
+# IDE
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Cache
+cache/
+tmp/
+
+# Node modules (if using)
+node_modules/
+
+# PHP
+*.php~
