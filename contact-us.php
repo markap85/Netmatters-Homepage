@@ -1,4 +1,7 @@
 <?php
+// Include the contact form handler
+include_once 'includes/contact_form_handler.php';
+
 // Include the header and sidebar
 include_once 'includes/header.php';
 
@@ -59,32 +62,62 @@ CONTACT US PAGE CONTENT
 
     <div class="contact-section">
         <div class="container">
+            <!-- Display success or error messages -->
+            <?php if (isset($response) && !empty($response['message'])): ?>
+                <div class="alert <?php echo $response['success'] ? 'alert-success' : 'alert-error'; ?>">
+                    <?php echo htmlspecialchars($response['message']); ?>
+                </div>
+            <?php endif; ?>
+            
             <div class="contact-content">
                 <div class="contact-form">
-                    <form>
+                    <form method="POST" action="contact-us.php">
                         <div>
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name">
+                            <label for="first_name">First Name *</label>
+                            <input type="text" id="first_name" name="first_name" value="<?php echo getFormValue('first_name'); ?>" required>
+                            <?php if (hasError('first_name', $response['errors'] ?? [])): ?>
+                                <span class="error"><?php echo getError('first_name', $response['errors']); ?></span>
+                            <?php endif; ?>
+                        </div>
+                        <div>
+                            <label for="last_name">Last Name *</label>
+                            <input type="text" id="last_name" name="last_name" value="<?php echo getFormValue('last_name'); ?>" required>
+                            <?php if (hasError('last_name', $response['errors'] ?? [])): ?>
+                                <span class="error"><?php echo getError('last_name', $response['errors']); ?></span>
+                            <?php endif; ?>
                         </div>
                         <div>
                             <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
+                            <input type="text" id="company" name="company" value="<?php echo getFormValue('company'); ?>">
                         </div>
                         <div>
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email">
+                            <label for="email">Your Email *</label>
+                            <input type="email" id="email" name="email" value="<?php echo getFormValue('email'); ?>" required>
+                            <?php if (hasError('email', $response['errors'] ?? [])): ?>
+                                <span class="error"><?php echo getError('email', $response['errors']); ?></span>
+                            <?php endif; ?>
                         </div>
                         <div>
-                            <label for="telephone">Your Telephone Number</label>
-                            <input type="tel" id="telephone" name="telephone">
+                            <label for="phone">Your Telephone Number</label>
+                            <input type="tel" id="phone" name="phone" value="<?php echo getFormValue('phone'); ?>">
                         </div>
                         <div>
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message"></textarea>
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" value="<?php echo getFormValue('subject'); ?>" required>
+                            <?php if (hasError('subject', $response['errors'] ?? [])): ?>
+                                <span class="error"><?php echo getError('subject', $response['errors']); ?></span>
+                            <?php endif; ?>
                         </div>
                         <div>
-                            <input type="checkbox" id="marketing" name="marketing">
-                            <label for="marketing">Please tick this if you want marketing</label>
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required><?php echo getFormValue('message'); ?></textarea>
+                            <?php if (hasError('message', $response['errors'] ?? [])): ?>
+                                <span class="error"><?php echo getError('message', $response['errors']); ?></span>
+                            <?php endif; ?>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="marketing_consent" name="marketing_consent" <?php echo isset($_POST['marketing_consent']) ? 'checked' : ''; ?>>
+                            <label for="marketing_consent">Please tick this if you want marketing communications</label>
                         </div>
                         <div class="form-footer">
                             <button type="submit">Send Enquiry</button>
