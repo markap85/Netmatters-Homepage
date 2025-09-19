@@ -4,10 +4,10 @@
     overflow: hidden;
     height: 550px;
     
-    // Add margin-top when body has sticky header active
-    body.sticky-header-active & {
-        margin-top: 99px;
-    }
+    // Remove margin-top when sticky header is active since body already has padding-top
+    // body.sticky-header-active & {
+    //     margin-top: 99px;
+    // }
     
     // Splide specific styles
     .splide__track {
