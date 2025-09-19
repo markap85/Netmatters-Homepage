@@ -50,3 +50,89 @@
 .office-item button {
     margin-top: 10px;
 }
+
+// Contact Section Styling
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 40px;
+
+    @media (min-width: 991px) {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.contact-form {
+    padding: 20px;
+}
+
+.contact-form div {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-footer button {
+    padding: 10px 20px;
+    background-color: #007cba;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-footer span {
+    font-size: 12px;
+    color: #666;
+}
+
+.contact-info {
+    padding: 20px;
+}
+
+.contact-info h3 {
+    margin: 20px 0 10px 0;
+    font-size: 16px;
+}
+
+.contact-info p {
+    margin: 0 0 10px 0;
+}
+
+.accordion h3 {
+    cursor: pointer;
+    margin: 20px 0 10px 0;
+}
+
+.accordion-content {
+    margin-left: 10px;
+}

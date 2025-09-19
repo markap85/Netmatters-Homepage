@@ -3944,4 +3944,89 @@ body.cookie-popup-active {
 .office-item button {
   margin-top: 10px; }
 
+/* line 55, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 40px; }
+  @media (min-width: 991px) {
+    /* line 55, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    .contact-content {
+      grid-template-columns: 2fr 1fr; } }
+
+/* line 66, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-form {
+  padding: 20px; }
+
+/* line 70, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-form div {
+  margin-bottom: 15px; }
+
+/* line 74, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold; }
+
+/* line 80, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px; }
+
+/* line 88, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical; }
+
+/* line 93, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-form input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px; }
+
+/* line 98, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; }
+
+/* line 105, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.form-footer button {
+  padding: 10px 20px;
+  background-color: #007cba;
+  color: white;
+  border: none;
+  cursor: pointer; }
+
+/* line 113, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.form-footer span {
+  font-size: 12px;
+  color: #666; }
+
+/* line 118, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-info {
+  padding: 20px; }
+
+/* line 122, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-info h3 {
+  margin: 20px 0 10px 0;
+  font-size: 16px; }
+
+/* line 127, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.contact-info p {
+  margin: 0 0 10px 0; }
+
+/* line 131, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.accordion h3 {
+  cursor: pointer;
+  margin: 20px 0 10px 0; }
+
+/* line 136, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.accordion-content {
+  margin-left: 10px; }
+
 /*# sourceMappingURL=styles.css.map */
