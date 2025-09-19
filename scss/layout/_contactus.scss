@@ -15,7 +15,15 @@
   }
 }
 
+.title-section h1 {
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+    color: $black-dark;
+}
+
+// ------------------------------------------------------------------------------
 // Offices Grid Styling
+// ------------------------------------------------------------------------------
 .offices-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -28,8 +36,9 @@
 }
 
 .office-item {
-    padding: 20px;
+    margin: 20px;
     border: 1px solid #ccc;
+    border-radius: 15px 15px 0 0;
 }
 
 .office-item img {
@@ -37,21 +46,28 @@
     height: auto;
     display: block;
     margin-bottom: 10px;
+        border-radius: 15px 15px 0 0;
 }
 
-.office-item h3 {
+.office-item-text {
+    padding: 30px;
+
+    h3 {
     margin: 0 0 10px 0;
-}
+    }
 
-.office-item p {
+    p {
     margin: 0 0 10px 0;
-}
+    }
 
-.office-item button {
+    button {
     margin-top: 10px;
+    }
 }
 
+// ------------------------------------------------------------------------------
 // Contact Section Styling
+// ------------------------------------------------------------------------------
 .contact-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -114,6 +130,9 @@
     font-size: 12px;
     color: #666;
 }
+
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 
 .contact-info {
     padding: 20px;

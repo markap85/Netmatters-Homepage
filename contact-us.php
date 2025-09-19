@@ -27,25 +27,31 @@ CONTACT US PAGE CONTENT
         <div class="container">
             <div class="offices-grid">
                 <div class="office-item">
-                    <img src="" alt="Office 1">
-                    <h3>Office 1</h3>
-                    <p>Address Line 1<br>City, Postcode</p>
-                    <p>Phone: 01234 567890</p>
-                    <button>View More</button>
+                    <img src="img/contactus/cambridge.jpg" alt="Office 1">
+                    <div class="office-item-text">
+                        <h3>Cambridge Office</h3>
+                        <p>Unit 1.31,<br>St John's Innovation Centre,<br>Cowley Road, Milton,<br>Cambridge,<br>CB4 0WS</p>
+                        <p>01223 37 57 72</p>
+                        <button>View More</button>
+                    </div>
                 </div>
                 <div class="office-item">
-                    <img src="" alt="Office 2">
-                    <h3>Office 2</h3>
-                    <p>Address Line 1<br>City, Postcode</p>
-                    <p>Phone: 01234 567890</p>
-                    <button>View More</button>
+                    <img src="img/contactus/wymondham.jpg" alt="Office 2">
+                        <div class="office-item-text">
+                        <h3>Wymondham Office</h3>
+                        <p>Unit 15,<br>Penfold Drive,<br>Gateway 11 Business Park,<br>Wymondham, Norfolk,<br>NR18 0WZ</p>
+                        <p>01603 70 40 20</p>
+                        <button>View More</button>
+                    </div>
                 </div>
                 <div class="office-item">
-                    <img src="" alt="Office 3">
-                    <h3>Office 3</h3>
-                    <p>Address Line 1<br>City, Postcode</p>
-                    <p>Phone: 01234 567890</p>
-                    <button>View More</button>
+                    <img src="img/contactus/yarmouth-2.jpg" alt="Office 3">
+                        <div class="office-item-text">
+                            <h3>Great Yarmouth Office</h3>
+                        <p>Suite F23,<br>Beacon Innovation Centre,<br>Beacon Park, Gorleston,<br>Great Yarmouth, Norfolk,<br>NR31 7RA</p>
+                        <p>01493 60 32 04</p>
+                        <button>View More</button>
+                    </div>
                 </div>
             </div>
         </div>
