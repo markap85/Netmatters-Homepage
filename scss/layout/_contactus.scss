@@ -14,3 +14,39 @@
     }
   }
 }
+
+// Offices Grid Styling
+.offices-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+
+    @media (min-width: 991px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.office-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.office-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.office-item h3 {
+    margin: 0 0 10px 0;
+}
+
+.office-item p {
+    margin: 0 0 10px 0;
+}
+
+.office-item button {
+    margin-top: 10px;
+}

@@ -3909,4 +3909,39 @@ body.cookie-popup-active {
     .breadcrumb a:hover {
       text-decoration: underline; }
 
+/* line 19, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.offices-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px; }
+  @media (min-width: 991px) {
+    /* line 19, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    .offices-grid {
+      grid-template-columns: repeat(3, 1fr); } }
+
+/* line 30, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.office-item {
+  padding: 20px;
+  border: 1px solid #ccc; }
+
+/* line 35, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.office-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px; }
+
+/* line 42, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.office-item h3 {
+  margin: 0 0 10px 0; }
+
+/* line 46, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.office-item p {
+  margin: 0 0 10px 0; }
+
+/* line 50, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.office-item button {
+  margin-top: 10px; }
+
 /*# sourceMappingURL=styles.css.map */
