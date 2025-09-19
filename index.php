@@ -620,41 +620,7 @@
             This section showcases the partners and certifications of Netmatters.
             ======================= -->
 
-            <div class="welcome-section" aria-labelledby="welcome-heading">
-                <div class="container">
-                    <div class="welcome-grid">
-                        <article class="welcome-grid-item">
-                            <h2 id="welcome-heading">Welcome To Netmatters</h2>
-                            <p class="bold">Netmatters is a leading Bespoke Software, IT Support, and Digital Marketing company based in the East of England with offices in Cambridge, Wymondham, and Great Yarmouth.</p>
-                            <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
-                            <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
-                            <div class="welcome-links">
-                                <a class="btn btn--primary">Why Choose Us?<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                <a class="btn btn--primary">Our Culture<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </article>
-                        <article class="welcome-grid-item">
-                            <h2>What Our Clients Think</h2>
-                            <div class="stars-bar" role="img" aria-label="5 out of 6 stars rating">
-                                <span class="icon-star-full" aria-hidden="true"></span>
-                                <span class="icon-star-full" aria-hidden="true"></span>
-                                <span class="icon-star-full" aria-hidden="true"></span>
-                                <span class="icon-star-full" aria-hidden="true"></span>
-                                <span class="icon-star-full" aria-hidden="true"></span>
-                                <span class="icon-star-empty" aria-hidden="true"></span>
-                            </div>
-                            <blockquote>
-                                <p class="bold">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</p>
-                                <cite>Eleanor Bishop, Head of Marketing - <span class="bold">Ashcroft Partnership LLP</span></cite>
-                            </blockquote>
-                            <div class="review-links">
-                                <a class="btn btn--google">Google Reviews<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                <a class="btn btn--trustpilot">Trustpilot Reviews<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
+  
 
             <!-- =======================
             PARTNERS SECTION
