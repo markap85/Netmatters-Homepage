@@ -240,7 +240,7 @@
                 <div class="container">
                     <div class="header-content">
                         <div class="logo">
-                            <a aria-label="Netmatters home page">
+                            <a aria-label="Netmatters home page" href="index.php">
                                 <img src="img/logos/nm-logo-dark.png" alt="Netmatters company logo">
                             </a>
                         </div>
