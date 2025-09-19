@@ -274,7 +274,7 @@
                             </div>
                             
                             <!-- Mobile Menu Toggle -->
-                            <button class="hamburger" type="button" aria-label="Toggle navigation">
+                            <button class="hamburger mobile-menu-toggle" type="button" aria-label="Toggle navigation">
                                 <span></span>
                                 <span></span>
                                 <span></span>

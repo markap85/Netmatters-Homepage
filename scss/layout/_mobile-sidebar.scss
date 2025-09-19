@@ -339,6 +339,7 @@ body.sidebar-active {
 
 body.sidebar-active .sidebar-menu {
     right: 0; // Sidebar stays fixed
+    z-index: 1500; // Higher than navigation popouts when active
 }
 
 body.sidebar-active .screen-overlay {
