@@ -4,6 +4,33 @@ include_once 'includes/header.php';
 
 // Include the navigation menu
 include_once 'includes/navigation.php';
+
+// Load environment variables
+require_once __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Database connection
+try {
+    $pdo = new PDO(
+        "mysql:host=" . $_ENV['DB_HOST'] . ";dbname=" . $_ENV['DB_NAME'],
+        $_ENV['DB_USERNAME'],
+        $_ENV['DB_PASSWORD'],
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
+}
+
+// Fetch news items
+try {
+    $stmt = $pdo->prepare("SELECT * FROM news ORDER BY date_published DESC LIMIT 3");
+    $stmt->execute();
+    $news_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    $news_items = [];
+    error_log("News fetch error: " . $e->getMessage());
+}
 ?>
 
 <!-- =======================
@@ -219,48 +246,25 @@ This section showcases the partners and certifications of Netmatters.
             <a class="view-our-work">View All <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </header>
         <div class="news-grid">
-            <article class="news-item">
-                <span class="tag tag--bespoke">News</span>
-                <img src="img/News/april-notables-2025-A2Np.webp" alt="Team celebration at Netmatters April 2025 notable achievements event" loading="lazy">
-                <h3>April Notables 2025 - Celebrating Our Team</h3>
-                <p>April Notables 2025 At Netmatters, we're passionate about celebrating the people who make our success...</p>
-                <a class="btn btn--yellow">Read More</a>
-                <footer class="news-meta">
-                    <img src="img/logos/NetmattersSmallLogoM.webp" alt="Netmatters logo" class="news-logo">
-                    <div class="news-meta-text">
-                        <strong>Posted By Netmatters</strong>
-                        <time datetime="2025-05-07">7th May 2025</time>
-                    </div>
-                </footer>
-            </article>
-            <article class="news-item">
-                <span class="tag tag--developer">News</span>
-                <img src="img/News/netmatters-achieves-kings-lGCo.webp" alt="Netmatters team celebrating King's Award for Enterprise achievement" loading="lazy">
-                <h3>Netmatters Achieves King's Award for Enterprise...</h3>
-                <p>Netmatters is honoured to have been presented with a King's Award for Enterprise for Promoting Opportunity...</p>
-                <a class="btn btn--orange">Read More</a>
-                <footer class="news-meta">
-                    <img src="img/logos/NetmattersSmallLogoM.webp" alt="Netmatters logo" class="news-logo">
-                    <div class="news-meta-text">
-                        <strong>Posted By Netmatters</strong>
-                        <time datetime="2025-05-07">7th May 2025</time>
-                    </div>
-                </footer>
-            </article>
-            <article class="news-item">
-                <span class="tag tag--it">News</span>
-                <img src="img/News/april-notables-2025-A2Np.png" alt="Case study showcasing security enhancement project results" loading="lazy">
-                <h3>Case Study: Enhancing Security and Reducing Costs...</h3>
-                <p>Who Is The Client? Greg Rowe Limited is a leading UK-based tap design and manufacturing company that...</p>
-                <a class="btn btn--blue">Read More</a>
-                <footer class="news-meta">
-                    <img src="img/logos/NetmattersSmallLogoM.webp" alt="Netmatters logo" class="news-logo">
-                    <div class="news-meta-text">
-                        <strong>Posted By Netmatters</strong>
-                        <time datetime="2025-05-07">7th May 2025</time>
-                    </div>
-                </footer>
-            </article>
+            <?php if (!empty($news_items)): ?>
+                <?php foreach ($news_items as $news): ?>
+                    <article class="news-item">
+                        <span class="tag <?php echo htmlspecialchars($news['tag_class']); ?>"><?php echo htmlspecialchars($news['tag_text']); ?></span>
+                        <img src="<?php echo htmlspecialchars($news['image']); ?>" alt="<?php echo htmlspecialchars($news['image_alt']); ?>" loading="lazy">
+                        <h3><?php echo htmlspecialchars($news['title']); ?></h3>
+                        <p><?php echo htmlspecialchars($news['excerpt']); ?></p>
+                        <a class="btn <?php echo htmlspecialchars($news['btn_class']); ?>"><?php echo htmlspecialchars($news['btn_text']); ?></a>
+                        <footer class="news-meta">
+                            <img src="img/logos/NetmattersSmallLogoM.webp" alt="Netmatters logo" class="news-logo">
+                            <div class="news-meta-text">
+                                <strong>Posted By <?php echo htmlspecialchars($news['author']); ?></strong>
+                                <time datetime="<?php echo htmlspecialchars($news['date_published']); ?>"><?php echo date('jS F Y', strtotime($news['date_published'])); ?></time>
+                            </div>
+                        </footer>
+                    </article>
+                <?php endforeach; ?>
+            <?php else: ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>
