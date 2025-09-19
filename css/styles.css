@@ -3894,4 +3894,19 @@ body.cookie-popup-active {
           width: 100%;
           text-align: center; } }
 
+/* line 1, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+.breadcrumb {
+  background-color: #f4f4f4;
+  padding: 10px 0;
+  font-size: 14px;
+  margin-bottom: 20px; }
+  /* line 7, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  .breadcrumb a {
+    color: #181924;
+    font-weight: bold;
+    text-decoration: none; }
+    /* line 12, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    .breadcrumb a:hover {
+      text-decoration: underline; }
+
 /*# sourceMappingURL=styles.css.map */
