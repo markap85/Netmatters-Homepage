@@ -12,10 +12,14 @@
 body {
     // Add top padding when header becomes sticky to prevent content jump
     &.sticky-header-active {
-        padding-top: 110px; // Match header height
+        padding-top: 209px; // Header (110px) + Navigation (99px)
         
         @media (min-width: $brk-point-s) {
-            padding-top: 110px; // Maintain consistent height across breakpoints
+            padding-top: 209px; // Maintain consistent height across breakpoints
+        }
+        
+        @media (max-width: ($brk-point-m - 1px)) {
+            padding-top: 110px; // Only header on mobile since nav is hidden
         }
     }
 }

@@ -34,6 +34,25 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    // Sticky navigation styles
+    &.sticky-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 998; // One less than header z-index
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(110px); // Position directly below header
+    }
+
+    &.nav-hidden {
+        transform: translateY(-209px); // Move completely off screen (header + nav height)
+    }
+
+    &.nav-visible {
+        transform: translateY(110px); // Position below header
+    }
 }
 
 .main-nav-items {

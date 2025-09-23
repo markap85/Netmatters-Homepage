@@ -20,7 +20,7 @@ header {
     }
 
     &.header-hidden {
-        transform: translateY(-100%);
+        transform: translateY(-110px); // Move up by exact header height
     }
 
     &.header-visible {

@@ -62,12 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .accordion h3.active .accordion-arrow {
             transform: rotate(180deg);
         }
-        .accordion h3:hover {
-            background-color: #f5f5f5;
-            padding: 10px;
-            margin: -5px;
-            border-radius: 4px;
-        }
         .accordion-content {
             overflow: hidden;
             transition: all 0.3s ease;

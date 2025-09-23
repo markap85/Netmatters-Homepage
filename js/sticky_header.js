@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
+    const mainNav = document.querySelector('.main-nav');
     const body = document.body;
     let lastScrollTop = 0;
     let ticking = false;
     const scrollThreshold = 10; // Minimum scroll distance to trigger hide/show
 
-    // Add initial classes
-    header.classList.add('sticky-header');
+    // Add initial classes to both header and navigation
+    if (header) {
+        header.classList.add('sticky-header');
+    }
+    if (mainNav) {
+        mainNav.classList.add('sticky-nav');
+    }
     body.classList.add('sticky-header-active');
 
     function updateHeader() {
@@ -21,20 +27,43 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        if (currentScrollTop > lastScrollTop && currentScrollTop > header.offsetHeight) {
-            // Scrolling down & past header height - hide header
-            header.classList.add('header-hidden');
-            header.classList.remove('header-visible');
+        // Calculate combined height of header and navigation
+        const headerHeight = header ? header.offsetHeight : 0;
+        const navHeight = mainNav ? mainNav.offsetHeight : 0;
+        const totalHeight = headerHeight + navHeight;
+
+        if (currentScrollTop > lastScrollTop && currentScrollTop > totalHeight) {
+            // Scrolling down & past header+nav height - hide both as one unit
+            if (header) {
+                header.classList.add('header-hidden');
+                header.classList.remove('header-visible');
+            }
+            if (mainNav) {
+                mainNav.classList.add('nav-hidden');
+                mainNav.classList.remove('nav-visible');
+            }
         } else if (currentScrollTop < lastScrollTop) {
-            // Scrolling up - show header
-            header.classList.remove('header-hidden');
-            header.classList.add('header-visible');
+            // Scrolling up - show both as one unit
+            if (header) {
+                header.classList.remove('header-hidden');
+                header.classList.add('header-visible');
+            }
+            if (mainNav) {
+                mainNav.classList.remove('nav-hidden');
+                mainNav.classList.add('nav-visible');
+            }
         }
 
-        // If at the very top, ensure header is visible
+        // If at the very top, ensure both are visible
         if (currentScrollTop <= 0) {
-            header.classList.remove('header-hidden');
-            header.classList.add('header-visible');
+            if (header) {
+                header.classList.remove('header-hidden');
+                header.classList.add('header-visible');
+            }
+            if (mainNav) {
+                mainNav.classList.remove('nav-hidden');
+                mainNav.classList.add('nav-visible');
+            }
         }
 
         lastScrollTop = currentScrollTop;
