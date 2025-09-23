@@ -4,8 +4,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all accordion headers
-    const accordionHeaders = document.querySelectorAll('.accordion h3');
+    // Get all accordion headers (now targeting p elements)
+    const accordionHeaders = document.querySelectorAll('.accordion p');
     
     accordionHeaders.forEach(header => {
         // Add click event listener to each header
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add CSS for active state
     const style = document.createElement('style');
     style.textContent = `
-        .accordion h3.active .accordion-arrow {
+        .accordion p.active .accordion-arrow {
             transform: rotate(180deg);
         }
         .accordion-content {

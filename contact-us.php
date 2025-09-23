@@ -32,28 +32,28 @@ CONTACT US PAGE CONTENT
                 <div class="office-item">
                     <img src="img/contactus/cambridge.jpg" alt="Office 1">
                     <div class="office-item-text">
-                        <h3>Cambridge Office</h3>
+                        <a>Cambridge Office</a>
                         <p>Unit 1.31,<br>St John's Innovation Centre,<br>Cowley Road, Milton,<br>Cambridge,<br>CB4 0WS</p>
-                        <p>01223 37 57 72</p>
-                        <button>View More</button>
+                        <h3>01223 37 57 72</h3>
+                        <a href="#" class="btn">View More</a>
                     </div>
                 </div>
                 <div class="office-item">
                     <img src="img/contactus/wymondham.jpg" alt="Office 2">
                         <div class="office-item-text">
-                        <h3>Wymondham Office</h3>
+                        <a>Wymondham Office</a>
                         <p>Unit 15,<br>Penfold Drive,<br>Gateway 11 Business Park,<br>Wymondham, Norfolk,<br>NR18 0WZ</p>
-                        <p>01603 70 40 20</p>
-                        <button>View More</button>
+                        <h3>01603 70 40 20</h3>
+                        <a href="#" class="btn">View More</a>
                     </div>
                 </div>
                 <div class="office-item">
                     <img src="img/contactus/yarmouth-2.jpg" alt="Office 3">
                         <div class="office-item-text">
-                            <h3>Great Yarmouth Office</h3>
+                            <a>Great Yarmouth Office</a>
                         <p>Suite F23,<br>Beacon Innovation Centre,<br>Beacon Park, Gorleston,<br>Great Yarmouth, Norfolk,<br>NR31 7RA</p>
-                        <p>01493 60 32 04</p>
-                        <button>View More</button>
+                        <h3>01493 60 32 04</h3>
+                        <a href="#" class="btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -72,49 +72,45 @@ CONTACT US PAGE CONTENT
             <div class="contact-content">
                 <div class="contact-form">
                     <form method="POST" action="contact-us.php">
-                        <div>
-                            <label for="first_name">First Name *</label>
-                            <input type="text" id="first_name" name="first_name" value="<?php echo getFormValue('first_name'); ?>" required>
-                            <?php if (hasError('first_name', $response['errors'] ?? [])): ?>
-                                <span class="error"><?php echo getError('first_name', $response['errors']); ?></span>
-                            <?php endif; ?>
+                        <!-- Row 1: First Name and Company Name side by side -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name" class="required">First Name</label>
+                                <input type="text" id="first_name" name="first_name" value="<?php echo getFormValue('first_name'); ?>" required>
+                                <?php if (hasError('first_name', $response['errors'] ?? [])): ?>
+                                    <span class="error"><?php echo getError('first_name', $response['errors']); ?></span>
+                                <?php endif; ?>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" value="<?php echo getFormValue('company'); ?>">
+                            </div>
                         </div>
-                        <div>
-                            <label for="last_name">Last Name *</label>
-                            <input type="text" id="last_name" name="last_name" value="<?php echo getFormValue('last_name'); ?>" required>
-                            <?php if (hasError('last_name', $response['errors'] ?? [])): ?>
-                                <span class="error"><?php echo getError('last_name', $response['errors']); ?></span>
-                            <?php endif; ?>
+                        
+                        <!-- Row 2: Email and Phone side by side -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="required">Your Email</label>
+                                <input type="email" id="email" name="email" value="<?php echo getFormValue('email'); ?>" required>
+                                <?php if (hasError('email', $response['errors'] ?? [])): ?>
+                                    <span class="error"><?php echo getError('email', $response['errors']); ?></span>
+                                <?php endif; ?>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Your Telephone Number</label>
+                                <input type="tel" id="phone" name="phone" value="<?php echo getFormValue('phone'); ?>">
+                            </div>
                         </div>
-                        <div>
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company" value="<?php echo getFormValue('company'); ?>">
-                        </div>
-                        <div>
-                            <label for="email">Your Email *</label>
-                            <input type="email" id="email" name="email" value="<?php echo getFormValue('email'); ?>" required>
-                            <?php if (hasError('email', $response['errors'] ?? [])): ?>
-                                <span class="error"><?php echo getError('email', $response['errors']); ?></span>
-                            <?php endif; ?>
-                        </div>
-                        <div>
-                            <label for="phone">Your Telephone Number</label>
-                            <input type="tel" id="phone" name="phone" value="<?php echo getFormValue('phone'); ?>">
-                        </div>
-                        <div>
-                            <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" value="<?php echo getFormValue('subject'); ?>" required>
-                            <?php if (hasError('subject', $response['errors'] ?? [])): ?>
-                                <span class="error"><?php echo getError('subject', $response['errors']); ?></span>
-                            <?php endif; ?>
-                        </div>
-                        <div>
-                            <label for="message">Message *</label>
+                        
+                        <!-- Message - Full Width -->
+                        <div class="form-full-width">
+                            <label for="message" class="required">Message</label>
                             <textarea id="message" name="message" required><?php echo getFormValue('message'); ?></textarea>
                             <?php if (hasError('message', $response['errors'] ?? [])): ?>
                                 <span class="error"><?php echo getError('message', $response['errors']); ?></span>
                             <?php endif; ?>
                         </div>
+                        
                         <div>
                             <input type="checkbox" id="marketing_consent" name="marketing_consent" <?php echo isset($_POST['marketing_consent']) ? 'checked' : ''; ?>>
                             <label for="marketing_consent">Please tick this if you want marketing communications</label>
@@ -126,21 +122,21 @@ CONTACT US PAGE CONTENT
                     </form>
                 </div>
                 <div class="contact-info">
-                    <h3>Email us on:</h3>
-                    <p>sales@netmatters.com</p>
+                    <p>Email us on:</p>
+                    <h3>sales@netmatters.com</h3>
                     
-                    <h3>Speak to Sales on:</h3>
-                    <p>01603 515007</p>
-                    
-                    <h3>Business hours:</h3>
-                    <p>Monday - Friday 07:00 - 18:00</p>
+                    <strong>Speak to Sales on:</strong>
+                    <h3>01603 515007</h3>
+
+                    <strong>Business hours:</strong><br>
+                    <strong>Monday - Friday 07:00 - 18:00</strong>
                     
                     <div class="accordion">
-                        <h3>Out of Hours IT Support</h3>
+                        <p>Out of Hours IT Support</p>
                         <div class="accordion-content">
                             <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
-                            <p>Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00<br>
-                            Sunday 10:00 - 18:00</p>
+                            <strong>Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00<br>
+                            Sunday 10:00 - 18:00</strong>
                             <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.</p>
                         </div>
                     </div>
