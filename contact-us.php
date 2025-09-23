@@ -75,7 +75,7 @@ CONTACT US PAGE CONTENT
                         <!-- Row 1: First Name and Company Name side by side -->
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="first_name" class="required">First Name</label>
+                                <label for="first_name" class="required">Your Name</label>
                                 <input type="text" id="first_name" name="first_name" value="<?php echo getFormValue('first_name'); ?>" required>
                                 <?php if (hasError('first_name', $response['errors'] ?? [])): ?>
                                     <span class="error"><?php echo getError('first_name', $response['errors']); ?></span>
@@ -97,7 +97,7 @@ CONTACT US PAGE CONTENT
                                 <?php endif; ?>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Your Telephone Number</label>
+                                <label for="phone" class="required">Your Telephone Number</label>
                                 <input type="tel" id="phone" name="phone" value="<?php echo getFormValue('phone'); ?>">
                             </div>
                         </div>

@@ -61,14 +61,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Real-time validation
+    // Real-time validation - DISABLED
+    // Removed blur validation to prevent styling/text on field exit
     Object.entries(fields).forEach(([name, field]) => {
         if (!field) return;
         
-        field.addEventListener('blur', function() {
-            validateField(name, field);
-        });
-        
+        // Only clear errors on input, no validation on blur
         field.addEventListener('input', function() {
             // Clear error on input if field was previously invalid
             if (field.classList.contains('error')) {
@@ -172,25 +170,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Add CSS for better error styling
+    // CSS styling removed - no visual error indicators on blur
     const style = document.createElement('style');
     style.textContent = `
-        .contact-form input.error,
-        .contact-form textarea.error {
-            border-color: #dc3545 !important;
-            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
-        }
-        
-        .contact-form .error {
-            animation: shake 0.5s ease-in-out;
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-        
         .contact-form button[type="submit"]:disabled {
             opacity: 0.6;
             cursor: not-allowed;
