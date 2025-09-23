@@ -111,13 +111,18 @@ CONTACT US PAGE CONTENT
                             <?php endif; ?>
                         </div>
                         
-                        <div>
+                        <!-- Marketing Consent - Full Width -->
+                        <div class="form-full-width form-checkbox">
                             <input type="checkbox" id="marketing_consent" name="marketing_consent" <?php echo isset($_POST['marketing_consent']) ? 'checked' : ''; ?>>
                             <label for="marketing_consent">Please tick this if you want marketing communications</label>
                         </div>
-                        <div class="form-footer">
-                            <button type="submit">Send Enquiry</button>
-                            <span>* Fields Required</span>
+                        
+                        <!-- Form Footer - Full Width -->
+                        <div class="form-full-width">
+                            <div class="form-footer">
+                                <button type="submit">Send Enquiry</button>
+                                <span>* Fields Required</span>
+                            </div>
                         </div>
                     </form>
                 </div>

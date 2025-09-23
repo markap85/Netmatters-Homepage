@@ -198,6 +198,32 @@
     resize: vertical;
 }
 
+// Checkbox styling for marketing consent
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    
+    input[type="checkbox"] {
+        width: auto;
+        margin: 0;
+        flex-shrink: 0;
+        margin-top: 2px; // Align with text baseline
+    }
+    
+    label {
+        width: auto;
+        height: auto;
+        margin: 0;
+        font-family: Poppins, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #333645;
+    }
+}
+
 .contact-form input[type="checkbox"] {
     width: auto;
     margin-right: 10px;
@@ -215,9 +241,8 @@
     display: inline-block;
     margin: 15px 3px;
     padding: 5px 30px;
-    width: 144px;
     height: 47px;
-    background-color: #926FB1;
+    background-color: #333645;
     color: #FFFFFF;
     border: none;
     border-radius: 3px;
