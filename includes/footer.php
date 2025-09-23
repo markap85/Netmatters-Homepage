@@ -125,6 +125,8 @@
         <script src="js/sticky_header.js" defer></script>
         <script src="js/sidebar_menu.js"></script>
         <script src="js/cookie_consent.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="js/form_validation.js"></script>
 
     </body>
 </html>
