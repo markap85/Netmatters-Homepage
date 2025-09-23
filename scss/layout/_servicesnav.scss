@@ -42,8 +42,12 @@
         left: 0;
         right: 0;
         z-index: 998; // One less than header z-index
-        transition: transform 0.3s ease-in-out;
         transform: translateY(110px); // Position directly below header
+    }
+
+    // Only add transitions after page load to prevent animations on page change
+    &.sticky-nav:not(.no-transition) {
+        transition: transform 0.3s ease-in-out;
     }
 
     &.nav-hidden {

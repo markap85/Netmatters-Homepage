@@ -9,11 +9,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add initial classes to both header and navigation
     if (header) {
         header.classList.add('sticky-header');
+        header.classList.add('header-visible'); // Start visible
+        header.classList.add('no-transition'); // Disable transitions initially
     }
     if (mainNav) {
         mainNav.classList.add('sticky-nav');
+        mainNav.classList.add('nav-visible'); // Start visible
+        mainNav.classList.add('no-transition'); // Disable transitions initially
     }
     body.classList.add('sticky-header-active');
+
+    // Enable transitions after a short delay to allow smooth scroll animations
+    setTimeout(() => {
+        if (header) {
+            header.classList.remove('no-transition');
+        }
+        if (mainNav) {
+            mainNav.classList.remove('no-transition');
+        }
+    }, 100);
 
     function updateHeader() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
