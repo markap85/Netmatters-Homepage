@@ -462,3 +462,84 @@
         }
     }
 }
+
+// ------------------------------------------------------------------------------
+// Form Notification Styling
+// ------------------------------------------------------------------------------
+.form-notification {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease-out;
+    
+    &.success {
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+        color: #3c763d;
+    }
+    
+    &.error {
+        background-color: #f2dede;
+        border-color: #ebccd1;
+        color: #a94442;
+    }
+}
+
+.notification-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 20px;
+    
+    #notification-message {
+        font-family: Poppins, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        flex: 1;
+        white-space: pre-line; // Preserve line breaks
+        line-height: 1.5;
+    }
+    
+    .notification-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        color: inherit;
+        padding: 0;
+        margin-left: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: background-color 0.2s ease;
+        
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Button submitting state
+.form-footer button[type="submit"] {
+    &.submitting {
+        background-color: #999 !important;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}

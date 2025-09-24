@@ -22,11 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Sanitize and validate input data
     $firstName = trim($_POST['first_name'] ?? '');
-    $lastName = trim($_POST['last_name'] ?? '');
+    $lastName = ''; // Not used in this form
     $email = trim($_POST['email'] ?? '');
     $phone = trim($_POST['phone'] ?? '');
     $company = trim($_POST['company'] ?? '');
-    $subject = trim($_POST['subject'] ?? '');
+    $subject = 'Contact Form Submission'; // Default subject since form doesn't have this field
     $message = trim($_POST['message'] ?? '');
     $marketingConsent = isset($_POST['marketing_consent']) ? 1 : 0;
     
@@ -39,18 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $response['errors']['first_name'] = 'First name is required.';
     }
     
-    if (empty($lastName)) {
-        $response['errors']['last_name'] = 'Last name is required.';
-    }
-    
     if (empty($email)) {
         $response['errors']['email'] = 'Email is required.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $response['errors']['email'] = 'Please enter a valid email address.';
-    }
-    
-    if (empty($subject)) {
-        $response['errors']['subject'] = 'Subject is required.';
     }
     
     if (empty($message)) {

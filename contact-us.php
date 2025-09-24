@@ -71,6 +71,14 @@ CONTACT US PAGE CONTENT
             
             <div class="contact-content">
                 <div class="contact-form">
+                    <!-- Notification Container -->
+                    <div id="form-notification" class="form-notification" style="display: none;">
+                        <div class="notification-content">
+                            <span id="notification-message"></span>
+                            <button type="button" class="notification-close" onclick="closeNotification()">&times;</button>
+                        </div>
+                    </div>
+                    
                     <form method="POST" action="contact-us.php">
                         <!-- Row 1: First Name and Company Name side by side -->
                         <div class="form-row">

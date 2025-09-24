@@ -127,6 +127,7 @@
         <script src="js/cookie_consent.js"></script>
         <script src="js/accordion.js"></script>
         <script src="js/form_validation.js"></script>
+        <script src="js/contact_form.js"></script>
 
     </body>
 </html>
