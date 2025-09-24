@@ -362,14 +362,20 @@
     // Remove the active state styling since it should always look the same
     
     .accordion-arrow {
-        text-decoration: none !important; // Remove underline from arrow
-        text-decoration-line: none !important; // Additional fallback
-        border-bottom: none !important; // In case underline is a border
-        margin-left: 10px;
+        position: absolute;
+        right: 4em;
+        top: 50%;
+        transform: translateY(-50%);
+        text-decoration: none !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
+        background: none !important;
         font-size: 25px;
         font-weight: bold;
-        vertical-align: middle;
-        display: inline;
+        display: inline-block;
+        z-index: 10;
+
+        
     }
 }
 
