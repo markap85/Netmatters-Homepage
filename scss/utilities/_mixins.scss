@@ -208,3 +208,28 @@ $white: #fff;
   font-size: $size;
   color: $color;
 }
+
+
+// ------------------------------------------------------------------------------
+// Variables & Mixins - CONTACT PAGE
+// ------------------------------------------------------------------------------
+$primary-color: #333645;
+$secondary-color: #926FB1;
+$text-color: #666666;
+$error-color: #a94442;
+$form-bg: rgb(230, 231, 233);
+$border-radius: 10px;
+$font-family: Poppins, sans-serif;
+
+@mixin button-base {
+    display: inline-block;
+    font-family: $font-family;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
