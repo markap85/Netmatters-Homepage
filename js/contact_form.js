@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle form submission
     form.addEventListener('submit', function(e) {
         e.preventDefault();
+        console.log('Form submitted via AJAX'); // Debug log
         
         // Change button state to submitting
         submitButton.textContent = 'Submitting...';
@@ -31,15 +32,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 'X-Requested-With': 'XMLHttpRequest'
             }
         })
-        .then(response => response.json())
+        .then(response => {
+            console.log('Response received:', response); // Debug log
+            return response.json();
+        })
         .then(data => {
+            console.log('Data parsed:', data); // Debug log
+            
             // Reset button state
             submitButton.textContent = originalButtonText;
             submitButton.classList.remove('submitting');
             submitButton.disabled = false;
             
+            // Debug: Check notification elements before clearing errors
+            console.log('Before clearFormErrors - notification elements exist:', {
+                notification: !!document.getElementById('form-notification'),
+                messageElement: !!document.getElementById('notification-message')
+            });
+            
             // Clear previous errors
             clearFormErrors();
+            
+            // Debug: Check notification elements after clearing errors
+            console.log('After clearFormErrors - notification elements exist:', {
+                notification: !!document.getElementById('form-notification'),
+                messageElement: !!document.getElementById('notification-message')
+            });
             
             if (data.success) {
                 // Reset form first
@@ -78,6 +96,15 @@ document.addEventListener('DOMContentLoaded', function() {
 function showNotification(message, type = 'success') {
     const notification = document.getElementById('form-notification');
     const messageElement = document.getElementById('notification-message');
+    
+    // Check if elements exist
+    if (!notification || !messageElement) {
+        console.error('Notification elements not found:', {
+            notification: !!notification,
+            messageElement: !!messageElement
+        });
+        return;
+    }
     
     // Set message
     messageElement.textContent = message;
@@ -129,8 +156,8 @@ function clearFormErrors() {
         input.classList.remove('error');
     });
     
-    // Remove error messages
-    const errorMessages = document.querySelectorAll('.contact-form .error');
+    // Remove error messages (but NOT notification elements)
+    const errorMessages = document.querySelectorAll('.contact-form .error:not(#form-notification):not(#notification-message)');
     errorMessages.forEach(error => {
         error.remove();
     });

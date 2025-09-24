@@ -20,6 +20,9 @@ $response = [
 // Check if form was submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
+    // Check if this is an AJAX request
+    $isAjax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
+    
     // Sanitize and validate input data
     $firstName = trim($_POST['first_name'] ?? '');
     $email = trim($_POST['email'] ?? '');
@@ -108,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     // If this is an AJAX request, return JSON
-    if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    if ($isAjax) {
         header('Content-Type: application/json');
         echo json_encode($response);
         exit;
