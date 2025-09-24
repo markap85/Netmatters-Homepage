@@ -62,13 +62,6 @@ CONTACT US PAGE CONTENT
 
     <div class="contact-section">
         <div class="container">
-            <!-- Display success or error messages -->
-            <?php if (isset($response) && !empty($response['message'])): ?>
-                <div class="alert <?php echo $response['success'] ? 'alert-success' : 'alert-error'; ?>">
-                    <?php echo htmlspecialchars($response['message']); ?>
-                </div>
-            <?php endif; ?>
-            
             <div class="contact-content">
                 <div class="contact-form">
                     <!-- Notification Container -->
@@ -79,7 +72,7 @@ CONTACT US PAGE CONTENT
                         </div>
                     </div>
                     
-                    <form method="POST" action="contact-us.php">
+                    <form method="POST" action="contact-us.php" novalidate>
                         <!-- Row 1: First Name and Company Name side by side -->
                         <div class="form-row">
                             <div class="form-group">

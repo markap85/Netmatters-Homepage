@@ -45,6 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $response['errors']['email'] = 'Please enter a valid email address.';
     }
     
+    if (empty($phone)) {
+        $response['errors']['phone'] = 'Telephone number is required.';
+    } elseif (!preg_match('/^[\d\s\-\+\(\)]{10,15}$/', $phone)) {
+        $response['errors']['phone'] = 'Please enter a valid telephone number.';
+    }
+    
     if (empty($message)) {
         $response['errors']['message'] = 'Message is required.';
     } elseif (strlen($message) < 10) {

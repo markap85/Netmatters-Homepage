@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
             clearFormErrors();
             
             if (data.success) {
-                // Show success notification
-                showNotification('Your message has been sent successfully!', 'success');
-                
-                // Reset form
+                // Reset form first
                 form.reset();
+                
+                // Show success notification using server message
+                showNotification(data.message || 'Your message has been sent successfully!', 'success');
             } else {
                 // Show validation errors in notification box
                 if (data.errors && Object.keys(data.errors).length > 0) {
@@ -88,11 +88,19 @@ function showNotification(message, type = 'success') {
     // Show notification
     notification.style.display = 'block';
     
-    // Auto-hide after 5 seconds for success messages
+    // Scroll to notification to ensure it's visible
+    setTimeout(() => {
+        notification.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+        });
+    }, 100);
+    
+    // Auto-hide after 8 seconds for success messages (increased time so user can see it)
     if (type === 'success') {
         setTimeout(() => {
             hideNotification();
-        }, 5000);
+        }, 8000);
     }
 }
 
