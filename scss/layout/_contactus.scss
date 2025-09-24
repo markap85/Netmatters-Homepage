@@ -91,6 +91,13 @@
         color: $primary-color;
         text-decoration: none;
 
+        // Office title styling (first anchor tag - not the button)
+        &:not(.btn) {
+            display: block;
+            margin-bottom: 15px; // Add padding below office titles
+            font-weight: 600; // Make titles slightly bolder
+        }
+
         &.btn {
             @include button-base;
             padding: 5px 30px;
