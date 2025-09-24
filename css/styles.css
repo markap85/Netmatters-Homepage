@@ -4245,31 +4245,54 @@ body.cookie-popup-active {
   line-height: 30px;
   font-weight: 400;
   letter-spacing: 0.4px;
-  color: #666666; }
+  color: #666666;
+  cursor: pointer;
+  position: relative; }
+  /* line 359, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  .accordion p.active {
+    font-weight: 600; }
 
-/* line 358, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 364, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .accordion-content {
-  margin-left: 10px; }
+  margin-left: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  padding: 0; }
+  /* line 371, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  .accordion-content.open {
+    max-height: 500px;
+    padding: 10px 0; }
+  /* line 376, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  .accordion-content p, .accordion-content strong {
+    margin: 8px 0;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666666; }
+  /* line 384, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  .accordion-content strong {
+    font-weight: 600; }
 
-/* line 365, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 392, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .alert {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
   font-size: 14px; }
-  /* line 372, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 399, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .alert.alert-success {
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6; }
-  /* line 378, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 405, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .alert.alert-error {
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1; }
 
-/* line 386, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 413, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-form .error {
   color: #a94442;
   font-size: 12px;
@@ -4277,13 +4300,13 @@ body.cookie-popup-active {
   margin-top: 5px;
   font-style: italic; }
 
-/* line 394, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 421, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-form input.error,
 .contact-form textarea.error {
   border-color: #a94442;
   box-shadow: 0 0 0 2px rgba(169, 68, 66, 0.2);
   transition: none; }
-  /* line 400, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 427, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .contact-form input.error:focus,
   .contact-form textarea.error:focus {
     border-color: #a94442;

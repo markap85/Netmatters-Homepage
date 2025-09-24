@@ -16,18 +16,29 @@ document.addEventListener('DOMContentLoaded', function() {
             // Toggle the accordion
             if (content && content.classList.contains('accordion-content')) {
                 // Check if currently open
-                const isOpen = content.style.display === 'block';
+                const isOpen = content.classList.contains('open');
                 
                 // Close all accordions first
                 document.querySelectorAll('.accordion-content').forEach(item => {
-                    item.style.display = 'none';
+                    item.classList.remove('open');
                     item.previousElementSibling.classList.remove('active');
+                });
+                
+                // Update all arrows to point down
+                document.querySelectorAll('.accordion-arrow').forEach(arrow => {
+                    arrow.style.transform = 'rotate(0deg)';
                 });
                 
                 // Open this accordion if it wasn't already open
                 if (!isOpen) {
-                    content.style.display = 'block';
+                    content.classList.add('open');
                     this.classList.add('active');
+                    
+                    // Rotate arrow for active accordion
+                    const arrow = this.querySelector('.accordion-arrow');
+                    if (arrow) {
+                        arrow.style.transform = 'rotate(180deg)';
+                    }
                 }
             }
         });
@@ -51,9 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Initially hide all accordion content
+    // Initially ensure all accordion content is closed
     document.querySelectorAll('.accordion-content').forEach(content => {
-        content.style.display = 'none';
+        content.classList.remove('open');
     });
     
     // Add CSS for active state
