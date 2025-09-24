@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle form submission
     form.addEventListener('submit', function(e) {
+        console.log('Form submit event triggered'); // Debug log
         e.preventDefault();
-        console.log('Form submitted via AJAX'); // Debug log
+        console.log('Default prevented, processing via AJAX'); // Debug log
         
         // Change button state to submitting
         submitButton.textContent = 'Submitting...';
