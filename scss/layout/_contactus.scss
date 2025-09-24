@@ -112,6 +112,8 @@
     grid-template-columns: 1fr;
     gap: 40px;
     margin-top: 40px;
+    margin-bottom: 50px;
+    align-items: start; // Prevent grid items from stretching to match tallest item
 
     @media (min-width: 991px) {
         grid-template-columns: 2fr 1fr;
@@ -350,19 +352,28 @@
     font-family: Poppins, sans-serif;
     font-size: 16px;
     line-height: 30px;
-    font-weight: 400;
+    font-weight: 700; // Always bold
     letter-spacing: 0.4px;
     color: #666666;
     cursor: pointer;
     position: relative;
+    text-decoration: underline; // Always underlined
     
-    &.active {
-        font-weight: 600;
+    // Remove the active state styling since it should always look the same
+    
+    .accordion-arrow {
+        text-decoration: none !important; // Remove underline from arrow
+        text-decoration-line: none !important; // Additional fallback
+        border-bottom: none !important; // In case underline is a border
+        margin-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        vertical-align: middle;
+        display: inline;
     }
 }
 
 .accordion-content {
-    margin-left: 10px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out, padding 0.4s ease-out;
@@ -370,19 +381,34 @@
     
     &.open {
         max-height: 500px; // Increased height for content
-        padding: 10px 0;
+            padding: 0;
     }
     
     p, strong {
-        margin: 8px 0;
         font-family: Poppins, sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 22px;
-        color: #666666;
+        color: #999999; // Pale grey color
+        text-decoration: none; // Remove any inherited underlines
     }
     
     strong {
         font-weight: 600;
+        color: #999999; // Pale grey for strong text too
+        text-decoration: none; // Ensure no underlines on strong text
+    }
+    
+    // Special styling for highlighted hours
+    .hours-highlight {
+        margin: 12px 0;
+        
+        strong {
+            color: #666666; // Darker grey, same as accordion title
+            font-weight: 700; // Bolder weight for emphasis
+            font-size: 14px;
+            line-height: 22px;
+            text-decoration: none;
+        }
     }
 }
 
