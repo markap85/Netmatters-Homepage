@@ -4122,33 +4122,65 @@ body.cookie-popup-active {
     margin-top: 2px; }
   /* line 222, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .form-checkbox label {
-    width: auto;
-    height: auto;
-    margin: 0;
-    font-family: Poppins, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.4;
-    color: #333645; }
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    font-family: Poppins, sans-serif !important;
+    font-size: 1rem !important;
+    line-height: 32px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.4px !important;
+    color: #333645 !important; }
+    /* line 233, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    .form-checkbox label a {
+      text-decoration: underline;
+      color: #333645 !important; }
+      /* line 237, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+      .form-checkbox label a:hover {
+        color: black; }
 
-/* line 234, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 244, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-form input[type="checkbox"] {
-  width: auto;
-  margin-right: 10px;
-  transition: none; }
-  /* line 239, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  border: 3px solid #333645 !important;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  transition: none;
+  background-color: #e6e7e9;
+  box-sizing: border-box;
+  cursor: pointer; }
+  /* line 260, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .contact-form input[type="checkbox"]:focus {
     outline: 2px solid lightblue;
     outline-offset: 2px; }
+  /* line 265, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  .contact-form input[type="checkbox"]:checked {
+    background-color: #333645; }
+    /* line 268, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    .contact-form input[type="checkbox"]:checked::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 16px;
+      font-weight: bold; }
 
-/* line 245, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 281, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .form-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px; }
 
-/* line 252, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 288, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .form-footer a.btn,
 .form-footer button {
   display: inline-block;
@@ -4168,16 +4200,16 @@ body.cookie-popup-active {
   text-align: center;
   cursor: pointer; }
 
-/* line 272, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 308, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .form-footer span {
   font-size: 12px;
   color: #666; }
 
-/* line 280, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 316, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-info {
   padding: 20px; }
 
-/* line 284, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 320, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-info h3 {
   margin: 20px 0 10px 0;
   font-family: Poppins, sans-serif;
@@ -4187,7 +4219,7 @@ body.cookie-popup-active {
   letter-spacing: 0.4px;
   color: #926FB1; }
 
-/* line 294, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 330, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-info p {
   margin: 0 0 10px 0;
   font-family: Poppins, sans-serif;
@@ -4197,7 +4229,7 @@ body.cookie-popup-active {
   letter-spacing: 0.4px;
   color: #666666; }
 
-/* line 304, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 340, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-info strong {
   font-family: Poppins, sans-serif;
   font-size: 16px;
@@ -4206,7 +4238,7 @@ body.cookie-popup-active {
   letter-spacing: 0.4px;
   color: #666666; }
 
-/* line 313, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 349, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .accordion p {
   font-family: Poppins, sans-serif;
   font-size: 16px;
@@ -4215,29 +4247,29 @@ body.cookie-popup-active {
   letter-spacing: 0.4px;
   color: #666666; }
 
-/* line 322, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 358, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .accordion-content {
   margin-left: 10px; }
 
-/* line 329, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 365, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .alert {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
   font-size: 14px; }
-  /* line 336, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 372, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .alert.alert-success {
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6; }
-  /* line 342, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 378, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .alert.alert-error {
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1; }
 
-/* line 350, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 386, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-form .error {
   color: #a94442;
   font-size: 12px;
@@ -4245,13 +4277,13 @@ body.cookie-popup-active {
   margin-top: 5px;
   font-style: italic; }
 
-/* line 358, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 394, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-form input.error,
 .contact-form textarea.error {
   border-color: #a94442;
   box-shadow: 0 0 0 2px rgba(169, 68, 66, 0.2);
   transition: none; }
-  /* line 364, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 400, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .contact-form input.error:focus,
   .contact-form textarea.error:focus {
     border-color: #a94442;

@@ -220,25 +220,61 @@
     }
     
     label {
-        width: auto;
-        height: auto;
-        margin: 0;
-        font-family: Poppins, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.4;
-        color: #333645;
+        width: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+        font-family: Poppins, sans-serif !important;
+        font-size: 1rem !important;
+        line-height: 32px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.4px !important;
+        color: #333645 !important;
+
+        a {
+            text-decoration: underline;
+            color: #333645 !important;
+
+            &:hover {
+                color: black;
+            }
+        }
     }
 }
 
 .contact-form input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 3px;
+    border: 3px solid #333645 !important;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    float: left;
+    margin-right: 20px;
     transition: none; // Remove any transitions/animations
+    background-color: rgb(230, 231, 233);
+    box-sizing: border-box;
+    cursor: pointer;
     
     &:focus {
         outline: 2px solid lightblue;
         outline-offset: 2px;
+    }
+    
+    &:checked {
+        background-color: #333645;
+        
+        &::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
     }
 }
 

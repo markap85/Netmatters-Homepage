@@ -114,7 +114,10 @@ CONTACT US PAGE CONTENT
                         <!-- Marketing Consent - Full Width -->
                         <div class="form-full-width form-checkbox">
                             <input type="checkbox" id="marketing_consent" name="marketing_consent" <?php echo isset($_POST['marketing_consent']) ? 'checked' : ''; ?>>
-                            <label for="marketing_consent">Please tick this if you want marketing communications</label>
+                            <label for="marketing_consent">
+                                Please tick this box if you wish to receive marketing information from us. 
+                                Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.
+                            </label>
                         </div>
                         
                         <!-- Form Footer - Full Width -->
