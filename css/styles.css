@@ -4070,7 +4070,10 @@ body.cookie-popup-active {
     .contact-form label.required::after {
       content: " *";
       color: #a94442; }
-  /* line 175, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 174, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  .contact-form .required-footer {
+    color: #a94442; }
+  /* line 179, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .contact-form input,
   .contact-form textarea {
     width: 100%;
@@ -4081,36 +4084,36 @@ body.cookie-popup-active {
     border-radius: 4px;
     transition: none;
     outline: none; }
-    /* line 186, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 190, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .contact-form input:focus,
     .contact-form textarea:focus {
       border-color: lightblue;
       box-shadow: 0 0 0 2px rgba(173, 216, 230, 0.2); }
-    /* line 192, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 196, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .contact-form input:invalid,
     .contact-form textarea:invalid {
       box-shadow: none;
       outline: none; }
-    /* line 197, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 201, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .contact-form input::-webkit-validation-bubble,
     .contact-form textarea::-webkit-validation-bubble {
       display: none; }
-    /* line 202, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 206, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .contact-form input.error,
     .contact-form textarea.error {
       border-color: #a94442;
       box-shadow: 0 0 0 2px rgba(169, 68, 66, 0.2); }
-      /* line 206, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+      /* line 210, ../Netmatters-Homepage/scss/layout/_contactus.scss */
       .contact-form input.error:focus,
       .contact-form textarea.error:focus {
         border-color: #a94442;
         box-shadow: 0 0 0 2px rgba(169, 68, 66, 0.3); }
-  /* line 213, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 217, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .contact-form textarea {
     min-height: 100px;
     resize: vertical;
     font-family: Poppins, sans-serif; }
-  /* line 220, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 224, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .contact-form .error {
     color: #a94442;
     font-size: 12px;
@@ -4119,13 +4122,13 @@ body.cookie-popup-active {
     font-style: italic;
     font-family: Poppins, sans-serif; }
 
-/* line 233, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 237, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .form-checkbox {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   margin: 20px 0; }
-  /* line 239, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 243, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .form-checkbox input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -4140,14 +4143,14 @@ body.cookie-popup-active {
     margin-top: 2px;
     position: relative;
     transition: none; }
-    /* line 254, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 258, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .form-checkbox input[type="checkbox"]:focus {
       outline: 2px solid lightblue;
       outline-offset: 2px; }
-    /* line 259, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 263, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .form-checkbox input[type="checkbox"]:checked {
       background-color: #333645; }
-      /* line 262, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+      /* line 266, ../Netmatters-Homepage/scss/layout/_contactus.scss */
       .form-checkbox input[type="checkbox"]:checked::after {
         content: '✓';
         position: absolute;
@@ -4157,7 +4160,7 @@ body.cookie-popup-active {
         color: white;
         font-size: 16px;
         font-weight: bold; }
-  /* line 275, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 279, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .form-checkbox label {
     font-family: Poppins, sans-serif;
     font-size: 1rem;
@@ -4166,21 +4169,21 @@ body.cookie-popup-active {
     letter-spacing: 0.4px;
     color: #333645;
     margin: 0; }
-    /* line 284, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 288, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .form-checkbox label a {
       text-decoration: underline;
       color: #333645; }
-      /* line 288, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+      /* line 292, ../Netmatters-Homepage/scss/layout/_contactus.scss */
       .form-checkbox label a:hover {
         color: #121419; }
 
-/* line 298, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 302, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .form-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px; }
-  /* line 304, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 308, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .form-footer button[type="submit"] {
     display: inline-block;
     font-family: Poppins, sans-serif;
@@ -4199,45 +4202,45 @@ body.cookie-popup-active {
     color: #FFFFFF;
     font-size: 14.4px;
     line-height: 35px; }
-    /* line 314, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 318, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .form-footer button[type="submit"]:hover {
       background-color: #494d62; }
-    /* line 318, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 322, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .form-footer button[type="submit"].submitting {
       background-color: #999;
       cursor: not-allowed;
       pointer-events: none; }
-  /* line 325, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 329, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .form-footer span {
     font-size: 12px;
     color: #666666;
     font-family: Poppins, sans-serif; }
 
-/* line 335, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 339, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .form-notification {
   margin: 0 0 10px 0;
   border-radius: 10px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   animation: slideDown 0.3s ease-out; }
-  /* line 342, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 346, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .form-notification.success {
     background-color: #dff0d8;
     border-color: #d6e9c6;
     color: #3c763d; }
-  /* line 348, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 352, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .form-notification.error {
     background-color: #f2dede;
     border-color: #ebccd1;
     color: #a94442; }
 
-/* line 355, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 359, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .notification-content {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 15px 20px; }
-  /* line 361, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 365, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .notification-content #notification-message {
     font-family: Poppins, sans-serif;
     font-size: 14px;
@@ -4245,7 +4248,7 @@ body.cookie-popup-active {
     flex: 1;
     white-space: pre-line;
     line-height: 1.5; }
-  /* line 370, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 374, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .notification-content .notification-close {
     background: none;
     border: none;
@@ -4262,7 +4265,7 @@ body.cookie-popup-active {
     justify-content: center;
     border-radius: 50%;
     transition: background-color 0.2s ease; }
-    /* line 387, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+    /* line 391, ../Netmatters-Homepage/scss/layout/_contactus.scss */
     .notification-content .notification-close:hover {
       background-color: rgba(0, 0, 0, 0.1); }
 
@@ -4274,10 +4277,10 @@ body.cookie-popup-active {
     opacity: 1;
     transform: translateY(0); } }
 
-/* line 407, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 411, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .contact-info {
   padding: 20px; }
-  /* line 410, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 414, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .contact-info h3 {
     margin: 20px 0 10px 0;
     font-family: Poppins, sans-serif;
@@ -4286,7 +4289,7 @@ body.cookie-popup-active {
     font-weight: 400;
     letter-spacing: 0.4px;
     color: #926FB1; }
-  /* line 420, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 424, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .contact-info p, .contact-info strong {
     margin: 0 0 10px 0;
     font-family: Poppins, sans-serif;
@@ -4296,7 +4299,7 @@ body.cookie-popup-active {
     letter-spacing: 0.4px;
     color: #666666; }
 
-/* line 433, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 437, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .accordion p {
   font-family: Poppins, sans-serif;
   font-size: 16px;
@@ -4308,7 +4311,7 @@ body.cookie-popup-active {
   position: relative;
   text-decoration: underline;
   margin: 0 0 10px 0; }
-  /* line 445, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 449, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .accordion p .accordion-arrow {
     position: absolute;
     right: 4em;
@@ -4319,19 +4322,19 @@ body.cookie-popup-active {
     font-weight: bold;
     z-index: 10;
     transition: transform 0.3s ease; }
-  /* line 457, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 461, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .accordion p.open .accordion-arrow {
     transform: translateY(-50%) rotate(180deg); }
 
-/* line 463, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+/* line 467, ../Netmatters-Homepage/scss/layout/_contactus.scss */
 .accordion-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out; }
-  /* line 468, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 472, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .accordion-content.open {
     max-height: 500px; }
-  /* line 472, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 476, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .accordion-content p, .accordion-content strong {
     font-family: Poppins, sans-serif;
     font-size: 16px;
@@ -4339,10 +4342,10 @@ body.cookie-popup-active {
     color: #999999;
     text-decoration: none;
     font-weight: 400; }
-  /* line 481, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 485, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .accordion-content strong {
     font-weight: 600; }
-  /* line 485, ../Netmatters-Homepage/scss/layout/_contactus.scss */
+  /* line 489, ../Netmatters-Homepage/scss/layout/_contactus.scss */
   .accordion-content .hours-highlight strong {
     color: #666666;
     font-weight: 700;

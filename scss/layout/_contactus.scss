@@ -171,6 +171,10 @@
         }
     }
 
+.required-footer {
+    color: $error-color;
+}
+
     // Form Inputs & Textarea
     input,
     textarea {

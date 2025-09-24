@@ -125,7 +125,7 @@ CONTACT US PAGE CONTENT
                         <div class="form-full-width">
                             <div class="form-footer">
                                 <button type="submit">Send Enquiry</button>
-                                <span>* Fields Required</span>
+                                <span><span class="required-footer">*</span> Fields Required</span>
                             </div>
                         </div>
                     </form>
