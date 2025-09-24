@@ -77,7 +77,7 @@ CONTACT US PAGE CONTENT
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="first_name" class="required">Your Name</label>
-                                <input type="text" id="first_name" name="first_name" value="<?php echo getFormValue('first_name'); ?>" required>
+                                <input type="text" id="first_name" name="first_name" value="<?php echo getFormValue('first_name'); ?>">
                                 <?php if (hasError('first_name', $response['errors'] ?? [])): ?>
                                     <span class="error"><?php echo getError('first_name', $response['errors']); ?></span>
                                 <?php endif; ?>
@@ -92,7 +92,7 @@ CONTACT US PAGE CONTENT
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email" class="required">Your Email</label>
-                                <input type="email" id="email" name="email" value="<?php echo getFormValue('email'); ?>" required>
+                                <input type="email" id="email" name="email" value="<?php echo getFormValue('email'); ?>">
                                 <?php if (hasError('email', $response['errors'] ?? [])): ?>
                                     <span class="error"><?php echo getError('email', $response['errors']); ?></span>
                                 <?php endif; ?>
@@ -106,7 +106,7 @@ CONTACT US PAGE CONTENT
                         <!-- Message - Full Width -->
                         <div class="form-full-width">
                             <label for="message" class="required">Message</label>
-                            <textarea id="message" name="message" required><?php echo getFormValue('message'); ?></textarea>
+                            <textarea id="message" name="message"><?php echo getFormValue('message'); ?></textarea>
                             <?php if (hasError('message', $response['errors'] ?? [])): ?>
                                 <span class="error"><?php echo getError('message', $response['errors']); ?></span>
                             <?php endif; ?>

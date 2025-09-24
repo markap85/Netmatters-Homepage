@@ -22,11 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Sanitize and validate input data
     $firstName = trim($_POST['first_name'] ?? '');
-    $lastName = ''; // Not used in this form
     $email = trim($_POST['email'] ?? '');
     $phone = trim($_POST['phone'] ?? '');
     $company = trim($_POST['company'] ?? '');
-    $subject = 'Contact Form Submission'; // Default subject since form doesn't have this field
     $message = trim($_POST['message'] ?? '');
     $marketingConsent = isset($_POST['marketing_consent']) ? 1 : 0;
     
@@ -74,18 +72,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Prepare insert statement
             $insertQuery = $pdo->prepare("
                 INSERT INTO contact_forms 
-                (first_name, last_name, email, phone, company, subject, message, marketing_consent, ip_address, user_agent) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                (first_name, email, phone, company, message, marketing_consent, ip_address, user_agent) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ");
             
             // Execute insert
             $result = $insertQuery->execute([
                 $firstName,
-                $lastName,
                 $email,
                 $phone,
                 $company,
-                $subject,
                 $message,
                 $marketingConsent,
                 $ipAddress,
