@@ -50,7 +50,7 @@ CONTACT US PAGE CONTENT
                 <div class="office-item">
                     <img src="img/contactus/yarmouth-2.jpg" alt="Office 3">
                         <div class="office-item-text">
-                            <a>Great Yarmouth Office</a>
+                            <a class="office-name">Great Yarmouth Office</a>
                         <p>Suite F23,<br>Beacon Innovation Centre,<br>Beacon Park, Gorleston,<br>Great Yarmouth, Norfolk,<br>NR31 7RA</p>
                         <h3>01493 60 32 04</h3>
                         <a href="#" class="btn">View More</a>
