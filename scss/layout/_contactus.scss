@@ -2,7 +2,31 @@
 // CONTACT US PAGE STYLES - Optimized & Consolidated
 // ==============================================================================
 
+// ------------------------------------------------------------------------------
+// Container
+// ------------------------------------------------------------------------------
+*, :after, :before {
+    box-sizing: border-box;
+}
 
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+
+    @media (min-width: 1260px) {
+        width: 1200px;
+    }
+}
 
 // ------------------------------------------------------------------------------
 // Page Header & Navigation
@@ -417,10 +441,9 @@
 // Contact Information & Accordion
 // ------------------------------------------------------------------------------
 .contact-info {
-    padding: 20px;
 
     h3 {
-        margin: 20px 0 10px 0;
+        margin: 0 0 10px 0;
         font-family: $font-family;
         font-size: 26px;
         line-height: 28.6px;
