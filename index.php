@@ -111,7 +111,7 @@ BANNER SLIDESHOW SECTION - Now using Splide.js
                 <div class="container">
                     <div class="banner-content">
                         <h1>Cyber Security</h1>
-                        <p class="subtext">Keeping bussinesses and their customers sensitive information protected.</p>
+                        <p class="subtext">Keeping business's and their customers sensitive information protected.</p>
                         <a class="btn">Find Out More</a>
                     </div>
                 </div>
