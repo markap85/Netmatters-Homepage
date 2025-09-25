@@ -22,7 +22,7 @@
         <meta name="twitter:title" content="Full Service Digital Agency | Netmatters">
         <meta name="twitter:description" content="Performance-driven digital and technology services with complete transparency">
         
-        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <!-- Splide.js CSS -->
