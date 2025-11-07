@@ -1,6 +1,3 @@
-<?php
-// filepath: c:\Users\mark\Documents\WebDesign\Netmatters-Homepage\includes\header.php
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -229,13 +226,12 @@
             </div>
         </div>
 
-        <main>
-            <div class="screen-overlay"></div>
+        <div class="screen-overlay"></div>
 
-            <!-- =======================
-            HEADER SECTION
-            This section includes the logo, navigation, and search bar.
-            ======================= -->
+        <!-- =======================
+        HEADER SECTION
+        This section includes the logo, navigation, and search bar.
+        ======================= -->
             <header>
                 <div class="container">
                     <div class="header-content">
@@ -259,7 +255,7 @@
                                 <form role="search">
                                     <label for="search-input-desktop" class="sr-only">Search</label>
                                     <div class="search-group">
-                                        <input type="text" id="search-input-desktop" placeholder="Search..." />
+                                        <input type="text" id="search-input-desktop" placeholder="Search...">
                                         <button type="submit" class="btn-search">
                                             <i class="fa fa-search" aria-hidden="true"></i>
                                         </button>
@@ -287,7 +283,7 @@
                         <form role="search">
                             <label for="search-input-mobile" class="sr-only">Search</label>
                             <div class="search-group">
-                                <input type="text" id="search-input-mobile" placeholder="Search..." />
+                                <input type="text" id="search-input-mobile" placeholder="Search...">
                                 <button type="submit" class="btn-search">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>

@@ -7,3 +7,8 @@ DB_PASSWORD=SnvChj-k_}MBev72
 # Extra Settings
 DB_PORT=3306
 DB_CHARSET=utf8mb4
+
+# Application Settings
+APP_NAME="Netmatters Homepage"
+APP_ENV=development
+APP_VERSION="v1.0.0"

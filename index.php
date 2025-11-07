@@ -37,6 +37,7 @@ try {
 BANNER SLIDESHOW SECTION - Now using Splide.js
 ======================= -->
 
+<main>
 <section class="splide banner-slideshow" aria-labelledby="hero-heading">
     <div class="splide__track">
         <ul class="splide__list">
