@@ -1,0 +1,9 @@
+# Database Configuration for cPanel
+DB_HOST=localhost
+DB_NAME=markpeters_netmatters.mark-peters.netmatters-scs.co.uk
+DB_USERNAME=markpeters_netmatters  
+DB_PASSWORD=SnvChj-k_}MBev72
+
+# Extra Settings
+DB_PORT=3306
+DB_CHARSET=utf8mb4
