@@ -46,36 +46,33 @@
 
         h1, #hero-heading {
             color: $white;
+            font-family: Poppins, sans-serif;
             font-size: 4rem;
-            line-height: 5rem;
-            font-weight: 600;
-            letter-spacing: 0.4px;
-            width: 1000px;
-            margin-bottom: 0;
+            line-height: 1.2; // Correct line-height ratio
+            font-weight: 700;
+            letter-spacing: -0.4px;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
 
             @media (max-width: $brk-point-m) {
                 font-size: 30px;
-                line-height: 2rem;
-                width: 90%;
+                line-height: 1.3;
+                max-width: 100%;
             }
         }
 
         .subtext {
-            font-size: 2rem;
+            font-family: Poppins, sans-serif;
+            font-size: 1.375rem; // 22px
+            line-height: 1.5;
             color: $white;
-            margin: 0;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            padding: 4.5rem 0;
-            width: 100%;
-            max-width: 800px;
+            font-weight: 400;
+            margin: 0 0 2rem 0;
+            max-width: 600px;
 
             @media (max-width: $brk-point-m) {
                 font-size: 1rem;
-                width: 90%;
+                max-width: 100%;
             }
         }
 
@@ -142,25 +139,32 @@
             );
         }
 
+        // Container inside slide - let it use global container styles
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            
+            @media (min-width: $brk-point-m) {
+                justify-content: flex-start; // Left align to match container edge
+            }
+        }
+
         .banner-content {
             position: relative;
             z-index: 2;
-            width: 100%;
-            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 0; // Only vertical padding
 
             @media (min-width: $brk-point-m) {
-                align-items: flex-start;
-                justify-content: center;
-                text-align: left;
-                max-width: 50%;
-                padding: 2rem 0;
-                margin-left: 0; // Remove manual margin
+                align-items: flex-start; // Left align on desktop
+                text-align: left; // Left align text on desktop
+                max-width: 600px; // Limit content width
             }
         }
     }
