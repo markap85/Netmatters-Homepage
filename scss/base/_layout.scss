@@ -30,21 +30,20 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
-    max-width: 100%;
 
-    /* Small tablets and large phones (576px and up) */
-    @media (min-width: $brk-point-s) {
-        max-width: 750px;
+    /* Small tablets and large phones (768px and up) */
+    @media (min-width: 768px) {
+        width: 750px;
     }
 
-    /* Medium tablets (768px and up) */
-    @media (min-width: $brk-point-m) {
-        max-width: 970px;
+    /* Medium tablets/iPad portrait (992px and up) */
+    @media (min-width: 992px) {
+        width: 970px;
     }
 
-    /* Large tablets/iPad landscape (992px and up) */
-    @media (min-width: $brk-point-l) {
-        max-width: 1170px;
+    /* Desktop (1260px and up) */
+    @media (min-width: 1260px) {
+        width: 1200px;
     }
 }
 
@@ -60,6 +59,22 @@ body {
 
 .section-content {
     padding: 2rem 0; /* Vertical padding only */
+}
+
+// ==============================================================================
+// Cursor Pointer - All Clickable Elements
+// ==============================================================================
+a,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.btn,
+.button,
+[role="button"],
+label[for],
+select {
+    cursor: pointer;
 }
 
 
