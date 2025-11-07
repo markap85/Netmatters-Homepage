@@ -184,13 +184,15 @@ This section showcases the partners and certifications of Netmatters.
 ======================= -->
 
 <div class="accreditation-carousel">
-    <div class="accreditation-carousel-track">
-        <!-- Repeat logos to ensure smooth loop -->
-        <img src="./img/PartnerLogos/Partner_Logo_1.jpeg" alt="Client 1">
-        <img src="./img/PartnerLogos/Partner_Logo_2.png" alt="Client 2">
-        <img src="./img/PartnerLogos/Partner_Logo_3.png" alt="Client 3">
-        <img src="./img/PartnerLogos/Partner_Logo_4.jpg" alt="Client 4">
-        <img src="./img/PartnerLogos/Partner_Logo_5.png" alt="Client 5">
+    <div class="container">
+        <div class="accreditation-carousel-track">
+            <!-- Repeat logos to ensure smooth loop -->
+            <img src="./img/PartnerLogos/Partner_Logo_1.jpeg" alt="Client 1">
+            <img src="./img/PartnerLogos/Partner_Logo_2.png" alt="Client 2">
+            <img src="./img/PartnerLogos/Partner_Logo_3.png" alt="Client 3">
+            <img src="./img/PartnerLogos/Partner_Logo_4.jpg" alt="Client 4">
+            <img src="./img/PartnerLogos/Partner_Logo_5.png" alt="Client 5">
+        </div>
     </div>
 </div>
 

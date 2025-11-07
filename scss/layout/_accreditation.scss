@@ -1,28 +1,78 @@
+// ==============================================================================
+// ACCREDITATION CAROUSEL SECTION
+// ==============================================================================
+
 .accreditation-carousel {
     width: 100%;
-    overflow-x: hidden;
-    margin: 0;
+    overflow: hidden; // Hide logos that extend beyond container
+    margin: 0 auto;
     padding: 50px 0;
     background: white;
 }
 
 .accreditation-carousel-track {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-  will-change: transform;
-  gap: 100px;
-  /* Remove overflow: clip; */
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+    gap: 40px; // Smaller gap on mobile
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    
+    // Tablet - increase gap
+    @media (min-width: $brk-point-s) {
+        gap: 60px;
+    }
+    
+    // iPad landscape and up - larger gap
+    @media (min-width: $brk-point-m) {
+        gap: 80px;
+    }
+    
+    // Desktop - largest gap
+    @media (min-width: $brk-point-l) {
+        gap: 100px;
+    }
+    
+    img {
+        width: auto;
+        height: 50px; // Smaller on mobile
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0;
+        filter: grayscale(100%);
+        object-fit: contain;
+        
+        // Tablet - slightly larger
+        @media (min-width: $brk-point-s) {
+            height: 60px;
+        }
+        
+        // iPad landscape and up - full size
+        @media (min-width: $brk-point-m) {
+            height: 70px;
+        }
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+        
+        // Hide some logos on smaller screens to prevent overflow
+        &:nth-child(n+4) {
+            display: none; // Show only 3 logos on mobile
+            
+            @media (min-width: $brk-point-s) {
+                display: block; // Show 4 logos on tablet
+            }
+        }
+        
+        &:nth-child(5) {
+            display: none; // Hide 5th logo on tablet
+            
+            @media (min-width: $brk-point-m) {
+                display: block; // Show all 5 logos on iPad landscape and up
+            }
+        }
+    }
 }
 
-.accreditation-carousel-track img {
-    width: auto;
-    height: 70px;
-    flex-shrink: 0;
-    margin: 0;
-    padding: 0;
-    filter: grayscale(100%);
-
-    &:hover {
-    filter: grayscale(0%);
-    }
-    }
