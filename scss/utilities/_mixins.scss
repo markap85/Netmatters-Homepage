@@ -231,5 +231,29 @@ $font-family: Poppins, sans-serif;
     cursor: pointer;
     border: none;
     border-radius: 3px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    
+    &:hover {
+        text-decoration: none;
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Navigation link mixin
+@mixin nav-link-base {
+    color: #fff;
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+        text-decoration: none;
+    }
 }

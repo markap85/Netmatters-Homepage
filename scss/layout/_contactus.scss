@@ -124,18 +124,15 @@
         }
 
         &.btn {
-            @include button-base;
-            padding: 5px 30px;
+            @include button(
+                $bg-color: $secondary-color,
+                $hover-bg: darken($secondary-color, 10%),
+                $padding: 5px 30px,
+                $font-size: 12px
+            );
             width: 144px;
             height: 47px;
-            background-color: $secondary-color;
-            color: #FFFFFF;
-            font-size: 12px;
             line-height: 35px;
-
-            &:hover {
-                background-color: darken($secondary-color, 10%);
-            }
         }
     }
 }
@@ -338,18 +335,16 @@
     margin-top: 20px;
 
     button[type="submit"] {
-        @include button-base;
+        @include button(
+            $bg-color: $primary-color,
+            $hover-bg: lighten($primary-color, 10%),
+            $padding: 5px 30px,
+            $font-size: 14.4px,
+            $disabled-bg: #999
+        );
         margin: 15px 3px;
-        padding: 5px 30px;
         height: 47px;
-        background-color: $primary-color;
-        color: #FFFFFF;
-        font-size: 14.4px;
         line-height: 35px;
-
-        &:hover {
-            background-color: lighten($primary-color, 10%);
-        }
 
         &.submitting {
             background-color: #999;
