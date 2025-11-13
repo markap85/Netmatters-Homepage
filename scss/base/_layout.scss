@@ -41,6 +41,11 @@ body {
         width: 970px;
     }
 
+    /* iPad landscape and small desktop (1024px and up) */
+    @media (min-width: 1024px) {
+        width: 1000px;
+    }
+
     /* Desktop (1260px and up) */
     @media (min-width: 1260px) {
         width: 1200px;

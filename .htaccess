@@ -1,0 +1,20 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Redirect .php URLs to non-.php (optional - for clean URLs)
+RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.php
+RewriteRule ^(.*)\.php$ /$1 [R=301,L]
+
+# Prevent directory browsing
+Options -Indexes
+
+# Set default index files
+DirectoryIndex index.php index.html
+
+# Error pages (optional)
+ErrorDocument 404 /404.php

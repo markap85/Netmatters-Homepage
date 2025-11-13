@@ -10,16 +10,7 @@
     z-index: 1002;
     padding: 40px 0;
 
-    .container {
-        display: block;
-        position: relative;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        min-height: 250px;
-        height: 400px;
-        z-index: 1002;
-    }
+    /* Container uses standard width from base/_layout.scss */
 }
 
 // Social icon base styles
@@ -55,12 +46,6 @@
   gap: 32px;
   margin: 32px 0;
   grid-template-columns: 1fr;
-}
-
-%centered-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 %column-gap {
