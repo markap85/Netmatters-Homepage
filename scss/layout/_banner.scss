@@ -4,6 +4,10 @@
     overflow: hidden;
     height: 550px;
     
+    @media (max-width: 768px) {
+        height: 400px; // Ensure enough height for content and pagination
+    }
+    
     // Remove margin-top when sticky header is active since body already has padding-top
     // body.sticky-header-active & {
     //     margin-top: 99px;
@@ -171,15 +175,26 @@
     
     // Customize Splide pagination (dots)
     .splide__pagination {
-        bottom: 30px;
+        bottom: 20px;
+        z-index: 10;
+        
+        @media (max-width: 768px) {
+            bottom: 15px; // Position higher on mobile to stay within image area
+        }
         
         .splide__pagination__page {
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background-color: #666;
+            background-color: rgba(255, 255, 255, 0.5);
             margin: 0 7.5px;
             transition: all 0.3s ease;
+            
+            @media (max-width: 768px) {
+                width: 12px;
+                height: 12px;
+                margin: 0 6px;
+            }
             
             &:hover {
                 background-color: rgba(255, 255, 255, 0.8);
@@ -194,13 +209,20 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    top: -7px;
-                    left: -7px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     width: 24px;
                     height: 24px;
                     border: 2px solid rgba(255, 255, 255, 1);
                     border-radius: 50%;
                     box-sizing: border-box;
+                    
+                    @media (max-width: 768px) {
+                        width: 26px;
+                        height: 26px;
+                        border-width: 3px;
+                    }
                 }
             }
         }
