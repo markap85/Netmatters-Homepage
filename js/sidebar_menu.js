@@ -1,37 +1,25 @@
 // Sidebar Menu Toggle
-const openSidebar = document.querySelector('.mobile-menu-toggle');
-const closeSidebar = document.getElementById('closeSidebar');
-const body = document.body;
-const screenOverlay = document.querySelector('.screen-overlay');
+document.addEventListener('DOMContentLoaded', function() {
+    const openSidebar = document.querySelector('.mobile-menu-toggle');
+    const closeSidebar = document.getElementById('closeSidebar');
+    const body = document.body;
+    const screenOverlay = document.querySelector('.screen-overlay');
 
-console.log('Sidebar script loaded');
+    if (openSidebar) {
+        openSidebar.addEventListener('click', () => {
+            body.classList.add('sidebar-active');
+        });
+    }
 
-if (openSidebar) {
-    console.log('Mobile Menu Toggle button found');
-    openSidebar.addEventListener('click', () => {
-        console.log('Mobile Menu Toggle clicked');
-        body.classList.add('sidebar-active');
-    });
-} else {
-    console.error('Mobile Menu Toggle button not found');
-}
+    if (closeSidebar) {
+        closeSidebar.addEventListener('click', () => {
+            body.classList.remove('sidebar-active');
+        });
+    }
 
-if (closeSidebar) {
-    console.log('Close Sidebar button found');
-    closeSidebar.addEventListener('click', () => {
-        console.log('Close Sidebar clicked');
-        body.classList.remove('sidebar-active');
-    });
-} else {
-    console.error('Close Sidebar button not found');
-}
-
-if (screenOverlay) {
-    console.log('Screen overlay found');
-    screenOverlay.addEventListener('click', () => {
-        console.log('Screen overlay clicked');
-        body.classList.remove('sidebar-active');
-    });
-} else {
-    console.error('Screen overlay not found');
-}
+    if (screenOverlay) {
+        screenOverlay.addEventListener('click', () => {
+            body.classList.remove('sidebar-active');
+        });
+    }
+});

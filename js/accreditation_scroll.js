@@ -1,6 +1,12 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const carousel = document.querySelector(".accreditation-carousel");
+    
+    // Exit if carousel doesn't exist on this page
+    if (!carousel) {
+        return;
+    }
+    
     const track = carousel.querySelector(".accreditation-carousel-track");
     const wrappers = Array.from(track.children);
     const wrapperCount = wrappers.length;

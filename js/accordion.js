@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get all accordion headers (only direct p children, not nested ones)
     const accordionHeaders = document.querySelectorAll('.accordion > p');
     
+    // Exit if no accordions exist on this page
+    if (accordionHeaders.length === 0) {
+        return;
+    }
+    
     accordionHeaders.forEach(header => {
         // Add click event listener to each header
         header.addEventListener('click', function() {

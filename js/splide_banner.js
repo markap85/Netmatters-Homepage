@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Check if banner slideshow exists on this page
+    const bannerElement = document.querySelector('.banner-slideshow');
+    if (!bannerElement) {
+        return; // Exit if not on a page with banner
+    }
+    
     // Initialize Splide for banner slideshow
     const splide = new Splide('.banner-slideshow', {
         type: 'loop',           // Infinite loop

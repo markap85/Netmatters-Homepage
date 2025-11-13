@@ -5,6 +5,12 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.contact-form form');
+    
+    // Exit early if form doesn't exist (not on contact page)
+    if (!form) {
+        return;
+    }
+    
     const submitButton = form.querySelector('button[type="submit"]');
     const originalButtonText = submitButton.textContent;
     

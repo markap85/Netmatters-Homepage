@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.querySelector(".tooltip-carousel");
+  
+  // Exit if carousel doesn't exist on this page
+  if (!carousel) {
+      return;
+  }
+  
   const track = carousel.querySelector(".carousel-track");
   const wrappers = Array.from(track.children).slice(0);
   const wrapperCount = wrappers.length;
