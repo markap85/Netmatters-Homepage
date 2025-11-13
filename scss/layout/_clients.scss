@@ -24,8 +24,8 @@
 .carousel-track img {
   width: auto;
   max-width: 200px; // Clamp logo width to match reference site
-  height: 70px;
-  max-height: 70px;
+  height: auto; // Allow height to scale with aspect ratio
+  max-height: 70px; // Maximum height constraint
   object-fit: contain; // Maintain aspect ratio while fitting within constraints
   flex-shrink: 0;
   margin: 0;
@@ -47,8 +47,8 @@
 
 .tooltip-wrapper img {
   max-width: 200px; // Clamp logo width to match reference site
-  height: 70px;
-  max-height: 70px;
+  height: auto; // Allow height to scale with aspect ratio
+  max-height: 70px; // Maximum height constraint
   object-fit: contain; // Maintain aspect ratio while fitting within constraints
   display: block;
 }
