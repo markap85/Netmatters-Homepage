@@ -244,7 +244,7 @@
                         <div class="header-right">
                             <div class="header-contact">
                                 <a class="header-support-btn btn primary" aria-label="Call Netmatters">
-                                    <i class="fa fa-mouse-pointer" aria-hidden="true"></i> Support
+                                    <i class="fa fa-computer-mouse" aria-hidden="true"></i> Support
                                 </a>
                                 <a class="header-contact-btn btn secondary" href="/contact-us.php" aria-label="Contact Netmatters">
                                     <i class="fa fa-paper-plane" aria-hidden="true"></i> Contact

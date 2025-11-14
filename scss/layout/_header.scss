@@ -100,7 +100,7 @@ header {
                 background-color: #3367d6;
             }
 
-            .fa-mouse-pointer,
+            .fa-computer-mouse,
             .fa-paper-plane {
                 font-size: 20px;
                 display: flex;
@@ -126,8 +126,10 @@ header {
             display: flex;
         }
         
-        @media (min-width: $brk-point-m) {
-            display: none;
+        // Keep search visible on iPad landscape (992px-1259px) - only hide input, keep button
+        // Hide completely only on tablet portrait where Support/Contact buttons are hidden
+        @media (min-width: $brk-point-m) and (max-width: 1259px) {
+            display: flex; // Keep visible to show search button
         }
         
         @media (min-width: $brk-point-l) {
@@ -152,6 +154,11 @@ header {
                 padding: 10px;
                 width: 200px;
                 
+                // Hide input on iPad landscape (992px - 1259px) when Support/Contact buttons are visible
+                @media (min-width: $brk-point-m) and (max-width: 1259px) {
+                    display: none;
+                }
+                
                 &:focus {
                     border-color: #5bc0de;
                     outline: 0;
@@ -172,6 +179,11 @@ header {
                 cursor: pointer;
                 transition: background-color 0.3s ease;
                 border: none;
+                
+                // Full border radius when input is hidden (iPad landscape)
+                @media (min-width: $brk-point-m) and (max-width: 1259px) {
+                    border-radius: 3px;
+                }
                 
                 &:hover {
                     background: darken(#999AA2, 10%);
