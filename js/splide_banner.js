@@ -18,14 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
         keyboard: true,         // Keyboard navigation
         speed: 600,             // Transition speed
         easing: 'ease',         // Transition easing
-        height: '550px',        // Match original banner height
+        height: '550px',        // Match original banner height on all screen sizes
         cover: true,            // Cover background images
         heightRatio: 0,         // Disable automatic height ratio
-        breakpoints: {
-            768: {
-                height: '400px',  // Smaller height on mobile
-            }
-        }
     });
 
     // Mount the Splide instance

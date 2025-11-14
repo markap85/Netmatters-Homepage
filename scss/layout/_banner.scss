@@ -3,15 +3,11 @@
     position: relative;
     overflow: hidden;
     height: 550px;
+    margin-top: 110px; // Prevent overlap with fixed header
     
-    @media (max-width: 768px) {
-        height: 400px; // Ensure enough height for content and pagination
+    @media (min-width: 768px) {
+        margin-top: 0; // Remove margin on larger screens
     }
-    
-    // Remove margin-top when sticky header is active since body already has padding-top
-    // body.sticky-header-active & {
-    //     margin-top: 99px;
-    // }
     
     // Splide specific styles
     .splide__track {
@@ -25,17 +21,13 @@
     .splide__slide {
         position: relative;
         width: 100%;
-        height: 550px; // Fixed height to match original banner
+        height: 550px; // Fixed height for all screen sizes
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;
-        
-        @media (max-width: 768px) {
-            height: 400px; // Smaller height on mobile
-        }
         
         &::before { // Gradient Overlay over Image Banner
             content: "";
@@ -59,8 +51,11 @@
             max-width: 1000px;
 
             @media (max-width: $brk-point-m) {
-                font-size: 30px;
-                line-height: 1.3;
+                font-size: 2.5rem;
+                line-height: 3rem;
+                margin: 0 0 1.25rem;
+                color: #fff;
+                font-weight: 600;
                 max-width: 100%;
             }
         }
@@ -75,7 +70,10 @@
             max-width: 800px;
 
             @media (max-width: $brk-point-m) {
-                font-size: 1rem;
+                margin-bottom: .375rem;
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 600;
                 max-width: 100%;
             }
         }
