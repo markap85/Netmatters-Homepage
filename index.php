@@ -47,7 +47,7 @@ BANNER SLIDESHOW SECTION - Now using Splide.js
                     <div class="banner-content">
                         <h1 id="hero-heading">The East Of England's Leading Technology Company</h1>
                         <p class="subtext">Performance-driven digital and technology services with complete transparency</p>
-                        <a class="btn">Why Choose Us?</a>
+                        <a class="btn">Why Choose Us?<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </li>
@@ -58,7 +58,7 @@ BANNER SLIDESHOW SECTION - Now using Splide.js
                     <div class="banner-content">
                         <h1>Bespoke Software</h1>
                         <p class="subtext">Delivering expert bespoke software <br>solutions across a range of industries</p>
-                        <a class="btn">Find Out More</a>
+                        <a class="btn">Find Out More<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </li>
@@ -69,7 +69,7 @@ BANNER SLIDESHOW SECTION - Now using Splide.js
                     <div class="banner-content">
                         <h1>IT Support</h1>
                         <p class="subtext">Fast and cost-effective IT support services for your business.</p>
-                        <a class="btn">Find Out More</a>
+                        <a class="btn">Find Out More<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </li>
@@ -80,7 +80,7 @@ BANNER SLIDESHOW SECTION - Now using Splide.js
                     <div class="banner-content">
                         <h1>Digital Marketing</h1>
                         <p class="subtext">Generating your new business through results-driven marketing activities. </p>
-                        <a class="btn">Find Out More</a>
+                        <a class="btn">Find Out More<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </li>
@@ -91,7 +91,7 @@ BANNER SLIDESHOW SECTION - Now using Splide.js
                     <div class="banner-content">
                         <h1>Telecoms Services</h1>
                         <p class="subtext">A new approach to connectivity, see how we can help your business.</p>
-                        <a class="btn">Find Out More</a>
+                        <a class="btn">Find Out More<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </li>
@@ -102,7 +102,7 @@ BANNER SLIDESHOW SECTION - Now using Splide.js
                     <div class="banner-content">
                         <h1>Web Design</h1>
                         <p class="subtext">For businesses looking to make a strong and effective first impression.</p>
-                        <a class="btn">Find Out More</a>
+                        <a class="btn">Find Out More<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </li>
@@ -113,7 +113,7 @@ BANNER SLIDESHOW SECTION - Now using Splide.js
                     <div class="banner-content">
                         <h1>Cyber Security</h1>
                         <p class="subtext">Keeping business's and their customers sensitive information protected.</p>
-                        <a class="btn">Find Out More</a>
+                        <a class="btn">Find Out More<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </li>

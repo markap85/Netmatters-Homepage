@@ -3362,10 +3362,10 @@ footer .footer-copyright {
 /* line 63, ../Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-slideshow .splide__slide .subtext {
   font-family: Poppins, sans-serif;
-  font-size: 1.375rem;
-  line-height: 1.5;
+  font-size: 1.625rem;
+  line-height: 2.5rem;
   color: #fff;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 0 2rem 0;
   max-width: 800px;
 }
