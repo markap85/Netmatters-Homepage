@@ -4462,10 +4462,16 @@ body.sticky-header-active .banner {
 
 /* line 19, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav strong {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   text-transform: uppercase;
   font-weight: 300;
   white-space: nowrap;
+}
+
+/* line 26, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+.main-nav small {
+  text-transform: uppercase;
+  font-size: .625rem;
 }
 
 @media (min-width: 992px) {
@@ -4478,7 +4484,7 @@ body.sticky-header-active .banner {
   }
 }
 
-/* line 34, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 39, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav.sticky-nav {
   position: fixed;
   top: 0;
@@ -4488,22 +4494,22 @@ body.sticky-header-active .banner {
   transform: translateY(110px);
 }
 
-/* line 44, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 49, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav.sticky-nav:not(.no-transition) {
   transition: transform 0.3s ease-in-out;
 }
 
-/* line 48, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 53, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav.nav-hidden {
   transform: translateY(-209px);
 }
 
-/* line 52, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 57, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav.nav-visible {
   transform: translateY(110px);
 }
 
-/* line 57, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 62, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items {
   height: 100%;
   display: flex;
@@ -4511,7 +4517,7 @@ body.sticky-header-active .banner {
   justify-content: center;
 }
 
-/* line 67, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 72, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items > a {
   display: flex;
   flex-direction: column;
@@ -4524,56 +4530,56 @@ body.sticky-header-active .banner {
   gap: 5px;
 }
 
-/* line 82, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 87, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items .icon-laptop {
   color: #67809F;
   font-size: 23px;
   transition: color 0.3s;
 }
 
-/* line 83, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 88, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items .icon-display {
   color: #4183D7;
   font-size: 23px;
   transition: color 0.3s;
 }
 
-/* line 84, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 89, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items .icon-stats-bars {
   color: #2ECC71;
   font-size: 23px;
   transition: color 0.3s;
 }
 
-/* line 85, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 90, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items .icon-phone_in_talk {
   color: #D64541;
   font-size: 23px;
   transition: color 0.3s;
 }
 
-/* line 86, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 91, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items .icon-embed {
   color: #926FB1;
   font-size: 23px;
   transition: color 0.3s;
 }
 
-/* line 87, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 92, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items .icon-security {
   color: #F62459;
   font-size: 23px;
   transition: color 0.3s;
 }
 
-/* line 88, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 93, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items .icon-school {
   color: #D64541;
   font-size: 23px;
   transition: color 0.3s;
 }
 
-/* line 89, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 94, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items .icon-paper-plane,
 .main-nav-items .icon-mouse {
   color: #fff;
@@ -4581,7 +4587,7 @@ body.sticky-header-active .banner {
   transition: color 0.3s;
 }
 
-/* line 93, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 98, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items a.development {
   position: relative;
 }
@@ -4607,7 +4613,7 @@ body.sticky-header-active .banner {
   display: block;
 }
 
-/* line 94, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 99, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items a.it {
   position: relative;
 }
@@ -4633,7 +4639,7 @@ body.sticky-header-active .banner {
   display: block;
 }
 
-/* line 95, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 100, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items a.marketing {
   position: relative;
 }
@@ -4659,7 +4665,7 @@ body.sticky-header-active .banner {
   display: block;
 }
 
-/* line 96, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 101, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items a.telecoms {
   position: relative;
 }
@@ -4685,7 +4691,7 @@ body.sticky-header-active .banner {
   display: block;
 }
 
-/* line 97, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 102, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items a.design {
   position: relative;
 }
@@ -4711,7 +4717,7 @@ body.sticky-header-active .banner {
   display: block;
 }
 
-/* line 98, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 103, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items a.cyber {
   position: relative;
 }
@@ -4737,7 +4743,7 @@ body.sticky-header-active .banner {
   display: block;
 }
 
-/* line 99, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 104, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items a.developer {
   position: relative;
 }
@@ -4763,7 +4769,7 @@ body.sticky-header-active .banner {
   display: block;
 }
 
-/* line 102, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
+/* line 107, ../Netmatters-Homepage/scss/layout/_servicesnav.scss */
 .main-nav-items > a:hover i {
   color: #fff !important;
 }

@@ -17,10 +17,15 @@
     }
 
     strong {
-        font-size: 1.2rem;
+        font-size: 1.125rem;
         text-transform: uppercase;
         font-weight: 300; // Make font thinner
         white-space: nowrap; // Prevent text from wrapping
+    }
+
+    small {
+        text-transform: uppercase;
+        font-size: .625rem;
     }
 
     @media (min-width: $brk-point-m) {
