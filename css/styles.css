@@ -721,26 +721,31 @@ th {
   box-sizing: border-box;
 }
 
-/* line 14, ../Netmatters-Homepage/scss/base/_layout.scss */
+/* line 11, ../Netmatters-Homepage/scss/base/_layout.scss */
+body {
+  font-family: Poppins, sans-serif;
+}
+
+/* line 18, ../Netmatters-Homepage/scss/base/_layout.scss */
 body.sticky-header-active {
   padding-top: 209px;
 }
 
 @media (min-width: 768px) {
-  /* line 14, ../Netmatters-Homepage/scss/base/_layout.scss */
+  /* line 18, ../Netmatters-Homepage/scss/base/_layout.scss */
   body.sticky-header-active {
     padding-top: 209px;
   }
 }
 
 @media (max-width: 991px) {
-  /* line 14, ../Netmatters-Homepage/scss/base/_layout.scss */
+  /* line 18, ../Netmatters-Homepage/scss/base/_layout.scss */
   body.sticky-header-active {
     padding-top: 110px;
   }
 }
 
-/* line 27, ../Netmatters-Homepage/scss/base/_layout.scss */
+/* line 31, ../Netmatters-Homepage/scss/base/_layout.scss */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -754,35 +759,35 @@ body.sticky-header-active {
 }
 
 @media (min-width: 768px) {
-  /* line 27, ../Netmatters-Homepage/scss/base/_layout.scss */
+  /* line 31, ../Netmatters-Homepage/scss/base/_layout.scss */
   .container {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 27, ../Netmatters-Homepage/scss/base/_layout.scss */
+  /* line 31, ../Netmatters-Homepage/scss/base/_layout.scss */
   .container {
     width: 970px;
   }
 }
 
 @media (min-width: 1024px) {
-  /* line 27, ../Netmatters-Homepage/scss/base/_layout.scss */
+  /* line 31, ../Netmatters-Homepage/scss/base/_layout.scss */
   .container {
     width: 1000px;
   }
 }
 
 @media (min-width: 1260px) {
-  /* line 27, ../Netmatters-Homepage/scss/base/_layout.scss */
+  /* line 31, ../Netmatters-Homepage/scss/base/_layout.scss */
   .container {
     width: 1200px;
   }
 }
 
 /* Ensure sections don't override container alignment */
-/* line 56, ../Netmatters-Homepage/scss/base/_layout.scss */
+/* line 60, ../Netmatters-Homepage/scss/base/_layout.scss */
 .about-section,
 .hero-section,
 .portfolio-section,
@@ -792,13 +797,13 @@ body.sticky-header-active {
   padding-right: 0;
 }
 
-/* line 65, ../Netmatters-Homepage/scss/base/_layout.scss */
+/* line 69, ../Netmatters-Homepage/scss/base/_layout.scss */
 .section-content {
   padding: 2rem 0;
   /* Vertical padding only */
 }
 
-/* line 72, ../Netmatters-Homepage/scss/base/_layout.scss */
+/* line 76, ../Netmatters-Homepage/scss/base/_layout.scss */
 a,
 button,
 input[type="submit"],
