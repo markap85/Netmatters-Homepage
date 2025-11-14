@@ -248,18 +248,18 @@ header {
             align-items: center;
             height: 55px;
             border-radius: 2px;
-            overflow: hidden;
+            position: relative;
             
             input {
-                border: 1px solid rgb(180, 180, 180);
-                border-right: none;
-                border-radius: 2px 0 0 2px;
-                background: transparent;
+                background-color: rgba(0, 0, 0, .1);
+                outline: 1px solid hsla(0, 0%, 100%, .2);
+                border: 2px solid rgba(0, 0, 0, .1);
+                border-radius: 2px;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
                 height: 100%;
                 font-size: 1rem;
-                outline: none;
-                padding: 10px;
-                flex: 1;
+                padding: 10px 50px 10px 10px; // Add right padding for icon
+                width: 100%;
                 
                 &:focus {
                     border-color: #5bc0de;
@@ -269,21 +269,22 @@ header {
             }
             
             .btn-search {
-                background: #999AA2;
-                border-radius: 0 2px 2px 0;
-                width: 55px;
-                height: 55px;
+                position: absolute;
+                right: 0;
+                background: transparent;
+                border: none;
+                width: 50px;
+                height: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: white;
+                color: #333645;
                 font-size: 1.5rem;
                 cursor: pointer;
-                transition: background-color 0.3s ease;
-                border: none;
+                pointer-events: auto;
                 
                 &:hover {
-                    background: darken(#999AA2, 10%);
+                    color: lighten(#333645, 15%);
                 }
             }
         }
