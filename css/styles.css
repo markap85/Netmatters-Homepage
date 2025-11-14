@@ -3033,7 +3033,6 @@ footer .footer-row {
   /* line 49, ../Netmatters-Homepage/scss/layout/_footer.scss */
   footer .footer-row .footer-social {
     flex: 0 0 100%;
-    margin-bottom: 40px;
   }
   /* line 54, ../Netmatters-Homepage/scss/layout/_footer.scss */
   footer .footer-row .footer-menus-grid {
@@ -3055,7 +3054,7 @@ footer .footer-row {
   /* line 68, ../Netmatters-Homepage/scss/layout/_footer.scss */
   footer .footer-row .footer-social {
     flex: 0 0 100%;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
   }
   /* line 73, ../Netmatters-Homepage/scss/layout/_footer.scss */
   footer .footer-row .footer-menus-grid {
@@ -3147,7 +3146,7 @@ footer .footer-social {
   height: auto;
   align-items: center;
   justify-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   max-width: 200px;
 }
 
