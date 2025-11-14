@@ -96,7 +96,10 @@
     // Your existing styles...
     img,
     .news-icon {
-        @include responsive-img;
+        width: 100%;
+        height: 212px;
+        display: block;
+        object-fit: cover;
     }
 
     h3 {

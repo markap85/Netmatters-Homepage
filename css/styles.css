@@ -2586,13 +2586,13 @@ body.sidebar-active header {
 /* line 97, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-item img,
 .news-item .news-icon {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 212px;
   display: block;
   object-fit: cover;
 }
 
-/* line 102, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 105, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-item h3 {
   margin: 16px 0 8px 0;
   font-size: 1.25rem;
@@ -2602,7 +2602,7 @@ body.sidebar-active header {
   padding-right: 20px;
 }
 
-/* line 111, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 114, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-item p {
   font-size: 1rem;
   color: #333645;
@@ -2612,7 +2612,7 @@ body.sidebar-active header {
   padding-right: 20px;
 }
 
-/* line 120, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 123, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-item .btn {
   padding: 0.5rem 0.5rem;
   display: inline-block;
@@ -2663,37 +2663,37 @@ body.sidebar-active header {
 }
 
 @media (min-width: 992px) {
-  /* line 120, ../Netmatters-Homepage/scss/layout/_news.scss */
+  /* line 123, ../Netmatters-Homepage/scss/layout/_news.scss */
   .news-item .btn {
     flex: 1;
     max-width: 95%;
   }
 }
 
-/* line 144, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 147, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-item .btn .icon-arrow-right {
   font-size: 16px;
 }
 
-/* line 151, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 154, ../Netmatters-Homepage/scss/layout/_news.scss */
 .btn--yellow {
   background-color: #F7B322 !important;
   color: #fff;
 }
 
-/* line 156, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 159, ../Netmatters-Homepage/scss/layout/_news.scss */
 .btn--orange {
   background-color: #D64541 !important;
   color: #fff;
 }
 
-/* line 161, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 164, ../Netmatters-Homepage/scss/layout/_news.scss */
 .btn--blue {
   background-color: #4183D7 !important;
   color: #fff;
 }
 
-/* line 167, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 170, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-meta {
   margin-top: auto;
   border-top: 1px solid #CBCBCB;
@@ -2705,7 +2705,7 @@ body.sidebar-active header {
   justify-content: flex-start;
 }
 
-/* line 178, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 181, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-logo {
   max-width: 50px;
   max-height: 50px;
@@ -2715,14 +2715,14 @@ body.sidebar-active header {
   align-self: flex-start;
 }
 
-/* line 187, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 190, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-meta-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* line 192, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 195, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-meta-text strong {
   display: block;
   margin: 0;
@@ -2730,7 +2730,7 @@ body.sidebar-active header {
   font-size: 0.9rem;
 }
 
-/* line 199, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 202, ../Netmatters-Homepage/scss/layout/_news.scss */
 .news-meta-text time {
   display: block;
   margin: 2px 0 0 0;
@@ -2738,17 +2738,17 @@ body.sidebar-active header {
   font-size: 0.85rem;
 }
 
-/* line 213, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 216, ../Netmatters-Homepage/scss/layout/_news.scss */
 .tag--bespoke {
   background-color: #67809F;
 }
 
-/* line 214, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 217, ../Netmatters-Homepage/scss/layout/_news.scss */
 .tag--developer {
   background-color: #D64541;
 }
 
-/* line 215, ../Netmatters-Homepage/scss/layout/_news.scss */
+/* line 218, ../Netmatters-Homepage/scss/layout/_news.scss */
 .tag--it {
   background-color: #4183D7;
 }
