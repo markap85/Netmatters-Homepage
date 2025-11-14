@@ -48,8 +48,8 @@
     // Below 768px: Single column, show all 3 items
     grid-template-columns: 1fr;
     
-    // 768px to 1259px: Two columns, hide third item
-    @media (min-width: 768px) and (max-width: 1259px) {
+    // 768px to 991px: Two columns, hide third item
+    @media (min-width: 768px) and (max-width: 991px) {
         grid-template-columns: repeat(2, 1fr);
         
         // Hide the third news item
@@ -58,10 +58,19 @@
         }
     }
     
-    // 1260px and above: Three columns or auto-fit, show all items
-    @media (min-width: 1260px) {
+    // 992px to 1259px: Two columns, hide third item
+    @media (min-width: $brk-point-m) and (max-width: 1259px) {
+        grid-template-columns: repeat(2, 1fr);
+        
+        // Hide the third news item
+        .news-item:nth-child(3) {
+            display: none;
+        }
+    }
+    
+    // 1260px and above: Three columns, show all items
+    @media (min-width: $brk-point-l) {
         grid-template-columns: repeat(3, 1fr);
-        // or use: grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         
         // Ensure all items are visible
         .news-item:nth-child(3) {
@@ -98,23 +107,53 @@
     .news-icon {
         width: 100%;
         height: 212px;
+        min-height: 212px;
+        max-height: 212px;
         display: block;
         object-fit: cover;
     }
+    
+    // Override for news-logo to prevent it from being 212px tall
+    .news-logo {
+        width: 60px !important;
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 60px !important;
+    }
 
     h3 {
-        margin: 16px 0 8px 0;
-        font-size: 1.25rem;
-        color: $grey-mid;
+        margin: 0 0 15px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+        color: #333645;
         text-align: left;
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 30px;
+        
+        @media (min-width: $brk-point-s) {
+            min-height: 3rem;
+        }
+        
+        a {
+            font-weight: 600;
+            color: #333645;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     p {
-        font-size: 1rem;
-        color: $grey-mid;
-        margin-bottom: 16px;
+        line-height: 1.375rem;
+    font-size: .8125rem;
+        font-weight: 400;
+        letter-spacing: .4px;
+    color: #666;
+        margin-bottom: 25px;
         text-align: left;
         padding-left: 20px;
         padding-right: 20px;
@@ -179,12 +218,18 @@
 }
 
 .news-logo {
-    max-width: 50px;
-    max-height: 50px;
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
     display: inline-block;
     vertical-align: middle;
     margin-right: 12px;
-    align-self: flex-start; // Aligns logo to the top/left of the flex container
+    align-self: flex-start;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .news-meta-text {
