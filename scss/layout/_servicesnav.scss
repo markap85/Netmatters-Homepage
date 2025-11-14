@@ -20,6 +20,7 @@
         font-size: 1.2rem;
         text-transform: uppercase;
         font-weight: 300; // Make font thinner
+        white-space: nowrap; // Prevent text from wrapping
     }
 
     @media (min-width: $brk-point-m) {
@@ -54,10 +55,10 @@
 }
 
 .main-nav-items {
-  width: 90%;
-  max-width: 1260px;
-  margin-left: auto;
-  margin-right: auto;
+//   width: 90%;
+//   max-width: 1260px;
+//   margin-left: auto;
+//   margin-right: auto;
   height: 100%; // Fill the height of .main-nav
   display: flex;
   align-items: center; // Make children fill height

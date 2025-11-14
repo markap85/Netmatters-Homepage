@@ -6,7 +6,8 @@ SERVICES NAVIGATION SECTION
 ======================= -->
 
 <nav class="main-nav" aria-label="Main navigation">
-    <div class="main-nav-items">
+    <div class="container">
+        <div class="main-nav-items">
         <a class="development">
             <i class="icon-laptop"></i>
             <div class="text-group">
@@ -157,6 +158,7 @@ SERVICES NAVIGATION SECTION
                     <li><a role="menuitem"><i class="fas fa-handshake"></i>Scion Collaborators</a></li>
                 </ul>
             </div>
+        </div>
         </div>
     </div>
 </nav>
