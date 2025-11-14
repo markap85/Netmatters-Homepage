@@ -169,20 +169,44 @@ $white: #fff;
 //services
 
 @mixin service-icon($bg-color, $size: 20px) {
-  font-size: $size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  margin: 0 auto 17px;
   background-color: $bg-color !important;
   color: $white;
-  padding: 10px;
   border-radius: 50%;
   transition: background-color 0.3s ease, color 0.3s ease;
+  
+  &:before {
+    font-size: 32px;
+  }
 }
 
 @mixin service-button($bg-color) {
-  background: $bg-color !important;
+  display: inline-block;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  margin-bottom: 0;
+  background-color: $bg-color !important;
+  background-image: none;
   color: $white;
-  padding: 8px 20px;
-  border-radius: 4px;
+  border: 1px solid $bg-color;
+  border-radius: 3px;
+  font-size: 1.063rem;
+  font-weight: 400;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: normal;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
