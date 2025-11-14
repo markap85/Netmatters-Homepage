@@ -3150,7 +3150,17 @@ footer .footer-social {
   max-width: 200px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
+  /* line 134, ../Netmatters-Homepage/scss/layout/_footer.scss */
+  footer .footer-social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 992px) {
   /* line 134, ../Netmatters-Homepage/scss/layout/_footer.scss */
   footer .footer-social {
     display: flex;
@@ -3163,7 +3173,7 @@ footer .footer-social {
   }
 }
 
-/* line 155, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 162, ../Netmatters-Homepage/scss/layout/_footer.scss */
 footer .footer-social a {
   display: flex;
   align-items: center;
@@ -3173,20 +3183,20 @@ footer .footer-social a {
   text-decoration: none;
 }
 
-@media (min-width: 480px) {
-  /* line 155, ../Netmatters-Homepage/scss/layout/_footer.scss */
+@media (min-width: 992px) {
+  /* line 162, ../Netmatters-Homepage/scss/layout/_footer.scss */
   footer .footer-social a {
     flex: 0 0 10%;
     max-width: 45%;
   }
 }
 
-/* line 168, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 175, ../Netmatters-Homepage/scss/layout/_footer.scss */
 footer .footer-social a:hover {
   color: #ccc;
 }
 
-/* line 174, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 181, ../Netmatters-Homepage/scss/layout/_footer.scss */
 footer .footer-copyright {
   text-align: center;
   font-size: 0.875rem;
@@ -3194,34 +3204,34 @@ footer .footer-copyright {
 }
 
 @media (max-width: 767px) {
-  /* line 181, ../Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 188, ../Netmatters-Homepage/scss/layout/_footer.scss */
   footer .footer-logo {
     flex: 0 0 100%;
     max-width: 100%;
   }
 }
 
-/* line 190, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 197, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .icon-facebook:hover {
   background-color: #3B5998 !important;
 }
 
-/* line 194, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 201, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .icon-instagram:hover {
   background-color: #D93175 !important;
 }
 
-/* line 198, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 205, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .icon-x:hover {
   background-color: #1DA1F2 !important;
 }
 
-/* line 202, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 209, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .icon-linkedin:hover {
   background-color: #0077B5 !important;
 }
 
-/* line 208, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 215, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .footer-bottom {
   display: flex;
   flex-direction: row;
@@ -3229,26 +3239,34 @@ footer .footer-copyright {
   background-color: #212330 !important;
 }
 
-/* line 214, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 221, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .footer-bottom .container {
   margin-bottom: 0;
 }
 
-/* line 218, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 225, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .footer-bottom .footer-bottom-content {
   display: flex;
   align-items: center;
   width: 100%;
+  padding: 20px 15px;
 }
 
 @media (min-width: 768px) {
-  /* line 218, ../Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 225, ../Netmatters-Homepage/scss/layout/_footer.scss */
   .footer-bottom .footer-bottom-content {
-    padding: 15px 5px;
+    padding: 20px 15px;
   }
 }
 
-/* line 230, ../Netmatters-Homepage/scss/layout/_footer.scss */
+@media (min-width: 992px) {
+  /* line 225, ../Netmatters-Homepage/scss/layout/_footer.scss */
+  .footer-bottom .footer-bottom-content {
+    padding: 20px 0;
+  }
+}
+
+/* line 239, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .footer-bottom .footer-bottom-content a {
   color: #fff;
   text-decoration: none;
@@ -3256,12 +3274,12 @@ footer .footer-copyright {
   line-height: 1.5;
 }
 
-/* line 236, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 245, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .footer-bottom .footer-bottom-content a:hover {
   text-decoration: underline;
 }
 
-/* line 241, ../Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 250, ../Netmatters-Homepage/scss/layout/_footer.scss */
 .footer-bottom .footer-bottom-content p {
   margin: 0;
 }
