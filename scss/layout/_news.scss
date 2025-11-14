@@ -160,28 +160,27 @@
     }
 
     .btn {
-        padding: 0.5rem 0.5rem;
-        @include button(
-            $bg-color: #272936,
-            $hover-bg: #121318,
-        );
+        display: inline-block;
+        height: auto;
+        line-height: 35px;
+        padding: 5px 15px;
+        margin: 0 0 20px 20px;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        font-size: 1.063rem;
+        font-weight: 400;
+        text-align: center;
+        text-decoration: none;
         text-transform: uppercase;
-        
-        // Fix the button margins to prevent overflow
-        margin-right:50%;
-        margin-left: 5%;
-        max-width: 90%;
-        
-        min-height: 44px;
-        display: flex;
-        align-items: left;
-        justify-content: center;
-        box-sizing: border-box;
-
-        @media (min-width: $brk-point-m) {
-            flex: 1;
-            max-width: 95%;
-        }
+        vertical-align: middle;
+        white-space: normal;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        align-self: flex-start;
+        color: white;
 
         .icon-arrow-right {
             font-size: 16px;
@@ -210,11 +209,11 @@
     margin-top: auto;
     border-top: 1px solid $grey;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     padding: 16px 20px;
     flex-direction: row;
     background-color: $white;
-    justify-content: flex-start; // Ensures items are aligned to the left
+    justify-content: flex-start;
 }
 
 .news-logo {
