@@ -1,0 +1,11 @@
+# Database Configuration for XAMPP
+DB_HOST=localhost
+DB_USERNAME=root
+DB_PASSWORD=
+DB_NAME=netmatters_db
+DB_PORT=3306
+
+# Application Settings
+APP_NAME="Netmatters Homepage"
+APP_ENV=development
+APP_VERSION="v1.0.0"
