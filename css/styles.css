@@ -1567,7 +1567,7 @@ body.sidebar-active header {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   /* line 65, ../Netmatters-Homepage/scss/layout/_services.scss */
   .services-grid-sub {
     grid-template-columns: repeat(2, 1fr);
@@ -1781,7 +1781,6 @@ body.sidebar-active header {
   background-color: #926FB1 !important;
   background-image: none;
   color: #fff;
-  border: 1px solid #926FB1;
   border-radius: 3px;
   font-size: 1.063rem;
   font-weight: 400;
@@ -1807,7 +1806,6 @@ body.sidebar-active header {
   background-color: #F7B322 !important;
   background-image: none;
   color: #fff;
-  border: 1px solid #F7B322;
   border-radius: 3px;
   font-size: 1.063rem;
   font-weight: 400;
@@ -1833,7 +1831,6 @@ body.sidebar-active header {
   background-color: #4183D7 !important;
   background-image: none;
   color: #fff;
-  border: 1px solid #4183D7;
   border-radius: 3px;
   font-size: 1.063rem;
   font-weight: 400;
@@ -1859,7 +1856,6 @@ body.sidebar-active header {
   background-color: #2ECC71 !important;
   background-image: none;
   color: #fff;
-  border: 1px solid #2ECC71;
   border-radius: 3px;
   font-size: 1.063rem;
   font-weight: 400;
@@ -1885,7 +1881,6 @@ body.sidebar-active header {
   background-color: #D64541 !important;
   background-image: none;
   color: #fff;
-  border: 1px solid #D64541;
   border-radius: 3px;
   font-size: 1.063rem;
   font-weight: 400;
@@ -1911,7 +1906,6 @@ body.sidebar-active header {
   background-color: #926FB1 !important;
   background-image: none;
   color: #fff;
-  border: 1px solid #926FB1;
   border-radius: 3px;
   font-size: 1.063rem;
   font-weight: 400;
@@ -1937,7 +1931,6 @@ body.sidebar-active header {
   background-color: #F62459 !important;
   background-image: none;
   color: #fff;
-  border: 1px solid #F62459;
   border-radius: 3px;
   font-size: 1.063rem;
   font-weight: 400;
@@ -1963,7 +1956,6 @@ body.sidebar-active header {
   background-color: #D64541 !important;
   background-image: none;
   color: #fff;
-  border: 1px solid #D64541;
   border-radius: 3px;
   font-size: 1.063rem;
   font-weight: 400;
@@ -1984,18 +1976,18 @@ body.sidebar-active header {
   background-color: #67809F !important;
 }
 
-/* line 216, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 215, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.bespoke-hover:hover h3, .service-item.bespoke-hover:hover p {
   color: #fff !important;
 }
 
-/* line 220, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 219, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.bespoke-hover:hover .icon-laptop {
   background-color: #fff !important;
   color: #67809F !important;
 }
 
-/* line 225, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 224, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.bespoke-hover:hover .service-item__link--bespoke {
   background: #fff !important;
   color: #67809F !important;
@@ -2006,18 +1998,18 @@ body.sidebar-active header {
   background-color: #4183D7 !important;
 }
 
-/* line 216, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 215, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.it-hover:hover h3, .service-item.it-hover:hover p {
   color: #fff !important;
 }
 
-/* line 220, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 219, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.it-hover:hover .icon-display {
   background-color: #fff !important;
   color: #4183D7 !important;
 }
 
-/* line 225, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 224, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.it-hover:hover .service-item__link--it {
   background: #fff !important;
   color: #4183D7 !important;
@@ -2028,18 +2020,18 @@ body.sidebar-active header {
   background-color: #2ECC71 !important;
 }
 
-/* line 216, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 215, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.digital-hover:hover h3, .service-item.digital-hover:hover p {
   color: #fff !important;
 }
 
-/* line 220, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 219, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.digital-hover:hover .icon-stats-bars {
   background-color: #fff !important;
   color: #2ECC71 !important;
 }
 
-/* line 225, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 224, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.digital-hover:hover .service-item__link--digital {
   background: #fff !important;
   color: #2ECC71 !important;
@@ -2050,18 +2042,18 @@ body.sidebar-active header {
   background-color: #D64541 !important;
 }
 
-/* line 216, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 215, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.telecoms-hover:hover h3, .service-item.telecoms-hover:hover p {
   color: #fff !important;
 }
 
-/* line 220, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 219, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.telecoms-hover:hover .icon-phone_in_talk {
   background-color: #fff !important;
   color: #D64541 !important;
 }
 
-/* line 225, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 224, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.telecoms-hover:hover .service-item__link--telecoms {
   background: #fff !important;
   color: #D64541 !important;
@@ -2072,18 +2064,18 @@ body.sidebar-active header {
   background-color: #926FB1 !important;
 }
 
-/* line 216, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 215, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.web-hover:hover h3, .service-item.web-hover:hover p {
   color: #fff !important;
 }
 
-/* line 220, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 219, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.web-hover:hover .icon-embed2 {
   background-color: #fff !important;
   color: #926FB1 !important;
 }
 
-/* line 225, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 224, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.web-hover:hover .service-item__link--web {
   background: #fff !important;
   color: #926FB1 !important;
@@ -2094,18 +2086,18 @@ body.sidebar-active header {
   background-color: #F62459 !important;
 }
 
-/* line 216, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 215, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.cyber-hover:hover h3, .service-item.cyber-hover:hover p {
   color: #fff !important;
 }
 
-/* line 220, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 219, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.cyber-hover:hover .icon-security {
   background-color: #fff !important;
   color: #F62459 !important;
 }
 
-/* line 225, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 224, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.cyber-hover:hover .service-item__link--cyber {
   background: #fff !important;
   color: #F62459 !important;
@@ -2116,18 +2108,18 @@ body.sidebar-active header {
   background-color: #D64541 !important;
 }
 
-/* line 216, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 215, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.developer-hover:hover h3, .service-item.developer-hover:hover p {
   color: #fff !important;
 }
 
-/* line 220, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 219, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.developer-hover:hover .icon-school {
   background-color: #fff !important;
   color: #D64541 !important;
 }
 
-/* line 225, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 224, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .service-item.developer-hover:hover .service-item__link--developer {
   background: #fff !important;
   color: #D64541 !important;
@@ -4489,7 +4481,7 @@ body.sticky-header-active .banner {
   box-sizing: border-box;
 }
 
-/* line 280, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
+/* line 279, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
 .main-nav a:hover {
   text-decoration: none;
 }

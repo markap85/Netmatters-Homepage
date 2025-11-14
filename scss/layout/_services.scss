@@ -64,8 +64,8 @@
 
 .services-grid-sub {
   @extend %grid-default;
-
-  @media (min-width: $brk-point-m) {
+  
+  @media (min-width: $brk-point-s) {
     grid-template-columns: repeat(2, 1fr);
   }
 
