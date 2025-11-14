@@ -2759,6 +2759,41 @@ body.sidebar-active header {
   background-color: #4183D7;
 }
 
+/* line 296, ../Netmatters-Homepage/scss/layout/_news.scss */
+.news-item:has(.tag--bespoke) h3 {
+  color: #67809F;
+}
+
+/* line 297, ../Netmatters-Homepage/scss/layout/_news.scss */
+.news-item:has(.tag--developer) h3 {
+  color: #D64541;
+}
+
+/* line 298, ../Netmatters-Homepage/scss/layout/_news.scss */
+.news-item:has(.tag--it) h3 {
+  color: #4183D7;
+}
+
+/* line 299, ../Netmatters-Homepage/scss/layout/_news.scss */
+.news-item:has(.tag--marketing) h3 {
+  color: #2ECC71;
+}
+
+/* line 300, ../Netmatters-Homepage/scss/layout/_news.scss */
+.news-item:has(.tag--telecoms) h3 {
+  color: #D64541;
+}
+
+/* line 301, ../Netmatters-Homepage/scss/layout/_news.scss */
+.news-item:has(.tag--design) h3 {
+  color: #926FB1;
+}
+
+/* line 302, ../Netmatters-Homepage/scss/layout/_news.scss */
+.news-item:has(.tag--cyber) h3 {
+  color: #F62459;
+}
+
 /* line 1, ../Netmatters-Homepage/scss/layout/_clients.scss */
 .tooltip-carousel {
   width: 100%;
