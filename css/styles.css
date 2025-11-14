@@ -847,7 +847,7 @@ header.header-visible {
 
 /* line 34, ../Netmatters-Homepage/scss/layout/_header.scss */
 header .container {
-  padding: 20px 0;
+  padding: 20px 20px;
   height: 110px;
 }
 
