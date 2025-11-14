@@ -3092,7 +3092,7 @@ footer .footer-copyright {
   font-weight: 700;
   letter-spacing: -0.4px;
   margin-bottom: 1.5rem;
-  max-width: 600px;
+  max-width: 1000px;
 }
 
 @media (max-width: 992px) {
@@ -3112,7 +3112,7 @@ footer .footer-copyright {
   color: #fff;
   font-weight: 400;
   margin: 0 0 2rem 0;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 @media (max-width: 992px) {
@@ -3483,7 +3483,7 @@ footer .footer-copyright {
   .banner-slideshow .splide__slide .banner-content {
     align-items: flex-start;
     text-align: left;
-    max-width: 600px;
+    max-width: 1000px;
   }
 }
 
