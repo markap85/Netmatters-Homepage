@@ -271,6 +271,8 @@ This section showcases the partners and certifications of Netmatters.
             <?php else: ?>
             <?php endif; ?>
         </div>
+        
+        <a class="view-our-work-mobile">View All <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
     </div>
 </section>
 
