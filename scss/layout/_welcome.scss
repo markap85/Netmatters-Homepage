@@ -32,10 +32,11 @@
 
     p {
       margin: 0 0 16px 0;
-      line-height: 1.6;
+      line-height: 1.875rem;
 
       &.bold {
-        font-weight: bold;
+        font-weight: 600;
+        font-size: 1rem;
       }
     }
 
@@ -44,14 +45,23 @@
 
       p {
         margin-bottom: 16px;
+        
+        &.bold {
+          font-style: italic;
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
       }
 
       cite {
-        font-style: italic;
-        font-size: 14px;
+      font-weight: 600;
+      color: #a3a8ac;
+      font-size: 1.1rem;
+      font-style: normal;
 
         .bold {
           font-weight: bold;
+          color: white;
         }
       }
     }

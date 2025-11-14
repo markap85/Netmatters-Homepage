@@ -2299,68 +2299,79 @@ body.sidebar-active header {
 /* line 33, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-grid-item p {
   margin: 0 0 16px 0;
-  line-height: 1.6;
+  line-height: 1.875rem;
 }
 
 /* line 37, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-grid-item p.bold {
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
-/* line 42, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 43, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-grid-item blockquote {
   margin: 16px 0;
 }
 
-/* line 45, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 46, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-grid-item blockquote p {
   margin-bottom: 16px;
 }
 
 /* line 49, ../Netmatters-Homepage/scss/layout/_welcome.scss */
-.welcome-section .welcome-grid-item blockquote cite {
+.welcome-section .welcome-grid-item blockquote p.bold {
   font-style: italic;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
-/* line 53, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 56, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+.welcome-section .welcome-grid-item blockquote cite {
+  font-weight: 600;
+  color: #a3a8ac;
+  font-size: 1.1rem;
+  font-style: normal;
+}
+
+/* line 62, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-grid-item blockquote cite .bold {
   font-weight: bold;
+  color: white;
 }
 
-/* line 60, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 70, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .stars-bar {
   display: flex;
   gap: 4px;
 }
 
-/* line 64, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 74, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .stars-bar .icon-star-full {
   font-size: 50px;
   color: #F7B322;
 }
 
-/* line 68, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 78, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .stars-bar .icon-star-empty {
   font-size: 50px;
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 73, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 83, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links,
 .welcome-section .review-links {
   margin-top: auto;
 }
 
 @media (min-width: 992px) {
-  /* line 73, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+  /* line 83, ../Netmatters-Homepage/scss/layout/_welcome.scss */
   .welcome-section .welcome-links,
   .welcome-section .review-links {
     flex-direction: row;
   }
 }
 
-/* line 82, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 92, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn,
 .welcome-section .review-links .btn {
   border-radius: 6px;
@@ -2375,14 +2386,14 @@ body.sidebar-active header {
 }
 
 @media (min-width: 992px) {
-  /* line 82, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+  /* line 92, ../Netmatters-Homepage/scss/layout/_welcome.scss */
   .welcome-section .welcome-links .btn,
   .welcome-section .review-links .btn {
     flex: 0 1 auto;
   }
 }
 
-/* line 97, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 107, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn .icon-arrow-right,
 .welcome-section .welcome-links .btn .fa-arrow-right,
 .welcome-section .review-links .btn .icon-arrow-right,
@@ -2391,7 +2402,7 @@ body.sidebar-active header {
   padding-left: 4px;
 }
 
-/* line 104, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 114, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn--primary,
 .welcome-section .review-links .btn--primary {
   background-color: #272936;
@@ -2399,13 +2410,13 @@ body.sidebar-active header {
   margin-right: 8px;
 }
 
-/* line 109, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 119, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn--primary:hover,
 .welcome-section .review-links .btn--primary:hover {
   background-color: #121318;
 }
 
-/* line 114, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 124, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn--google,
 .welcome-section .review-links .btn--google {
   background-color: #4387f6;
@@ -2413,20 +2424,20 @@ body.sidebar-active header {
   margin-right: 8px;
 }
 
-/* line 119, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 129, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn--google:hover,
 .welcome-section .review-links .btn--google:hover {
   background-color: #1268f4;
 }
 
-/* line 124, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 134, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn--trustpilot,
 .welcome-section .review-links .btn--trustpilot {
   background-color: #00b67a;
   color: #fff;
 }
 
-/* line 128, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 138, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn--trustpilot:hover,
 .welcome-section .review-links .btn--trustpilot:hover {
   background-color: #008358;
