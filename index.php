@@ -175,6 +175,8 @@ BANNER SLIDESHOW SECTION - Now using Splide.js
                 <a class="service-item__link service-item__link--developer">Read More</a>
             </article>
         </div>
+        
+        <a class="view-our-work-mobile">View Our Work <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
     </div>
 </section>
 
