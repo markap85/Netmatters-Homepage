@@ -80,10 +80,18 @@
     }
 
     .btn {
-      @include button(#272936, #121318);
+      border-radius: 6px;
+      padding: 10px 30px;
+      font-size: 20px;
+      line-height: 35px;
+      margin-top: 25px;
+      border: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+      width: auto;
 
       @media (min-width: $brk-point-m) {
-        flex: 1;
+        flex: 0 1 auto;
       }
 
       .icon-arrow-right,
@@ -93,12 +101,33 @@
       }
     }
 
+    .btn--primary {
+      background-color: #272936;
+      color: $white;
+      margin-right: 8px;
+      
+      &:hover {
+        background-color: darken(#272936, 10%);
+      }
+    }
+
     .btn--google {
-      @include button(#4285f4, #3367d6);
+      background-color: #4387f6;
+      color: $white;
+      margin-right: 8px;
+      
+      &:hover {
+        background-color: darken(#4387f6, 10%);
+      }
     }
 
     .btn--trustpilot {
-      @include button(#00b67a, #009a66);
+      background-color: #00b67a;
+      color: $white;
+      
+      &:hover {
+        background-color: darken(#00b67a, 10%);
+      }
     }
   }
 }

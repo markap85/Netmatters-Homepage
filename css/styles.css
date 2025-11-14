@@ -2363,57 +2363,26 @@ body.sidebar-active header {
 /* line 82, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn,
 .welcome-section .review-links .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #272936;
-  color: #fff;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-size: 20px;
   line-height: 35px;
-  transition: all 0.2s ease-in-out;
-  user-select: none;
-  vertical-align: middle;
+  margin-top: 25px;
+  border: none;
   text-transform: uppercase;
-  cursor: pointer;
-}
-
-/* line 65, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
-.welcome-section .welcome-links .btn:hover:not(:disabled), .welcome-section .welcome-links .btn:focus:not(:disabled),
-.welcome-section .review-links .btn:hover:not(:disabled),
-.welcome-section .review-links .btn:focus:not(:disabled) {
-  background-color: #0062cc;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* line 72, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
-.welcome-section .welcome-links .btn:active:not(:disabled),
-.welcome-section .review-links .btn:active:not(:disabled) {
-  transform: translateY(1px);
-}
-
-/* line 76, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
-.welcome-section .welcome-links .btn:disabled,
-.welcome-section .review-links .btn:disabled {
-  background-color: #6c757d;
-  color: #fff;
-  cursor: not-allowed;
-  opacity: 0.6;
+  white-space: nowrap;
+  width: auto;
 }
 
 @media (min-width: 992px) {
   /* line 82, ../Netmatters-Homepage/scss/layout/_welcome.scss */
   .welcome-section .welcome-links .btn,
   .welcome-section .review-links .btn {
-    flex: 1;
+    flex: 0 1 auto;
   }
 }
 
-/* line 89, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 97, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn .icon-arrow-right,
 .welcome-section .welcome-links .btn .fa-arrow-right,
 .welcome-section .review-links .btn .icon-arrow-right,
@@ -2422,94 +2391,45 @@ body.sidebar-active header {
   padding-left: 4px;
 }
 
-/* line 96, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 104, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+.welcome-section .welcome-links .btn--primary,
+.welcome-section .review-links .btn--primary {
+  background-color: #272936;
+  color: #fff;
+  margin-right: 8px;
+}
+
+/* line 109, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+.welcome-section .welcome-links .btn--primary:hover,
+.welcome-section .review-links .btn--primary:hover {
+  background-color: #121318;
+}
+
+/* line 114, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn--google,
 .welcome-section .review-links .btn--google {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #4285f4;
+  background-color: #4387f6;
   color: #fff;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-  line-height: 35px;
-  transition: all 0.2s ease-in-out;
-  user-select: none;
-  vertical-align: middle;
-  text-transform: uppercase;
-  cursor: pointer;
+  margin-right: 8px;
 }
 
-/* line 65, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
-.welcome-section .welcome-links .btn--google:hover:not(:disabled), .welcome-section .welcome-links .btn--google:focus:not(:disabled),
-.welcome-section .review-links .btn--google:hover:not(:disabled),
-.welcome-section .review-links .btn--google:focus:not(:disabled) {
-  background-color: #0062cc;
-  color: #fff;
-  text-decoration: none;
+/* line 119, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+.welcome-section .welcome-links .btn--google:hover,
+.welcome-section .review-links .btn--google:hover {
+  background-color: #1268f4;
 }
 
-/* line 72, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
-.welcome-section .welcome-links .btn--google:active:not(:disabled),
-.welcome-section .review-links .btn--google:active:not(:disabled) {
-  transform: translateY(1px);
-}
-
-/* line 76, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
-.welcome-section .welcome-links .btn--google:disabled,
-.welcome-section .review-links .btn--google:disabled {
-  background-color: #6c757d;
-  color: #fff;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-/* line 100, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+/* line 124, ../Netmatters-Homepage/scss/layout/_welcome.scss */
 .welcome-section .welcome-links .btn--trustpilot,
 .welcome-section .review-links .btn--trustpilot {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
   background-color: #00b67a;
   color: #fff;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-  line-height: 35px;
-  transition: all 0.2s ease-in-out;
-  user-select: none;
-  vertical-align: middle;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 
-/* line 65, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
-.welcome-section .welcome-links .btn--trustpilot:hover:not(:disabled), .welcome-section .welcome-links .btn--trustpilot:focus:not(:disabled),
-.welcome-section .review-links .btn--trustpilot:hover:not(:disabled),
-.welcome-section .review-links .btn--trustpilot:focus:not(:disabled) {
-  background-color: #0062cc;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* line 72, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
-.welcome-section .welcome-links .btn--trustpilot:active:not(:disabled),
-.welcome-section .review-links .btn--trustpilot:active:not(:disabled) {
-  transform: translateY(1px);
-}
-
-/* line 76, ../Netmatters-Homepage/scss/utilities/_mixins.scss */
-.welcome-section .welcome-links .btn--trustpilot:disabled,
-.welcome-section .review-links .btn--trustpilot:disabled {
-  background-color: #6c757d;
-  color: #fff;
-  cursor: not-allowed;
-  opacity: 0.6;
+/* line 128, ../Netmatters-Homepage/scss/layout/_welcome.scss */
+.welcome-section .welcome-links .btn--trustpilot:hover,
+.welcome-section .review-links .btn--trustpilot:hover {
+  background-color: #008358;
 }
 
 /* line 2, ../Netmatters-Homepage/scss/layout/_news.scss */
