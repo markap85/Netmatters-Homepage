@@ -98,24 +98,8 @@ a.design     { @include nav-hover-style($design); }
 a.cyber      { @include nav-hover-style($cyber); }
 a.developer  { @include nav-hover-style($developer); }
 
-//Lighten Triangles on PopUps
-
-a.it:hover {
-    background-color: lighten($it, 10%);
-}
-a.marketing:hover {
-    background-color: lighten($marketing, 10%);
-}
-a.telecoms:hover {
-    background-color: lighten($telecoms, 10%);
-}
-a.design:hover {
-    background-color: lighten($design, 10%);
-}
-a.cyber:hover {
-    background-color: lighten($cyber, 10%);
-}
-a.developer:hover {
-    background-color: lighten($developer, 10%);
+// Make icons white on hover
+> a:hover i {
+    color: $white !important;
 }
 }
